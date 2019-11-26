@@ -22,10 +22,10 @@ fnatic = Team.create!(
   country: "England",
   description: "Fnatic is a professional esports organization headquartered in London, United Kingdom. Founded 23 July 2004, the team has players from around the world, across a variety of games"
 )
-image_path = Rails.root.join('app', 'assets', 'images', 'fnatic.png')
+fnatic_path = Rails.root.join('app', 'assets', 'images', 'fnatic.png')
 logo_path = Rails.root.join('app', 'assets', 'images', 'logofnatic.png')
 
-fnatic.images.attach(io: File.open(image_path), filename: 'fnatic.png', content_type: 'image/png')
+fnatic.images.attach(io: File.open(fnatic_path), filename: 'fnatic.png', content_type: 'image/png')
 fnatic.logo.attach(io: File.open(logo_path), filename: 'logofnatic.png', content_type: 'image/png')
 
 
@@ -41,8 +41,8 @@ tim_lipovsek = User.create!(
   role: "Mid"
   )
 
-avatartim_path = Rails.root.join('app', 'assets', 'images', 'tim.png')
-tim_lipovsek.avatar.attach(io: File.open(avatartim_path), filename: 'tim.png', content_type: 'image/png')
+avatar_tim_path = Rails.root.join('app', 'assets', 'images', 'tim.png')
+tim_lipovsek.avatar.attach(io: File.open(avatar_tim_path), filename: 'tim.png', content_type: 'image/png')
 
 gabriel_rau = User.create!(
   first_name: "Gabriel",
@@ -56,8 +56,8 @@ gabriel_rau = User.create!(
   role: "Top"
   )
 
-avatargab_path = Rails.root.join('app', 'assets', 'images', 'gab.png')
-tim_lipovsek.avatar.attach(io: File.open(avatargab_path), filename: 'gab.png', content_type: 'image/png')
+avatar_gab_path = Rails.root.join('app', 'assets', 'images', 'gab.png')
+tim_lipovsek.avatar.attach(io: File.open(avatar_gab_path), filename: 'gab.png', content_type: 'image/png')
 
 mads_pedersen = User.create!(
   first_name: "Mads",
@@ -71,6 +71,10 @@ mads_pedersen = User.create!(
   role: "Jungle"
   )
 
+avatar_mads_path = Rails.root.join('app', 'assets', 'images', 'mads.png')
+mads_pedersen.avatar.attach(io: File.open(avatar_mads_path), filename: 'mads.png', content_type: 'image/png')
+
+
 zdravets_galabov = User.create!(
   first_name: "Zdravets",
   last_name: "Galabov",
@@ -82,6 +86,11 @@ zdravets_galabov = User.create!(
   user_type: "player",
   role: "Support"
   )
+
+avatar_hyli_path = Rails.root.join('app', 'assets', 'images', 'hylissang.png')
+zdravets_galabov.avatar.attach(io: File.open(avatar_hyli_path), filename: 'hylissang.png', content_type: 'image/png')
+
+
 
 martin_larsson = User.create!(
   first_name: "Zdravets",
@@ -95,6 +104,11 @@ martin_larsson = User.create!(
   role: "Ad Carry"
 )
 
+avatar_martin_path = Rails.root.join('app', 'assets', 'images', 'martin.png')
+martin_larsson.avatar.attach(io: File.open(avatar_martin_path), filename: 'martin.png', content_type: 'image/png')
+
+
+
 louis_victor_legendre = User.create!(
   first_name: "Louis-Victor",
   last_name: "Legendre",
@@ -104,6 +118,10 @@ louis_victor_legendre = User.create!(
   team: fnatic,
   user_type: "coach",
 )
+
+avatar_mephisto_path = Rails.root.join('app', 'assets', 'images', 'troud.png')
+louis_victor_legendre.avatar.attach(io: File.open(avatar_mephisto_path), filename: 'troud.png', content_type: 'image/png')
+
 
 
 puts "Finished!"
