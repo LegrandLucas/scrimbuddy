@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :set_scrim, only: %i[show new create]
   before_action :set_review, only: %i[edit update destroy]
   def new
     @review = Review.new
@@ -35,6 +36,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+
+  def set_scrim
+    @scrim = Scrim.find(params[:scrim_id])
+  end
 
   def set_review
     @review = Review.find(params[:id])
