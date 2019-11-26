@@ -22,11 +22,26 @@ fnatic = Team.create!(
   country: "England",
   description: "Fnatic is a professional esports organization headquartered in London, United Kingdom. Founded 23 July 2004, the team has players from around the world, across a variety of games"
 )
+
 fnatic_path = Rails.root.join('app', 'assets', 'images', 'fnatic.png')
 logo_path = Rails.root.join('app', 'assets', 'images', 'logofnatic.png')
 
 fnatic.images.attach(io: File.open(fnatic_path), filename: 'fnatic.png', content_type: 'image/png')
 fnatic.logo.attach(io: File.open(logo_path), filename: 'logofnatic.png', content_type: 'image/png')
+
+gtwo = Team.create!(
+  name: "G2 Esports",
+  league: "LEC",
+  country: "Spain",
+  description: "G2 Esports, formerly known as Gamers2, is a Spanish esports organisation based in Berlin, Germany,[1] with players competing in League of Legends"
+)
+
+gtwo_path = Rails.root.join('app', 'assets', 'images', 'gtwo.png')
+gtwo_logo_path = Rails.root.join('app', 'assets', 'images', 'logogtwo.png')
+
+gtwo.images.attach(io: File.open(fnatic_path), filename: 'gtwo.png', content_type: 'image/png')
+gtwo.logo.attach(io: File.open(gtwo_logo_path), filename: 'logogtwo.png', content_type: 'image/png')
+
 
 
 tim_lipovsek = User.create!(
