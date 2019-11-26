@@ -15,4 +15,10 @@ class ReviewsController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def review_params
+    params.require(:review).permit(:punctuality_rate, :professionalism_rate, :fair_play_rate)
+  end
 end
