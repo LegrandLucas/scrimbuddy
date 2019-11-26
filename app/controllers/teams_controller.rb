@@ -23,10 +23,11 @@ class TeamsController < ApplicationController
   def edit; end
 
   def update
-   if @team.update(team_params)
-    redirect_to team_path(team)
+    if @team.update(team_params)
+      redirect_to team_path(team)
     else
       render :edit
+    end
   end
 
   def destroy
