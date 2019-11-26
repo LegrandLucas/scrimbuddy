@@ -1,0 +1,2 @@
+class ScrimsController < ApplicationController
+end
