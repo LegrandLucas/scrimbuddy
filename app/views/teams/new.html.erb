@@ -1,0 +1,10 @@
+<div class="container">
+  <%= simple_form_for [@team] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :league %>
+    <%#= f.input :country %>
+    <%= f.file_field :images, multiple: true, class: "form-control" %>
+    <%= f.file_field :logo, class: "form-control" %>
+    <%= f.submit "add a team", class: "btn btn-primary" %>
+  <% end %>
+</div>

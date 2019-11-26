@@ -191,6 +191,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activestorage
   autoprefixer-rails
   bootsnap
   devise
