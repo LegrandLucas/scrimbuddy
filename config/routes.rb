@@ -10,4 +10,9 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[new create]
   end
   resources :messages, only: %i[destroy]
+  resource :profile, only: [:show] do
+    get 'messages', on: :collection
+    get 'notification', on: :collection
+    get 'agenda', on: :collection
+  end
 end
