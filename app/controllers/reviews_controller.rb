@@ -28,6 +28,10 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    scrim = @review.scrim
+    authorize @review
+    @review.destroy
+    redirect_to scrim_path(scrim)
   end
 
   private
