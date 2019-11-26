@@ -1,0 +1,13 @@
+<div class="container">
+  <% @teams.each do |team|%>
+    <% team.users.each do |user| %>
+      <%= user.first_name %>
+      <% if user.avatar.attached? %>
+        <%= image_tag user.avatar, height: 200, width: 200 %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+
+<%= console %>
