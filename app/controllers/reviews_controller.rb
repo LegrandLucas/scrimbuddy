@@ -1,13 +1,14 @@
 class ReviewsController < ApplicationController
   def new
     @review = Review.new
-    autorize @review
+    authorize @review
   end
 
   def create
   end
 
   def edit
+    authorize @review
   end
 
   def update
