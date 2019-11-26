@@ -14,7 +14,7 @@ class TeamsController < ApplicationController
   def create
     @team = Team.new(team_params)
     if @team.save
-      redirect_to root_path
+      redirect_to teams_path
     else
       render :new
     end
@@ -24,10 +24,12 @@ class TeamsController < ApplicationController
 
   def update
     @team.update(team_params)
+    redirect_to team_path(team)
   end
 
   def destroy
     @team.destroy
+    redirect_to teams_path
   end
 
   private
