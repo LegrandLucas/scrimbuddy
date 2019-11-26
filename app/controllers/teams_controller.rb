@@ -23,8 +23,10 @@ class TeamsController < ApplicationController
   def edit; end
 
   def update
-    @team.update(team_params)
+   if @team.update(team_params)
     redirect_to team_path(team)
+    else
+      render :edit
   end
 
   def destroy
@@ -39,6 +41,6 @@ class TeamsController < ApplicationController
   end
 
   def team_params
-    params.require(:team).permit(:name, :league, :country, images: [])
+    params.require(:team).permit(:name, :league, :country, images: [], logo: [])
   end
 end
