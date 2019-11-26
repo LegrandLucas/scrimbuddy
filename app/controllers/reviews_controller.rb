@@ -18,6 +18,13 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @scrim = @review.scrim
+    authorize @review
+    if @review.update(review_params)
+      redirect_to scrim_path(@scrim)
+    else
+      render :edit
+    end
   end
 
   def destroy
