@@ -1,18 +1,18 @@
 <div class="nav-container">
   <div class="sb-container">
     <div class="d-flex justify-content-between">
-      <a class="logo" href="/">
-        <img src="https://myrealdomain.com/images/random-logo-6.png" alt="">
-      </a>
+      <%= link_to root_path do %>
+        <%= image_tag "https://myrealdomain.com/images/random-logo-6.png" %>
+      <% end %>
       <div class="sb-navbar">
         <li class="sb-list">
-          <a class="sb-link" href="#">Teams</a>
+          <%= link_to "Teams", teams_path, class: "sb-link" %>
         </li>
         <li class="sb-list">
-          <a class="sb-link" href="#">Chat room</a>
+          <%= link_to "Chat romm", root_path, class: "sb-link" %>
         </li>
         <li class="sb-list active">
-          <a class="sb-link" href="#">Scrims</a>
+          <%= link_to "Add a scrim", root_path, class: "sb-link" %>
         </li>
         <li class="sb-link dropdown">
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
