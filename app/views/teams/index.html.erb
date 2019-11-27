@@ -1,13 +1,24 @@
-<div class="container">
-  <% @teams.each do |team|%>
-    <% team.users.each do |user| %>
-      <%= user.pseudo %>
-      <% if user.avatar.attached? %>
-        <%= image_tag(user.avatar, class: "avatar", :transformation=>[{:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},{:width=>200, :crop=>"scale"}])%>
-      <% end %>
-    <% end %>
-  <% end %>
+<div class="sb-container ">
+  <div class="row d-flex ">
+    <% @teams.each do |team| %>
+    <div class="col-4">
+      <div class="team-card m-2">
+        <% team.images.each do |image|%>
+         <%= image_tag image %>
+       <div class="team-card-infos">
+        <h2><%= team.name%></h2>
+      </div>
+
+    </div>
+     <% end %>
+  </div>
+
+   <% end %>
+    </div>
+
+
 </div>
 
 
-<%= console %>
+
+

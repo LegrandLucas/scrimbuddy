@@ -1,0 +1,23 @@
+.team-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.team-card > img {
+  height: 300px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  margin: auto
+}
+
+.team-card-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
