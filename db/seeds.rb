@@ -54,6 +54,39 @@ fcs_logo_path = Rails.root.join('app', 'assets', 'images', 'logofcs.png')
 fcschalke.images.attach(io: File.open(fcs_logo_path), filename: 'logofcs.png', content_type: 'image/png')
 
 
+misfits = Team.create!(
+  name: "Misfits Gaming",
+  league: "LEC",
+  country: "US",
+  description: "Misfits was formed in May 2016 to play in the EUCS Summer Qualifiers after their former parent organization Renegades was banned from competitive play and so could no longer compete under the name Renegades: Banditos. In the qualifiers, they finished first in their group and then defeated EURONICS Gaming 3-1 in the finals to successfully qualify for the Summer Season."
+)
+
+misfits_logo_path = Rails.root.join('app', 'assets', 'images', 'logomisfits.png')
+
+misfits.images.attach(io: File.open(misfits_logo_path), filename: 'logomisfits.png', content_type: 'image/png')
+
+vitality = Team.create!(
+  name: "Team Vitality",
+  league: "LEC",
+  country: "France",
+  description: "Team Vitality formed its League of Legends team in December 2015 as its first expansion into PC gaming, acquiring Gambit Gaming's EU LCS Spring 2016 seed. Their first player signed at the time of announcement was former H2k support kaSing. 5 days later, Vitality completed their roster with former Gambit toplaner Cabochard, former CW jungler Shook, former ROCCAT midlaner Nukeduck and kaSing's former teammate Hjarnan. For their coaching staff, Vitality signed former Gambit coach Shaunz."
+)
+vitality_logo_path = Rails.root.join('app', 'assets', 'images', 'logovitality.png')
+
+vitality.images.attach(io: File.open(vitality_logo_path), filename: 'logovitality.png', content_type: 'image/png')
+
+
+splyce = Team.create!(
+  name: "Splyce",
+  league: "LEC",
+  country: "Canada",
+  description: "Splyce is an American esports organization with a European League of Legends team. The organization was acquired by OverActive Media in November 2018. They were previously known as Follow eSports."
+)
+splyce_logo_path = Rails.root.join('app', 'assets', 'images', 'splycelogo.png')
+
+splyce.images.attach(io: File.open(splyce_logo_path), filename: 'splycelogo.png', content_type: 'image/png')
+
+
 
 nemesis = User.create!(
   first_name: "Tim",
@@ -318,7 +351,7 @@ trick.avatar.attach(io: File.open(avatar_trick_path), filename: 'trick.png', con
 falco = User.create!(
   first_name: "Dylan",
   last_name: "Falco",
-  email: "dylanfalco@g2esport.com",
+  email: "dylanfalco@fcs.com",
   password: "azerty",
   pseudo: "Falco",
   team: fcschalke,
@@ -328,6 +361,271 @@ falco = User.create!(
 avatar_falco_path = Rails.root.join('app', 'assets', 'images', 'falco.png')
 falco.avatar.attach(io: File.open(avatar_falco_path), filename: 'falco.png', content_type: 'image/png')
 
+hiva = User.create!(
+  first_name: "Aleksi",
+  last_name: "Kaikkonen",
+  email: "alexiskaikkonen@misfits.com",
+  password: "azerty",
+  lol_account: "H1IVA",
+  pseudo: "H1iva",
+  team: misfits,
+  user_type: "player",
+  role: "Support"
+  )
+
+avatar_hiva_path = Rails.root.join('app', 'assets', 'images', 'hiva.png')
+hiva.avatar.attach(io: File.open(avatar_hiva_path), filename: 'hiva.png', content_type: 'image/png')
+
+neon = User.create!(
+  first_name: "Matúš",
+  last_name: "Jakubčík",
+  email: "mj@misfits.com",
+  password: "azerty",
+  lol_account: "Neon",
+  pseudo: "Neon",
+  team: misfits,
+  user_type: "player",
+  role: "Carry AD"
+  )
+
+avatar_neon_path = Rails.root.join('app', 'assets', 'images', 'neon.png')
+neon.avatar.attach(io: File.open(avatar_neon_path), filename: 'neon.png', content_type: 'image/png')
+
+febiven = User.create!(
+  first_name: "Fabian",
+  last_name: "Diepstraten",
+  email: "fabiandiep@misfits.com",
+  password: "azerty",
+  lol_account: "OwOOvOOwO",
+  pseudo: "Febiven",
+  team: misfits,
+  user_type: "player",
+  role: "Mid"
+  )
+
+avatar_febiven_path = Rails.root.join('app', 'assets', 'images', 'febiven.png')
+febiven.avatar.attach(io: File.open(avatar_febiven_path), filename: 'febiven.png', content_type: 'image/png')
+
+kirei = User.create!(
+  first_name: "Thomas",
+  last_name: "Yuen",
+  email: "thomasyuen@misfits.com",
+  password: "azerty",
+  lol_account: "Best Elise Korea",
+  pseudo: "Kirei",
+  team: misfits,
+  user_type: "player",
+  role: "Jungler"
+  )
+
+avatar_kirei_path = Rails.root.join('app', 'assets', 'images', 'kirei.png')
+kirei.avatar.attach(io: File.open(avatar_kirei_path), filename: 'kirei.png', content_type: 'image/png')
+
+dandan = User.create!(
+  first_name: "Danny",
+  last_name: "Le Comte",
+  email: "dannylecomte@misfits.com",
+  password: "azerty",
+  lol_account: "Dan Dan DD",
+  pseudo: "Dan Dan",
+  team: misfits,
+  user_type: "player",
+  role: "Top"
+  )
+
+avatar_dandan_path = Rails.root.join('app', 'assets', 'images', 'dandan.png')
+dandan.avatar.attach(io: File.open(avatar_dandan_path), filename: 'dandan.png', content_type: 'image/png')
+
+jandro = User.create!(
+  first_name: "Alejandro",
+  last_name: "Fernández-Valdés",
+  email: "jandro@misfits.com",
+  password: "azerty",
+  pseudo: "Jandro",
+  team: misfits,
+  user_type: "coach",
+  )
+
+avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
+jandro.avatar.attach(io: File.open(avatar_jandro_path), filename: 'jandro.png', content_type: 'image/png')
+
+cabochard = User.create!(
+  first_name: "Lucas",
+  last_name: "Simon-Meslet",
+  email: "lulu@vitality.com",
+  password: "azerty",
+  lol_account: "HB Cabochard",
+  pseudo: "Cabochard",
+  team: vitality,
+  user_type: "player",
+  role: "Top"
+  )
+
+avatar_cabochard_path = Rails.root.join('app', 'assets', 'images', 'cabochard.png')
+cabochard.avatar.attach(io: File.open(avatar_cabochard_path), filename: 'cabochard.png', content_type: 'image/png')
+
+mowgli = User.create!(
+  first_name: "Lee",
+  last_name: "Jae-ha",
+  email: "leejae@vitality.com",
+  password: "azerty",
+  lol_account: "jaeha",
+  pseudo: "Mowgli",
+  team: vitality,
+  user_type: "player",
+  role: "Jungler"
+  )
+
+avatar_mowgli_path = Rails.root.join('app', 'assets', 'images', 'mowgli.png')
+mowgli.avatar.attach(io: File.open(avatar_mowgli_path), filename: 'mowgli.png', content_type: 'image/png')
+
+jiizuke = User.create!(
+  first_name: "Daniele",
+  last_name: "di Mauro",
+  email: "jiizuke@vitality.com",
+  password: "azerty",
+  lol_account: "VIT Jiizuké",
+  pseudo: "Jiizuke",
+  team: vitality,
+  user_type: "player",
+  role: "Mid"
+  )
+
+avatar_jiizuke_path = Rails.root.join('app', 'assets', 'images', 'jiizuke.png')
+jiizuke.avatar.attach(io: File.open(avatar_jiizuke_path), filename: 'jiizuke.png', content_type: 'image/png')
+
+attila = User.create!(
+  first_name: "Amadeu",
+  last_name: "Carvalho",
+  email: "wolfgang@vitality.com",
+  password: "azerty",
+  lol_account: "VIT Attila",
+  pseudo: "Attila",
+  team: vitality,
+  user_type: "player",
+  role: "Carry AD"
+  )
+
+avatar_attila_path = Rails.root.join('app', 'assets', 'images', 'attila.png')
+attila.avatar.attach(io: File.open(avatar_attila_path), filename: 'attila.png', content_type: 'image/png')
+
+jactroll = User.create!(
+  first_name: "Jakub",
+  last_name: "Skurzyński",
+  email: "jskur@vitality.com",
+  password: "azerty",
+  lol_account: "VIT jactroll",
+  pseudo: "Jactroll",
+  team: vitality,
+  user_type: "player",
+  role: "Support"
+  )
+
+avatar_jactroll_path = Rails.root.join('app', 'assets', 'images', 'jactroll.png')
+jactroll.avatar.attach(io: File.open(avatar_jactroll_path), filename: 'jactroll.png', content_type: 'image/png')
+
+yamato = User.create!(
+  first_name: "Jakob",
+  last_name: "Mebdi",
+  email: "jakobmebdi@vitality.com",
+  password: "azerty",
+  pseudo: "YamatoCannon",
+  team: vitality,
+  user_type: "coach",
+  )
+
+avatar_yamato_path = Rails.root.join('app', 'assets', 'images', 'yamato.png')
+yamato.avatar.attach(io: File.open(avatar_yamato_path), filename: 'yamato.png', content_type: 'image/png')
+
+kobbe = User.create!(
+  first_name: "Kasper",
+  last_name: "Kobberup",
+  email: "kasper@splyce.com",
+  password: "azerty",
+  lol_account: "Kobbe",
+  pseudo: "Kobbe",
+  team: splyce,
+  user_type: "player",
+  role: "Carry AD"
+  )
+
+avatar_kobbe_path = Rails.root.join('app', 'assets', 'images', 'kobbe.png')
+kobbe.avatar.attach(io: File.open(avatar_kobbe_path), filename: 'kobbe.png', content_type: 'image/png')
+
+xerxe = User.create!(
+  first_name: "Andrei",
+  last_name: "Dragomir",
+  email: "andreidragomir@splyce.com",
+  password: "azerty",
+  lol_account: "Xerxe",
+  pseudo: "Xerxe",
+  team: splyce,
+  user_type: "player",
+  role: "Jungler"
+  )
+
+avatar_xerxe_path = Rails.root.join('app', 'assets', 'images', 'xerxe.png')
+xerxe.avatar.attach(io: File.open(avatar_xerxe_path), filename: 'xerxe.png', content_type: 'image/png')
+
+
+humanoid = User.create!(
+  first_name: "Marek",
+  last_name: "Brázda",
+  email: "marek@splyce.com",
+  password: "azerty",
+  lol_account: "Humanoid",
+  pseudo: "Humanoid",
+  team: splyce,
+  user_type: "player",
+  role: "Mid"
+  )
+
+avatar_humanoid_path = Rails.root.join('app', 'assets', 'images', 'humanoid.png')
+humanoid.avatar.attach(io: File.open(avatar_humanoid_path), filename: 'humanoid.png', content_type: 'image/png')
+
+tore = User.create!(
+  first_name: "Tore",
+  last_name: "Hoel Eilertsen",
+  email: "tore@splyce.com",
+  password: "azerty",
+  lol_account: "ekstra stor Tore",
+  pseudo: "Tore",
+  team: splyce,
+  user_type: "player",
+  role: "Support"
+  )
+
+avatar_tore_path = Rails.root.join('app', 'assets', 'images', 'tore.png')
+tore.avatar.attach(io: File.open(avatar_tore_path), filename: 'tore.png', content_type: 'image/png')
+
+vizicsacsi = User.create!(
+  first_name: "Tamás",
+  last_name: "Kiss",
+  email: "tamas@splyce.com",
+  password: "azerty",
+  lol_account: "aN Vizicsacsi",
+  pseudo: "Vizicsacsi",
+  team: splyce,
+  user_type: "player",
+  role: "Top"
+  )
+
+avatar_vizicsacsi_path = Rails.root.join('app', 'assets', 'images', 'vizicsacsi.png')
+vizicsacsi.avatar.attach(io: File.open(avatar_vizicsacsi_path), filename: 'vizicsacsi.png', content_type: 'image/png')
+
+
+duke = User.create!(
+  first_name: "Hadrien",
+  last_name: "Forestier",
+  email: "duke@splyce.com",
+  password: "azerty",
+  pseudo: "duke",
+  team: splyce,
+  user_type: "coach",
+  )
+
+avatar_duke_path = Rails.root.join('app', 'assets', 'images', 'duke.png')
+duke.avatar.attach(io: File.open(avatar_duke_path), filename: 'duke.png', content_type: 'image/png')
 
 
 
