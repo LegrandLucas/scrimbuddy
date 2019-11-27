@@ -1,0 +1,36 @@
+
+<div class="container">
+
+
+<div class="card-container">
+  <% @teams.each do |team|%>
+    <% team.users.each do |user| %>
+      <div class="top-card">
+        <h2><%= user.pseudo %></h2>
+        <div id="background">
+          <%= image_tag (user.avatar), class: "profile-pic" %>
+        </div>
+      </div>
+        <h2>Information</h2>
+      <div class="middle-card">
+        <div>
+        <h4><strong>Name:</strong> <%= user.first_name %>  <%= user.last_name %></h4>
+        </div>
+        <div>
+        <h4><strong>Role:</strong> <%= user.role %></h4>
+        </div>
+      </div>
+      <h2>Competitive</h2>
+      <div class="bottom-card">
+        <div>
+        <h4><strong>Team:</strong> <%= team.name %></h4>
+        </div>
+        <div>
+        <h4><strong>Favorite champ:</strong><p>xxxx</p></h4>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+</div>
