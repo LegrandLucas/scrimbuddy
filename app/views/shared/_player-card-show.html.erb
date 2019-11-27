@@ -1,0 +1,13 @@
+<div class="row d-flex ">
+  <% @team.users.each do |user| %>
+  <div class="col-2">
+    <%= image_tag user.avatar, class: "avatar-xl" %>
+    <h3><%= user.pseudo %></h2>
+  </div>
+
+    <% end %>
+</div>
+
+
+
+
