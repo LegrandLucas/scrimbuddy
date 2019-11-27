@@ -1,22 +1,5 @@
 <div class="sb-container ">
-  <div class="row d-flex ">
-    <% @teams.each do |team| %>
-    <div class="col-4">
-      <div class="team-card m-2">
-        <% team.images.each do |image|%>
-         <%= image_tag image %>
-       <div class="team-card-infos">
-        <h2><%= team.name%></h2>
-      </div>
-
-    </div>
-     <% end %>
-  </div>
-
-   <% end %>
-    </div>
-
-
+  <%= render 'shared/team-card-index'%>
 </div>
 
 
