@@ -276,7 +276,7 @@ odoamne = User.create!(
   password: "azerty",
   lol_account: "Odoamne",
   pseudo: "Odoamne",
-  team: gtwo,
+  team: fcschalke,
   user_type: "player",
   role: "Top"
   )
