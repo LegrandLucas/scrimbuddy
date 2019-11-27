@@ -1,0 +1,25 @@
+<div id="row">
+   <div class="col-xs-12 col-md-6 col-lg-3">
+    <% @teams.each do |team|%>
+    <div id="player-card">
+      <div class="body">
+        <% team.users.each do |user| %>
+          <%= image_tag (user.avatar), class: "avatar" %>
+          <div class="text-bloc">
+            <div>
+              <strong>Pseudo:</strong> <%= user.pseudo %>
+            </div>
+            <div>
+              <strong>Role:</strong> <%= user.role %>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
+     </div>
+  </div>
+</div>
+
+
+
+
