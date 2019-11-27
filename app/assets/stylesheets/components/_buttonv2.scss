@@ -1,0 +1,18 @@
+.btn-v2 {
+  background: #348498B7;
+  border-radius: 5px;
+  box-shadow: -1px 2px #00000075;
+  color: #F8F0F0FF;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  padding: 3px 125px;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.btn-v2:hover {
+  background: #348498;
+  color: #F8F0F0FF;
+  text-decoration: none;
+}
