@@ -1,0 +1,18 @@
+.btn-ca {
+  background: linear-gradient(#FF502F,#DD3718FF);
+  border-radius: 5px;
+  border: 1px solid #DD3718FF;
+  color: #F8F0F0FF;
+  display: inline-block;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  padding: 8px 24px;
+  transition: background 0.2s ease;
+}
+
+.btn-ca:hover {
+  background: linear-gradient(#DD3718FF,#FF502FB4 );
+  color: #F8F0F0FF;
+  text-decoration: none;
+}
