@@ -3,7 +3,7 @@
   justify-content: space-between;
 }
 
-.match-container {
+.boxes-list {
   background: rgba(91, 215, 111, 0.3);
   border: 1px solid #348498;
   border-radius: 5px;
@@ -17,16 +17,26 @@
   width: 936px;
 }
 
-.versus-match-card {
-  height: 61px;
-  width: 56px;
-  margin-top: 12px;
-  margin-left: 10px;
+.vs-boxes {
+  margin-top: 10px;
+  width: 15%;
+  flex: auto;
+  margin: 0.5rem;
+  background: white;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  list-style: none;
 }
 
-h2 {
+h2, h3 {
   font-family: 'Raleway', "Helvetica", "sans-serif";
   text-align: center;
   font-weight: 700;
   font-size: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-top: 15px;
 }
