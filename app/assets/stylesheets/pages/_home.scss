@@ -1,1 +1,28 @@
 // Specific CSS for your home-page
+.gif-container {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-size: cover;
+  background-image: url("home-gif.gif");
+}
+
+.white-circle {
+  background-color: white;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  position: absolute;
+  top: -40vw;
+  left: -40vw;
+}
+
+.navbar {
+  z-index: 2;
+}
+
+.home-text {
+  position: absolute;
+  bottom: 14vw;
+  right: 14vw;
+  width: 20vw;
+}
