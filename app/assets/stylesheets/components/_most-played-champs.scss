@@ -1,0 +1,28 @@
+.vs-boxes {
+  margin-top: 10px;
+  width: 10px;
+  height: 8em;
+  flex: auto;
+  margin: 0.5rem;
+  margin-left: -1px;
+  background: white;
+  line-height: 50px;
+  text-align: center;
+  list-style: none;
+}
+
+.boxes-list {
+  display: flex;
+  background: rgba(91, 215, 111, 0.3);
+  border: 1px solid #348498;
+  width: 900px;
+}
+
+.cards {
+  display: grid;
+  grid-gap: 16px;
+}
+
+.title-card {
+  text-align: center;
+}
