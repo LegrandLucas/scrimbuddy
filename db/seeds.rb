@@ -17,33 +17,29 @@ Team.destroy_all
 puts "Creating users, teams, reviews and scrims..."
 
 fnatic = Team.create!(
-  name: "Fnatic",
+  name: "FNATIC",
   league: "LEC",
   country: "England",
   description: "Fnatic is a professional esports organization headquartered in London, United Kingdom. Founded 23 July 2004, the team has players from around the world, across a variety of games"
 )
 
-fnatic_path = Rails.root.join('app', 'assets', 'images', 'fnatic.png')
 logo_path = Rails.root.join('app', 'assets', 'images', 'logofnatic.png')
 
-fnatic.images.attach(io: File.open(fnatic_path), filename: 'fnatic.png', content_type: 'image/png')
 fnatic.images.attach(io: File.open(logo_path), filename: 'logofnatic.png', content_type: 'image/png')
 
 gtwo = Team.create!(
-  name: "G2 Esports",
+  name: "G2 ESPORTS",
   league: "LEC",
   country: "Spain",
   description: "G2 Esports, formerly known as Gamers2, is a Spanish esports organisation based in Berlin, Germany,[1] with players competing in League of Legends"
 )
 
-gtwo_path = Rails.root.join('app', 'assets', 'images', 'gtwo.png')
 gtwo_logo_path = Rails.root.join('app', 'assets', 'images', 'logogtwo.png')
 
-gtwo.images.attach(io: File.open(gtwo_path), filename: 'gtwo.png', content_type: 'image/png')
 gtwo.images.attach(io: File.open(gtwo_logo_path), filename: 'logogtwo.png', content_type: 'image/png')
 
 fcschalke = Team.create!(
-  name: "FC Schalke 04 Esports",
+  name: "FC SCHALKE",
   league: "LEC",
   country: "Germany",
   description: "FC Schalke 04 Esports was announced on May 16, 2016, having purchased the EU LCS Summer 2016 seed and roster of Elements.[1] Their roster included Steve, Gilius, MrRalleZ, and sprattel from Elements's Spring Season lineup, with Fox from Unicorns of Love replacing Eika. With the acquisition, FC Schalke 04 became the second professional sports organization to sign a League of Legends team, after Beşiktaş acquired Aces High in 2015."
@@ -55,7 +51,7 @@ fcschalke.images.attach(io: File.open(fcs_logo_path), filename: 'logofcs.png', c
 
 
 misfits = Team.create!(
-  name: "Misfits Gaming",
+  name: "MISFITS",
   league: "LEC",
   country: "US",
   description: "Misfits was formed in May 2016 to play in the EUCS Summer Qualifiers after their former parent organization Renegades was banned from competitive play and so could no longer compete under the name Renegades: Banditos. In the qualifiers, they finished first in their group and then defeated EURONICS Gaming 3-1 in the finals to successfully qualify for the Summer Season."
@@ -66,7 +62,7 @@ misfits_logo_path = Rails.root.join('app', 'assets', 'images', 'logomisfits.png'
 misfits.images.attach(io: File.open(misfits_logo_path), filename: 'logomisfits.png', content_type: 'image/png')
 
 vitality = Team.create!(
-  name: "Team Vitality",
+  name: "VITALITY",
   league: "LEC",
   country: "France",
   description: "Team Vitality formed its League of Legends team in December 2015 as its first expansion into PC gaming, acquiring Gambit Gaming's EU LCS Spring 2016 seed. Their first player signed at the time of announcement was former H2k support kaSing. 5 days later, Vitality completed their roster with former Gambit toplaner Cabochard, former CW jungler Shook, former ROCCAT midlaner Nukeduck and kaSing's former teammate Hjarnan. For their coaching staff, Vitality signed former Gambit coach Shaunz."
@@ -77,7 +73,7 @@ vitality.images.attach(io: File.open(vitality_logo_path), filename: 'logovitalit
 
 
 splyce = Team.create!(
-  name: "Splyce",
+  name: "SPLYCE",
   league: "LEC",
   country: "Canada",
   description: "Splyce is an American esports organization with a European League of Legends team. The organization was acquired by OverActive Media in November 2018. They were previously known as Follow eSports."

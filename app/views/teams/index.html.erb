@@ -1,13 +1,7 @@
-<div class="container">
-  <% @teams.each do |team|%>
-    <% team.users.each do |user| %>
-      <%= user.pseudo %>
-      <% if user.avatar.attached? %>
-        <%= image_tag(user.avatar, class: "avatar", :transformation=>[{:width=>400, :height=>400, :gravity=>"face", :radius=>"max", :crop=>"crop"},{:width=>200, :crop=>"scale"}])%>
-      <% end %>
-    <% end %>
-  <% end %>
+<div class="sb-container ">
+  <%= render 'shared/team-card-index'%>
 </div>
 
 
-<%= console %>
+
+
