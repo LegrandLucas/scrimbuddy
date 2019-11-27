@@ -1,15 +1,13 @@
 .nav-container {
-  width: 100%;
   background-color: $sb-light-blue;
+  display: contents;
   color: white;
-  display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
 
   img {
       width: 80px;
-      margin-left: 20px;
       align-self: center;
     }
 
@@ -20,17 +18,19 @@
     }
 }
 
+.sb-container {
+  margin: 0 auto;
+  width: 90%;
+}
 
 .sb-navbar {
   display: flex;
   color: white;
   align-items: center;
   list-style-type: none;
-  margin-right: 20px;
 
   li {
     padding: 5px;
-    margin-right: 10px;
     color: black;
   }
 
