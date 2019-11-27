@@ -1,11 +1,12 @@
 .nav-container {
+  position: relative;
   background-color: $sb-light-blue;
   display: contents;
   color: white;
   display: flex;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  z-index: 2;
+  z-index: 3;
 
   img {
       width: 80px;
