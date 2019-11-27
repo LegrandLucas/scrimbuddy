@@ -1,0 +1,52 @@
+.card-container {
+  width: 391px;
+  height: 800px;
+  left: 27px;
+  top: 137px;
+  border-radius: 5px;
+  background-color: $sb-orange;
+  border: 2px solid $sb-orange;
+
+  h3 {
+    color: white;
+    position: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  h2 {
+    color: white;
+    position: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #background {
+    background-color: white;
+    height: 310px;
+    position: relative;
+
+  }
+
+  .profile-pic {
+    height: 290px;
+    align-self: center;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .middle-card {
+    color: black;
+    padding: 20px 40px;
+    background-color: white;
+    margin: solid;
+  }
+
+  .bottom-card {
+    color: black;
+    padding: 20px 40px;
+    background-color: white;
+    margin: solid;
+  }
+}
+
