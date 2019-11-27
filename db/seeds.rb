@@ -172,6 +172,7 @@ mephisto = User.create!(
   pseudo: "Mephisto",
   team: fnatic,
   user_type: "Coach",
+  role: "Coach"
 )
 
 avatar_mephisto_path = Rails.root.join('app', 'assets', 'images', 'troud.png')
@@ -264,6 +265,7 @@ grabzz = User.create!(
   pseudo: "Grabzz",
   team: gtwo,
   user_type: "coach",
+  role: "Coach"
   )
 
 avatar_grabzz_path = Rails.root.join('app', 'assets', 'images', 'grabzz.png')
@@ -352,6 +354,7 @@ falco = User.create!(
   pseudo: "Falco",
   team: fcschalke,
   user_type: "coach",
+  role: "Coach"
   )
 
 avatar_falco_path = Rails.root.join('app', 'assets', 'images', 'falco.png')
@@ -440,6 +443,7 @@ jandro = User.create!(
   pseudo: "Jandro",
   team: misfits,
   user_type: "coach",
+  role: "Coach"
   )
 
 avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
@@ -528,6 +532,7 @@ yamato = User.create!(
   pseudo: "YamatoCannon",
   team: vitality,
   user_type: "coach",
+  role: "Coach"
   )
 
 avatar_yamato_path = Rails.root.join('app', 'assets', 'images', 'yamato.png')
@@ -618,6 +623,7 @@ duke = User.create!(
   pseudo: "duke",
   team: splyce,
   user_type: "coach",
+  role: "Coach"
   )
 
 avatar_duke_path = Rails.root.join('app', 'assets', 'images', 'duke.png')
