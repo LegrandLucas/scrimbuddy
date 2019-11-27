@@ -1,9 +1,17 @@
-.player-card-infos{
-
-}
 
 .avatar-xl {
   object-fit: cover;
   height: 150px;
   width: 150px;
+}
+
+
+.player-card {
+  border: 2px solid $sb-blue;
+  border-radius: 5px
+}
+
+.player-card-infos p{
+  color: $sb-blue;
+  font-weight: bold
 }
