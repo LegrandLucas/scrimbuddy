@@ -1,9 +1,8 @@
 <div class="sb-container">
-  <div class="logo">
-   <a class="navbar-brand" href="#">
+   <a class="logo" href="/">
       <img src="https://myrealdomain.com/images/random-logo-6.png" alt="">
     </a>
-  </div>
+
   <div class="sb-navbar">
     <li class="sb-list">
           <a class="sb-link" href="#">Teams</a>
@@ -15,32 +14,19 @@
           <a class="sb-link" href="#">Scrims</a>
         </li>
         <li class="sb-link dropdown">
-  </div>
-</div>
-
-
-
-
-
-
-    <div class="sb-navbar">
-  <div class="???">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar mr-auto">
-
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-list" href="#">Profile</a>
-            <a class="dropdown-list" href="#">Log out</a>
+          <div class="dropdown-content">
+            <%= link_to "Profile", "/dashboard", class: "link" %>
+            <%= link_to "Logout", "/", class: "link" %>
           </div>
         </li>
-      </ul>
-    </div>
-  </div>
+ </div>
 </div>
+</div>
+
+
+
+
+
+
+
