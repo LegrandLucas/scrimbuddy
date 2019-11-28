@@ -10,34 +10,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  def scrapping_summoner_infos_from_riot_games
-    summoner_url = "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/#{lol_account}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
-    summoner_serialized = open(URI.parse(URI.escape(summoner_url))).read
-    summoner_infos = JSON.parse(summoner_serialized)
-    return summoner_infos
-  end
-
   def scraping_summoner_stats_from_riot_games
-    all_stats = []
-    summoner_infos = scrapping_summoner_infos_from_riot_games
-    summoner_id = summoner_infos['id']
-
-    stats_url = "https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/#{summoner_id}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
+    summoner_infos   = scrapping_summoner_infos_from_riot_games
+    stats_url        = "https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/#{summoner_infos['id']}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
     stats_serialized = open(stats_url).read
-    stats_infos = JSON.parse(stats_serialized)
-    stats = stats_infos.first
-    wins = stats["wins"]
-    all_stats << wins
-    losses = stats["losses"]
-    all_stats << losses
-    tier = stats["tier"]
-    all_stats << tier
-    rank = stats["rank"]
-    all_stats << rank
-    league_points = stats["leaguePoints"]
-    all_stats << league_points
-
-    return all_stats
+    response_api     = JSON.parse(stats_serialized).first
+    {
+      total_winning_game: response_api["wins"],
+      total_loosing_game: response_api["losses"],
+      tier: response_api["tier"],
+      rank: response_api["rank"],
+      league_points: response_api["leaguePoints"]
+    }
   end
 
   def scrapping_matches_list_from_riot_games
@@ -51,11 +35,11 @@ class User < ApplicationRecord
     return matches_list["matches"].first(5)
   end
 
-  def scrappig_match_details_from_riot_games
+  def scrapping_match_details_from_riot_games
     matches = scrapping_matches_list_from_riot_games
     matches_id = []
     matches_details = []
-    matches.each { |match| matches_id << match[:gameId] }
+    matches.each { |match| matches_id << match["gameId"] }
 
     matches_id.each do |id|
       match_url = "https://euw1.api.riotgames.com/lol/match/v4/matches/#{id}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
@@ -70,11 +54,30 @@ class User < ApplicationRecord
   end
 
   def scrapping_champions_from_riot_games
-    matches_details = scrappig_match_details_from_riot_games
-    match_participants = []
-    champions_id = []
+    champion_list_url = "http://ddragon.leagueoflegends.com/cdn/9.23.1/data/en_US/champion.json"
+    champions_serialized = open(champion_list_url).read
+    champions = JSON.parse(champions_serialized)
+    champions_infos = champions['data']
+    p champions_infos
 
-    matches_details.each { |match| match_participants << match["participants"] }
-    match_participants.each { |participant| champions_id << [participant["participantId"], participant["championId"]] }
+    matches_details = scrapping_match_details_from_riot_games
+    champions_id = []
+    champions_name = []
+
+    matches_details["participants"].each { |participant| champions_id << [participant["participantId"], participant["championId"]] }
+    champions_id.each do |champion_id|
+      champion_id[1]
+    end
   end
+
+  private
+
+  def scrapping_summoner_infos_from_riot_games
+    summoner_url        = "https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/#{lol_account}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
+    puts 'URL'
+    p URI.parse(URI.escape(summoner_url))
+    summoner_serialized = open(URI.parse(URI.escape(summoner_url))).read
+    JSON.parse(summoner_serialized)
+  end
+
 end
