@@ -8,11 +8,11 @@
 # require 'faker'
 
 puts "Destroy all seeds..."
-
+Scrim.destroy_all
+Team.destroy_all
 User.destroy_all
 # Review.destroy_all
-Team.destroy_all
-# Scrim.destroy_all
+
 
 puts "Creating users, teams, reviews and scrims..."
 
@@ -628,6 +628,43 @@ duke = User.create!(
 
 avatar_duke_path = Rails.root.join('app', 'assets', 'images', 'duke.png')
 duke.avatar.attach(io: File.open(avatar_duke_path), filename: 'duke.png', content_type: 'image/png')
+
+
+scrim1 = Scrim.create!(
+  start_game: DateTime.new(2019,10,23,10,20,00),
+  end_game: DateTime.new(2019,10,23,12,20,00),
+  result: "Win",
+  team_host: vitality,
+  team_visitor: splyce,
+  confirmation: true
+  )
+
+scrim2 = Scrim.create!(
+  start_game: DateTime.new(2019,10,23,10,30,00),
+  end_game: DateTime.new(2019,10,23,12,20,00),
+  result: "Win",
+  team_host: fnatic,
+  team_visitor: gtwo,
+  confirmation: false
+  )
+
+scrim3 = Scrim.create!(
+  start_game: DateTime.new(2019,11,23,10,30,00),
+  end_game: DateTime.new(2019,11,23,12,20,00),
+  result: "Lost",
+  team_host: fnatic,
+  team_visitor: splyce,
+  confirmation: false
+  )
+
+scrim4 = Scrim.create!(
+  start_game: DateTime.new(2019,12,23,10,30,00),
+  end_game: DateTime.new(2019,12,23,12,20,00),
+  result: "Lost",
+  team_host: fnatic,
+  team_visitor: splyce,
+  confirmation: false
+  )
 
 
 
