@@ -1,0 +1,60 @@
+.card-container {
+  width: 391px;
+  left: 27px;
+  top: 137px;
+  border-radius: 5px;
+  // background-color: $sb-orange;
+}
+
+  h4 {
+    color: black;
+    position: center;
+    text-align: center;
+  }
+
+  h2 {
+    color: white;
+    position: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #background {
+    margin: 30px auto;
+  }
+
+  .team-logo {
+    height: 290px;
+
+  }
+
+  .profile-pic {
+    height: 290px;
+    align-self: center;
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .top-card {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+
+
+  .middle-card {
+    color: black;
+    padding: 20px 40px;
+    background-color: white;
+    margin: solid;
+  }
+
+  .bottom-card {
+    color: black;
+    padding: 20px 40px;
+    background-color: white;
+    margin: solid;
+  }
+
+
+

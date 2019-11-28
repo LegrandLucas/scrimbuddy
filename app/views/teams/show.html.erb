@@ -1,3 +1,18 @@
 <div class="sb-container ">
-  <%= render 'shared/player-card-show' %>
+  <div class="infos">
+    <div class="players">
+      <div>
+        <h1>TEAM PLAYERS</h1>
+      </div>
+      <%= render 'shared/player-card-show' %>
+    </div>
+    <div class="history">
+      <div>
+        <h1>MATCH HISTORY</h1>
+      </div>
+    </div>
+  </div>
+  <div class="team">
+    <%= render 'shared/team-card-show-team', team: @team %>
+  </div>
 </div>

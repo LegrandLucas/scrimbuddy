@@ -8,11 +8,11 @@
 # require 'faker'
 
 puts "Destroy all seeds..."
-
-User.destroy_all
-# Review.destroy_all
+Scrim.destroy_all
 Team.destroy_all
-# Scrim.destroy_all
+User.destroy_all
+Review.destroy_all
+
 
 puts "Creating users, teams, reviews and scrims..."
 
@@ -630,6 +630,110 @@ avatar_duke_path = Rails.root.join('app', 'assets', 'images', 'duke.png')
 duke.avatar.attach(io: File.open(avatar_duke_path), filename: 'duke.png', content_type: 'image/png')
 
 
+scrim1 = Scrim.create!(
+  start_game: DateTime.new(2019,10,23,10,20,00),
+  end_game: DateTime.new(2019,10,23,12,20,00),
+  result: "Win",
+  team_host: vitality,
+  team_visitor: fnatic,
+  confirmation: true
+  )
+
+scrim2 = Scrim.create!(
+  start_game: DateTime.new(2019,10,23,10,30,00),
+  end_game: DateTime.new(2019,10,23,12,20,00),
+  result: "Win",
+  team_host: fnatic,
+  team_visitor: gtwo,
+  confirmation: false
+  )
+
+scrim3 = Scrim.create!(
+  start_game: DateTime.new(2019,11,23,10,30,00),
+  end_game: DateTime.new(2019,11,23,12,20,00),
+  result: "Lost",
+  team_host: fnatic,
+  team_visitor: splyce,
+  confirmation: false
+  )
+
+scrim4 = Scrim.create!(
+  start_game: DateTime.new(2019,12,23,10,30,00),
+  end_game: DateTime.new(2019,12,23,12,20,00),
+  result: "Lost",
+  team_host: fnatic,
+  team_visitor: splyce,
+  confirmation: false
+  )
+
+scrim5 = Scrim.create!(
+  start_game: DateTime.new(2019,9,23,17,30,00),
+  end_game: DateTime.new(2019,9,23,19,30,00),
+  result: "Lost",
+  team_host: splyce,
+  team_visitor: fnatic,
+  confirmation: true
+  )
+
+scrim6 = Scrim.create!(
+  start_game: DateTime.new(2019,7,23,17,30,00),
+  end_game: DateTime.new(2019,7,23,19,30,00),
+  result: "Lost",
+  team_host: fcschalke,
+  team_visitor: fnatic,
+  confirmation: true
+  )
+
+review1 = Review.create!(
+  punctuality_rate: 4,
+  professionalism_rate: 3,
+  fair_play_rate: 5,
+  team: fnatic,
+  user: grabzz,
+  scrim: scrim1,
+ )
+
+review2 = Review.create!(
+  punctuality_rate: 5,
+  professionalism_rate: 2,
+  fair_play_rate: 5,
+  team: fnatic,
+  user: duke,
+  scrim: scrim5,
+ )
+
+review3 = Review.create!(
+  punctuality_rate: 5,
+  professionalism_rate: 5,
+  fair_play_rate: 5,
+  team: fnatic,
+  user: falco,
+  scrim: scrim6,
+ )
+
+message1 = Message.create!(
+  content: "Hello, is it still okay for tomorrow ?",
+  sender: falco,
+  receiver: mephisto,
+  )
+
+message2 = Message.create!(
+  content: "Yes and for you ?",
+  sender: mephisto,
+  receiver: falco,
+  )
+
+message3 = Message.create!(
+  content: "Yes, can we just do it earlier ? 30 minutes earlier than planed ?",
+  sender: falco,
+  receiver: mephisto,
+  )
+
+message4 = Message.create!(
+  content: "I asked the guys, no problem, see you tomorrow",
+  sender: mephisto,
+  receiver: falco,
+  )
 
 puts "Finished!"
 

@@ -1,0 +1,91 @@
+.filter-bar-container{
+}
+
+
+input {
+  width: 250px;
+  height: 30px;
+  padding: 3px;
+  border: 1px solid #DDE1E4;
+}
+
+select {
+  width: 258px;
+  position: relative;
+  left: -17px;
+  margin: 0;
+  border: 1px solid #DDE1E4;
+  border-top: none;
+  font-size:9pt;
+}
+
+ul {
+  display: none;
+}
+
+option {
+  padding: 3px;
+}
+
+option:hover {
+  background-color: #C4C4C4;
+}
+
+button {
+  width: 30px;
+  height: 38px;
+  position: relative;
+  left: -5px;
+  border: 1px solid #DDE1E4;
+  border-left: none;
+  background-color: #C4C4C4;
+  cursor: pointer;
+}
+
+// /* WHEN IN PROD THE FOLLOWING JS CODE MUST BE ADDED:
+
+// button = document.querySelector('button');
+// ul = document.querySelector('ul');
+// select = document.querySelector('select');
+// options = select.options;
+
+// /* on arrow button click, show/hide the ul:
+
+// /* button.addEventListener('click', toggle_ul);
+
+// function toggle_ul() {
+//   if (ul.style.display === '') {
+//     ul.style.display = 'block';
+//     this.textContent = "▲";
+
+//     /* If input already has a value, select that option from ul:
+
+//     var val = input.value;
+//     for (var i = 0; i < options.length; i++) {
+//       if (options[i].text === val) {
+//         select.selectedIndex = i;
+//         break;
+//       }
+//     }
+//   } else hide_select();
+// }
+
+// /* when user selects an option from ul, write it to text field:
+
+// select.addEventListener('change', fill_input);
+
+// function fill_input() {
+//   input.value = options[this.selectedIndex].value;
+//   hide_select();
+// }
+
+// /* when user wants to type in text field, hide ul:
+
+// input = document.querySelector('input');
+// input.addEventListener('focus', hide_select);
+
+// function hide_select() {
+//   ul.style.display = '';
+//   button.textContent = "▼";
+// }
+// */
