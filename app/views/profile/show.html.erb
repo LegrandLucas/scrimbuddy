@@ -1,0 +1,61 @@
+<div class="sb-container max-height">
+  <div class="row">
+    <div class="col-xs-12 col-lg-3">
+      <%= render 'shared/player_card_show_player' %>
+    </div>
+    <div class="col-xs-12 col-lg-9">
+      <div class="stat-category">
+        Personnal statistics
+      </div>
+      <div class="player-stats">
+        <div class="row">
+          <div class="col-4">
+            <div class="games-stats">
+              <div class="cirlcle-per-cent">
+                50%
+              </div>
+              <div class="games">
+                <%= @user.scraping_summoner_stats_from_riot_games[:total_games] %> games : <%= @user.scraping_summoner_stats_from_riot_games[:total_winning_game] %> wins / <%= @user.scraping_summoner_stats_from_riot_games[:total_loosing_game] %> wins
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="player-ranking">
+              <% if @user.scraping_summoner_stats_from_riot_games[:tier] == 'CHALLENGER' %>
+                <%= image_tag "ranking/Emblem_Challenger.png" %>
+              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'GRANDMASTER' %>
+                <%= image_tag "ranking/Emblem_Grandmaster.png" %>
+              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'MASTER' %>
+                <%= image_tag "ranking/Emblem_Master.png" %>
+              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'DIAMOND' %>
+                <%= image_tag "ranking/Emblem_Diamond.png" %>
+              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'PLATINIUM' %>
+                <%= image_tag "ranking/Emblem_Platinium.png" %>
+              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'GOLD' %>
+                <%= image_tag "ranking/Emblem_Gold.png" %>
+              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'SILVER' %>
+                <%= image_tag "ranking/Emblem_Silver.png" %>
+              <% else %>
+                <%= image_tag "raking/Emblem_Bronze.png" %>
+              <% end %>
+              <div class="ranking">
+                <p>Rank: <%= @user.scraping_summoner_stats_from_riot_games[:tier] %> <%= @user.scraping_summoner_stats_from_riot_games[:rank] %></p>
+                <p>League points: <%= @user.scraping_summoner_stats_from_riot_games[:league_points] %></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="games-stats">
+              <div class="cirlcle-per-cent">
+                50%
+              </div>
+              <div class="most-used-champ">
+                Most used champions
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>.
+</div>

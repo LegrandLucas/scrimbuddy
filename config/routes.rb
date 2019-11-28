@@ -10,10 +10,6 @@ Rails.application.routes.draw do
   resources :scrims, only: %i[udpate destroy] do
     resources :reviews, only: %i[new create]
   end
+  resources :profile, only: [:show]
   resources :messages, only: %i[destroy]
-  resources :dashboard, only: [:show] do
-    get 'messages', on: :collection
-    get 'notification', on: :collection
-    get 'agenda', on: :collection
-  end
 end

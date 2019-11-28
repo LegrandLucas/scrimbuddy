@@ -1,17 +1,16 @@
 .card-container {
-  width: 391px;
-  height: 800px;
   left: 27px;
   top: 137px;
   border-radius: 5px;
   background-color: $sb-orange;
   border: 2px solid $sb-orange;
+  margin-top: 20px;
 
-  h3 {
-    color: white;
+  h4 {
+    color: black;
     position: center;
     text-align: center;
-    padding: 20px;
+    font-size: 24px;
   }
 
   h2 {
@@ -19,6 +18,7 @@
     position: center;
     text-align: center;
     padding: 20px;
+    font-size: 24px;
   }
 
   #background {

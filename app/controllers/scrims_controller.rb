@@ -8,7 +8,10 @@ class ScrimsController < ApplicationController
 
   def create
     @scrim = Scrim.new(scrim_params)
+    @scrim.team_host = Team.find(params[:team_id])
+    @scrim.team_visitor = current_user.team
     if @scrim.save
+      flash[:notice] = "Bravo !"
       redirect_to team_path(@team_host)
     else
       render :new
@@ -42,6 +45,6 @@ class ScrimsController < ApplicationController
   end
 
   def set_team_host
-    @team_host = Team.find(params[:team_host_id])
+    @team_host = Team.find(params[:team_id])
   end
 end
