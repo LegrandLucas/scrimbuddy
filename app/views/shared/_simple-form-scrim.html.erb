@@ -1,0 +1,13 @@
+<div class="sb-container">
+  <div class="booking-form">
+    <h3>LOGO</h3>
+    <h4>Book a scrim with <%= team_host.name %></h4>
+    <div class="simple-form">
+      <%= simple_form_for [team_host, scrim] do |f| %>
+      <%= f.input :start_game, as: :string, input_html: { id: "start_game"} %>
+      <%= f.input :end_game, as: :string, input_html: { id: "end_game"}  %>
+      <%= f.button :submit,  value: 'Send invitation'%>
+    </div>
+    <% end %>
+  </div>
+</div>
