@@ -1,0 +1,30 @@
+
+<div class="container">
+  <div class="card-container">
+    <% @teams.each do |team|%>
+    <% team.users.each do |user| %>
+    <% team.images.each do |image|%>
+    <div class="top-card">
+      <div id="background">
+        <%= image_tag image, class: "team-logo" %>
+      </div>
+    </div>
+    <h2>Organisation</h2>
+    <div class="middle-card">
+      <h4><%= team.name %></h4>
+    </div>
+    <h2>Location</h2>
+    <div class="bottom-card">
+      <h4><strong>From:</strong> <%= team.country %></h4>
+    </div>
+    <h2>Coach</h2>
+    <div class="bottom-card">
+      <h4> <% if user.role == "Coach"%></h4>
+      <%=  user.name  %>
+      <% end %>
+    </div>
+    <% end %>
+    <% end %>
+    <% end %>
+  </div>
+</div>
