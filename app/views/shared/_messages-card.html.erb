@@ -1,0 +1,16 @@
+<div class="row d-flex ">
+  <% @team.images.each do |image| %>
+  <div class="col-4">
+    <div class="message-card d-flex ">
+      <%= image_tag image %>
+
+    <% end %>
+
+    <div class ="message-content">
+      <h3><%= @team.name %></h3>
+      <p>Last message recorded</p>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
