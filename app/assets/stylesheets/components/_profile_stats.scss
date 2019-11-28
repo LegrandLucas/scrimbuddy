@@ -1,0 +1,58 @@
+.stat-category {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: $sb-orange;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.max-height {
+  height: calc(100vh - 90px);
+}
+
+
+.cirlcle-per-cent {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.games-stats {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.games-stats, .player-ranking {
+  margin: 20px auto;
+  width: 100%;
+}
+
+.player-ranking {
+  text-align: center;
+}
+
+.player-ranking img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.games, .ranking, .most-used-champ {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center,
+}
+
+.ranking p {
+  margin: 0;
+}
