@@ -620,7 +620,7 @@ duke = User.create!(
   last_name: "Forestier",
   email: "duke@splyce.com",
   password: "azerty",
-  pseudo: "duke",
+  pseudo: "Duke",
   team: splyce,
   user_type: "coach",
   role: "Coach"
