@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users do
+    get '/dashboard/:id', to: "pages#dashboard"
     resources :messages, only: %i[index show new create]
   end
   resources :teams do
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[new create]
   end
   resources :messages, only: %i[destroy]
-  resource :profile, only: [:show] do
+  resources :dashboard, only: [:show] do
     get 'messages', on: :collection
     get 'notification', on: :collection
     get 'agenda', on: :collection
