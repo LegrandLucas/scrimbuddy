@@ -1,8 +1,8 @@
 
 <div class="container">
   <div class="card-container">
-    <% @teams.each do |team|%>
     <% team.users.each do |user| %>
+        <% if user.role == "Coach"%>
     <% team.images.each do |image|%>
     <div class="top-card">
       <div id="background">
@@ -19,11 +19,11 @@
     </div>
     <h2>Coach</h2>
     <div class="bottom-card">
-      <h4> <% if user.role == "Coach"%></h4>
-      <%=  user.name  %>
+
+      <%=  user.pseudo  %>
       <% end %>
     </div>
-    <% end %>
+
     <% end %>
     <% end %>
   </div>
