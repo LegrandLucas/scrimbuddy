@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   end
   resources :profile, only: [:show]
   resources :messages, only: %i[destroy]
+
+  resources :dashboard, only: :show
 end

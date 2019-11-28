@@ -16,10 +16,12 @@
         </li>
         <li class="sb-link dropdown">
           <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
-          <div class="dropdown-content">
-            <%= link_to "Profile", dashboard_path(current_user), class: "link" %>
-            <%= link_to "Logout", "/", class: "link" %>
-          </div>
+          <% if user_signed_in? %>
+            <div class="dropdown-content">
+              <%= link_to "Profile", dashboard_path(current_user), class: "link" %>
+              <%= link_to "Logout", "/", class: "link" %>
+            </div>
+          <% end %>
         </li>
       </div>
     </div>
