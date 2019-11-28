@@ -1,0 +1,89 @@
+/*En bas c'est juste une testing image that needs to be changed to the team logo */
+$img-url: "https://images.unsplash.com/photo-1525543907410-b2562b6796d6?ixlib=rb-0.3.5&s=9ff8e5e718a6a40cbd0e1471235912f4&auto=format&fit=crop&w=3452&q=80";
+
+
+.team-card-pos {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .center-content  p, ul {
+    text-align: center;
+    list-style-type:none;
+  }
+
+  .card {
+    box-shadow: 1px 2px #888A85FF;
+    position: relative;
+    width: 600px;
+    height: 150px;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 4px;
+
+    &:before {
+      z-index: 99;
+      position: absolute;
+      top: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: #99C1CB;
+    }
+    &:after {
+      z-index: 99;
+      position: absolute;
+      bottom: -10px;
+      left: 32px;
+      display: block;
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
+      background-color: #348498;
+    }
+
+    h2 {
+      z-index: 100;
+      font-family: "Raleway", sans-serif;
+      position: absolute;
+      bottom: 15px;
+      right: 130px;
+      font-size: 60px;
+      font-weight: 700;
+    }
+
+    .pic {
+      margin: 0px 0px 10px 20px;
+      box-shadow: 1px 2px #888A85FF;
+      width: 100px;
+      height: 150px;
+      /* testing image:*/
+      background-image: url($img-url);
+      background-size: 100% 100%;
+      filter: grayscale(100%);
+    }
+
+    &:hover p {
+      color: #348498;
+    }
+
+    &:hover .pic {
+      filter: grayscale(0);
+
+    }
+  }
+
+}
