@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_145904) do
+ActiveRecord::Schema.define(version: 2019_11_28_110219) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,14 +61,14 @@ ActiveRecord::Schema.define(version: 2019_11_26_145904) do
   end
 
   create_table "scrims", force: :cascade do |t|
-    t.date "start_game"
-    t.date "end_game"
     t.string "result"
     t.boolean "confirmation", default: false
     t.bigint "team_host_id"
     t.bigint "team_visitor_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "end_game"
+    t.datetime "start_game"
     t.index ["team_host_id"], name: "index_scrims_on_team_host_id"
     t.index ["team_visitor_id"], name: "index_scrims_on_team_visitor_id"
   end
