@@ -79,6 +79,11 @@ class User < ApplicationRecord
     end
   end
 
+  def most_champions_played
+    summoner_infos   = scrapping_summoner_infos_from_riot_games
+    stats_url        = "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/#{summoner_infos['id']}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
+    stats_serialized = open(stats_url).read
+    JSON.parse(stats_serialized).first(5)
 
   def scrims
     self.team.scrims

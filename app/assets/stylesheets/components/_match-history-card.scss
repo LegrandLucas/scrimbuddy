@@ -1,5 +1,5 @@
 .match {
-  height: 100px;
+  height: 90px;
   width: 100%;
   padding: 20px;
   background-color: $sb-superlight-blue;
@@ -24,4 +24,13 @@
   width: 50px;
   height: 50px;
   background-color: white;
+}
+
+.duration {
+  text-align: center;
+  font-weight: bold;
+}
+
+.score {
+  font-weight: bold;
 }
