@@ -1,29 +1,21 @@
-<div class="container">
-  <div class="card-container">
-    <% team.users.each do |user| %>
-        <% if user.role == "Coach"%>
-    <% team.images.each do |image|%>
-    <div class="top-card">
-      <div id="background">
-        <%= image_tag image, class: "team-logo" %>
-      </div>
+<div class="card-container">
+  <div class="top-card-player">
+    <h2 class="player-name"><%= team.name %></h2>
+    <div id="background-logo">
+      <%= image_tag team.images.first, class: "team-logo" %>
     </div>
-    <h2>Organisation</h2>
-    <div class="middle-card">
-      <h4><%= team.name %></h4>
+  </div>
+  <h2>Location</h2>
+  <div class="middle-card">
+    <div class="team-name">
+      <h4><%= team.country %></h4>
     </div>
-    <h2>Location</h2>
-    <div class="bottom-card">
-      <h4> <%= team.country %></h4>
+  </div>
+  <h2>Coach</h2>
+  <div class="bottom-card">
+    <div class="team-name">
+      <% coach = team.users.where(user_type: 'Coach') %>
+      <h4><%= coach[0].pseudo %></h4>
     </div>
-    <h2>Coach</h2>
-    <div class="bottom-card">
-
-      <h4><%=  user.pseudo  %></h4>
-      <% end %>
-    </div>
-
-    <% end %>
-    <% end %>
   </div>
 </div>

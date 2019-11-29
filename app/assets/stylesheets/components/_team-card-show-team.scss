@@ -1,38 +1,48 @@
 .card-container {
-  width: 391px;
   left: 27px;
   top: 137px;
   border-radius: 5px;
-  // background-color: $sb-orange;
-}
+  background-color: $sb-orange;
+  border: 2px solid $sb-orange;
+  margin-top: 20px;
 
   h4 {
     color: black;
     position: center;
     text-align: center;
+    margin: 0;
   }
 
   h2 {
     color: white;
     position: center;
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
   }
 
   #background {
     margin: 30px auto;
   }
 
-  .team-logo {
-    height: 200px;
-
+  #background-logo {
+    background-color: white;
+    height: 250px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 
-  .profile-pic {
+  .team-logo {
     height: 200px;
     align-self: center;
     position: absolute;
-    bottom: 0px;
+    justify-content: center;
   }
 
   .top-card {
@@ -44,17 +54,15 @@
 
   .middle-card {
     color: black;
-    padding: 20px 40px;
+    padding: 10px 20px;
     background-color: white;
     margin: solid;
   }
 
   .bottom-card {
     color: black;
-    padding: 20px 40px;
+    padding: 10px 20px;
     background-color: white;
     margin: solid;
   }
-
-
-
+}
