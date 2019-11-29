@@ -631,8 +631,8 @@ duke.avatar.attach(io: File.open(avatar_duke_path), filename: 'duke.png', conten
 
 
 scrim1 = Scrim.create!(
-  start_game: DateTime.new(2019,10,23,10,20,00),
-  end_game: DateTime.new(2019,10,23,12,20,00),
+  start_game: DateTime.new(2019,11,01,11,20,00),
+  end_game: DateTime.new(2019,11,01,11,20,00),
   result: "Win",
   team_host: vitality,
   team_visitor: fnatic,
@@ -640,8 +640,8 @@ scrim1 = Scrim.create!(
   )
 
 scrim2 = Scrim.create!(
-  start_game: DateTime.new(2019,10,23,10,30,00),
-  end_game: DateTime.new(2019,10,23,12,20,00),
+  start_game: DateTime.new(2019,10,30,10,30,00),
+  end_game: DateTime.new(2019,10,30,12,20,00),
   result: "Win",
   team_host: fnatic,
   team_visitor: gtwo,
@@ -649,8 +649,8 @@ scrim2 = Scrim.create!(
   )
 
 scrim3 = Scrim.create!(
-  start_game: DateTime.new(2019,11,23,10,30,00),
-  end_game: DateTime.new(2019,11,23,12,20,00),
+  start_game: DateTime.new(2019,10,29,10,30,00),
+  end_game: DateTime.new(2019,10,29,12,20,00),
   result: "Lost",
   team_host: fnatic,
   team_visitor: splyce,
@@ -658,8 +658,8 @@ scrim3 = Scrim.create!(
   )
 
 scrim4 = Scrim.create!(
-  start_game: DateTime.new(2019,12,23,10,30,00),
-  end_game: DateTime.new(2019,12,23,12,20,00),
+  start_game: DateTime.new(2019,12,02,10,30,00),
+  end_game: DateTime.new(2019,12,02,12,20,00),
   result: "Lost",
   team_host: fnatic,
   team_visitor: splyce,
@@ -667,8 +667,8 @@ scrim4 = Scrim.create!(
   )
 
 scrim5 = Scrim.create!(
-  start_game: DateTime.new(2019,9,23,17,30,00),
-  end_game: DateTime.new(2019,9,23,19,30,00),
+  start_game: DateTime.new(2019,11,03,17,30,00),
+  end_game: DateTime.new(2019,11,03,19,30,00),
   result: "Lost",
   team_host: splyce,
   team_visitor: fnatic,
@@ -676,8 +676,8 @@ scrim5 = Scrim.create!(
   )
 
 scrim6 = Scrim.create!(
-  start_game: DateTime.new(2019,7,23,17,30,00),
-  end_game: DateTime.new(2019,7,23,19,30,00),
+  start_game: DateTime.new(2019,11,05,17,30,00),
+  end_game: DateTime.new(2019,11,05,19,30,00),
   result: "Lost",
   team_host: fcschalke,
   team_visitor: fnatic,
