@@ -1,0 +1,36 @@
+.card-scrims {
+  overflow: hidden;
+  height: 120px;
+  width: 300px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px
+}
+
+.card-scrims img {
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+  border-right: 1px solid lightgrey;
+}
+
+.card-scrims h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+  color: black
+}
+
+.card-scrims p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-scrims .card-scrims-infos {
+  padding: 16px;
+}

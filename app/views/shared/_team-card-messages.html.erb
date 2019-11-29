@@ -1,14 +1,18 @@
-<div class="team-card-pos">
-  <div class="container">
-    <div class="card">
-      <h2><%=  %></h2>
-      <div class="card-content">
-        <p></p>
+<% @user.scrims.each do |scrim| %>
+
+  <% if scrim.team_visitor.name == @user.team.name %>
+    <% scrim.team_host.images.each do |image|%>
+      <div class="card-scrims">
+        <%= image_tag image %>
+
+        <div class="card-scrims-infos">
+          <h2><%= scrim.team_host.name %></h2>
+          <p><%= scrim.result %></p>
+
+        </div>
       </div>
-      <div class="pic">
-        <%=  %>
-        <p>test</p>
-      </div>
-    </div>
-  </div>
-</div>
+
+    <% end %>
+  <% end %>
+<% end %>
+
