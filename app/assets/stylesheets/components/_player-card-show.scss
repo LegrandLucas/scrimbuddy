@@ -1,22 +1,18 @@
-
-.avatar-xl {
-  object-fit: cover;
-  height: 150px;
-  width: 150px;
+.card-image-avatar{
+  height:120px;
+  width: 120px;
+  object-fit: cover
 }
 
-
-.player-card {
+.player-card-team{
   border: 2px solid $sb-blue;
-  border-radius: 5px
-}
-
-.player-card-infos p{
-  color: $sb-blue;
+  margin: 10px;
+  border-radius: 5px;
   font-weight: bold
 }
 
-.player-card a:hover{
-  text-decoration: none
-
+.player-card-team  p{
+  text-align: center;
+  vertical-align: center;
+  color: $sb-dark-blue
 }
