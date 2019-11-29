@@ -1,14 +1,30 @@
-<div class="box flex">
-  <ul class="boxes-list">
-    <li class="vs-boxes"><h2>VS</h2></li>
-    <li class="vs-boxes">3</li>
-    <li class="vs-boxes">4</li>
-    <li class="vs-boxes">5</li>
-    <li class="vs-boxes"><h3>10-6</h3></li>
-    <li class="vs-boxes">7</li>
-    <li class="vs-boxes">8</li>
-    <li class="vs-boxes">9</li>
-    <li class="vs-boxes">10</li>
-    <li class="vs-boxes">11</li>
-  </ul>
+<div class="match">
+  <div class="row">
+    <div class="col-2">
+      <div class="duration">
+        <%= match[:duration]/60 %>m <%= match[:duration]%60 %>s
+      </div>
+    </div>
+    <div class="col-10">
+      <div class="match-infos">
+        <div class="team">
+          <% match[:team_one_players].each do |team_one_player| %>
+            <div class="player">
+              <%= team_one_player %>
+            </div>
+          <% end %>
+        </div>
+        <div class="score">
+          <%= match[:total_team_one_killed] %> - <%= match[:total_team_two_killed] %>
+        </div>
+        <div class="team">
+          <% match[:team_two_players].each do |team_two_player| %>
+            <div class="player">
+              <%= team_two_player %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

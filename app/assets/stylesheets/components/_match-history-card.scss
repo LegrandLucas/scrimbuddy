@@ -1,42 +1,27 @@
-.box.flex {
+.match {
+  height: 100px;
+  width: 100%;
+  padding: 20px;
+  background-color: $sb-superlight-blue;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+
+.match-infos {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.boxes-list {
-  background: rgba(91, 215, 111, 0.3);
-  border: 1px solid #348498;
-  border-radius: 5px;
-  box-shadow: 1px 2px #00000075;
+.team {
+  flex-grow: 1;
   display: flex;
-  padding: 10px;
-  height: 110px;
-  position: absolute;
-  left: 28px;
-  top: 423px;
-  width: 936px;
+  justify-content: space-around;
 }
 
-.vs-boxes {
-  margin-top: 10px;
-  width: 15%;
-  flex: auto;
-  margin: 0.5rem;
-  background: white;
-  line-height: 50px;
-  text-align: center;
-  border-radius: 4px;
-  list-style: none;
-}
-
-h2, h3 {
-  font-family: 'Raleway', "Helvetica", "sans-serif";
-  text-align: center;
-  font-weight: 700;
-  font-size: 50px;
-}
-
-h3 {
-  font-size: 30px;
-  margin-top: 15px;
+.player {
+  width: 50px;
+  height: 50px;
+  background-color: white;
 }
