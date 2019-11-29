@@ -1,12 +1,22 @@
 <div class="sb-container">
   <div class="row">
     <div class="col-8">
-      <h2 class="orange-background">TEAM PLAYERS</h2>
-      <%= render 'shared/player-card-show' %>
-      <h2 class="orange-background">MATCH HISTORY</h2>
+      <h2 class="stat-category">Team players</h2>
+      <%= render 'shared/player-card-show', team: @team %>
+      <h2 class="stat-category">Match history</h2>
     </div>
     <div class="col-4">
       <%= render 'shared/team-card-show-team', team: @team %>
-      <%= render 'shared/button-v2' %>
+      <div class="new-scrim-btn">
+        <%= link_to "Book scrim", new_team_scrim_path(@team), class: "btn-v2 form-control" %>
+        <% if @team.display_add_review_btn(current_user) %>
+          <%= link_to "Add a review", new_scrim_review(@team.scrims.last), class: "btn-v2 form-control" %>
+        <% end %>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="footer fixed-bottom">
+  <%= render 'shared/footer' %>
+</div>

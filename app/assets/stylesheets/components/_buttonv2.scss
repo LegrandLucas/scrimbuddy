@@ -1,23 +1,26 @@
 .btn-v2 {
-  background: #348498B7;
+  background: $sb-light-blue;
   border-radius: 5px;
-  box-shadow: -1px 2px #00000075;
-  color: #F8F0F0FF;
-  display: flex;
+  box-shadow: -1px 2px rgba(230, 230, 230, 0.8);
+  color: $sb-dark-blue;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  padding: 20px;
-  text-align: center;
   transition: background 0.2s ease;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .btn-v2:hover {
-  background: #348498;
-  color: #F8F0F0FF;
+  background: $sb-blue;
+  color: white;
   text-decoration: none;
 }
 
 .btn-v2 a {
+  text-align: center;
+}
+
+.new-scrim-btn {
+  margin-top: 10px;
   text-align: center;
 }
