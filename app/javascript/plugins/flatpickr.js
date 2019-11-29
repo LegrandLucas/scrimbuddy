@@ -7,7 +7,7 @@ const scrimForm = document.getElementById('new_scrim');
 
 if (scrimForm) {
   flatpickr("#start_game", {
-    altInput: true,
+    // altInput: true,
     minDate: "today",
     dateFormat: "d-m-Y H:i",
     enableTime: true,
