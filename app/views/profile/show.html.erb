@@ -1,9 +1,9 @@
-<div class="sb-container max-height">
+<div class="sb-container">
   <div class="row">
-    <div class="col-xs-12 col-lg-3">
+    <div class="col-4">
       <%= render 'shared/player_card_show_player' %>
     </div>
-    <div class="col-xs-12 col-lg-9">
+    <div class="col-8">
       <div class="stat-category">
         Personnal statistics
       </div>
@@ -16,7 +16,8 @@
                 50%
               </div>
               <div class="games">
-                <%= @user.scraping_summoner_stats_from_riot_games[:total_games] %> games : <%= @user.scraping_summoner_stats_from_riot_games[:total_winning_game] %> wins / <%= @user.scraping_summoner_stats_from_riot_games[:total_loosing_game] %> wins
+                <p><%= @user.scraping_summoner_stats_from_riot_games[:total_games] %> games :</p>
+                <p><%= @user.scraping_summoner_stats_from_riot_games[:total_winning_game] %> wins / <%= @user.scraping_summoner_stats_from_riot_games[:total_loosing_game] %> wins</p>
               </div>
             </div>
           </div>
@@ -47,8 +48,13 @@
           </div>
           <div class="col-4">
             <div class="games-stats">
-              <div class="cirlcle-per-cent">
-                50%
+              <div class="most-played-champions">
+                <% most_played_champions = @user.most_champions_played %>
+                <% most_played_champions.each do |champion| %>
+                  <div class="played-champion">
+                    <%= champion['championId'] %>
+                  </div>
+                <% end %>
               </div>
               <div class="most-used-champ">
                 Most used champions
@@ -64,10 +70,14 @@
 
       <div class="history-cards">
         <% matches = @user.five_last_matches_infos_from_riot %>
-        <% matches.first(4).each do |match| %>
+        <% matches.first(3).each do |match| %>
           <%= render 'shared/match-history', match: match %>
         <% end %>
       </div>
     </div>
   </div>.
+</div>
+
+<div class="footer">
+  <%= render 'shared/footer' %>
 </div>

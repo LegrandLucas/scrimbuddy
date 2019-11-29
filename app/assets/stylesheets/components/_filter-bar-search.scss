@@ -1,45 +1,44 @@
 .filter-bar-container{
-}
 
+  input {
+    width: 250px;
+    height: 30px;
+    padding: 3px;
+    border: 1px solid #DDE1E4;
+  }
 
-input {
-  width: 250px;
-  height: 30px;
-  padding: 3px;
-  border: 1px solid #DDE1E4;
-}
+  select {
+    width: 258px;
+    position: relative;
+    left: -17px;
+    margin: 0;
+    border: 1px solid #DDE1E4;
+    border-top: none;
+    font-size:9pt;
+  }
 
-select {
-  width: 258px;
-  position: relative;
-  left: -17px;
-  margin: 0;
-  border: 1px solid #DDE1E4;
-  border-top: none;
-  font-size:9pt;
-}
+  ul {
+    display: none;
+  }
 
-ul {
-  display: none;
-}
+  option {
+    padding: 3px;
+  }
 
-option {
-  padding: 3px;
-}
+  option:hover {
+    background-color: #C4C4C4;
+  }
 
-option:hover {
-  background-color: #C4C4C4;
-}
-
-button {
-  width: 30px;
-  height: 38px;
-  position: relative;
-  left: -5px;
-  border: 1px solid #DDE1E4;
-  border-left: none;
-  background-color: #C4C4C4;
-  cursor: pointer;
+  button {
+    width: 30px;
+    height: 38px;
+    position: relative;
+    left: -5px;
+    border: 1px solid #DDE1E4;
+    border-left: none;
+    background-color: #C4C4C4;
+    cursor: pointer;
+  }
 }
 
 // /* WHEN IN PROD THE FOLLOWING JS CODE MUST BE ADDED:
