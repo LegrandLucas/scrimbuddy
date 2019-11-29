@@ -21,4 +21,9 @@ class Team < ApplicationRecord
     visitor_scrims = Scrim.where("team_visitor_id = ? AND confirmation = ? AND start_game <= ? AND start_game > ?", self, true, Date.today + 7, Date.today)
     host_scrims + visitor_scrims
   end
+
+  def display_add_review_btn(user)
+    user.scrim.map(&:team).include?(self)
+    # user.scrim.select { |scrim| scrim.end_game < Date.today }.map(&:team).include?(self)
+  end
 end
