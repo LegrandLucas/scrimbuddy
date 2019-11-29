@@ -35,15 +35,25 @@
   color: #f1f1f1;
 }
 
+
 .sidebar-right {
   margin-top:180px;
   height: 723px;
   background-color: rgba(255, 80, 47, 0.2);
 }
 
-
  .team-box {
     text-align: center;
     display: inline-block;
     height: 100px;
  }
+
+.orange-background {
+  background-color: $sb-orange;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  padding: 5px
+  }
+
