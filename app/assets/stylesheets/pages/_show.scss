@@ -14,6 +14,11 @@
   color: #f1f1f1;
 }
 
-// .row {
-//   justify-content: flex-start;
-// }
+.orange-background {
+  background-color: $sb-orange;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  padding: 5px
+  }

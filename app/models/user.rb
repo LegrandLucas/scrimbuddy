@@ -84,6 +84,9 @@ class User < ApplicationRecord
     stats_url        = "https://euw1.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/#{summoner_infos['id']}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
     stats_serialized = open(stats_url).read
     JSON.parse(stats_serialized).first(5)
+
+  def scrims
+    self.team.scrims
   end
 
   private
@@ -101,4 +104,6 @@ class User < ApplicationRecord
     games          = response_api["matches"]
     games.first(5)
   end
+
+
 end
