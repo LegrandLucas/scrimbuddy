@@ -16,33 +16,33 @@
                 50%
               </div>
               <div class="games">
-                <p><%= @user.scraping_summoner_stats_from_riot_games[:total_games] %> games :</p>
-                <p><%= @user.scraping_summoner_stats_from_riot_games[:total_winning_game] %> wins / <%= @user.scraping_summoner_stats_from_riot_games[:total_loosing_game] %> wins</p>
+                <p><%= @infos[:total_games] %> games :</p>
+                <p><%= @infos[:total_winning_game] %> wins / <%= @infos[:total_loosing_game] %> wins</p>
               </div>
             </div>
           </div>
           <div class="col-4">
             <div class="player-ranking">
-              <% if @user.scraping_summoner_stats_from_riot_games[:tier] == 'CHALLENGER' %>
+              <% if @infos[:tier] == 'CHALLENGER' %>
                 <%= image_tag "ranking/Emblem_Challenger.png" %>
-              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'GRANDMASTER' %>
+              <% elsif @infos[:tier] == 'GRANDMASTER' %>
                 <%= image_tag "ranking/Emblem_Grandmaster.png" %>
-              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'MASTER' %>
+              <% elsif @infos[:tier] == 'MASTER' %>
                 <%= image_tag "ranking/Emblem_Master.png" %>
-              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'DIAMOND' %>
+              <% elsif @infos[:tier] == 'DIAMOND' %>
                 <%= image_tag "ranking/Emblem_Diamond.png" %>
-              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'PLATINUM' %>
-                <%= image_tag "ranking/Emblem_Platinum.png" %>
-              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'GOLD' %>
+              <% elsif @infos[:tier] == 'PLATINIUM' %>
+                <%= image_tag "ranking/Emblem_Platinium.png" %>
+              <% elsif @infos[:tier] == 'GOLD' %>
                 <%= image_tag "ranking/Emblem_Gold.png" %>
-              <% elsif @user.scraping_summoner_stats_from_riot_games[:tier] == 'SILVER' %>
+              <% elsif @infos[:tier] == 'SILVER' %>
                 <%= image_tag "ranking/Emblem_Silver.png" %>
               <% else %>
                 <%= image_tag "ranking/Emblem_Bronze.png" %>
               <% end %>
               <div class="ranking">
-                <p>Rank: <%= @user.scraping_summoner_stats_from_riot_games[:tier] %> <%= @user.scraping_summoner_stats_from_riot_games[:rank] %></p>
-                <p>League points: <%= @user.scraping_summoner_stats_from_riot_games[:league_points] %></p>
+                <p>Rank: <%= @infos[:tier] %> <%= @infos[:rank] %></p>
+                <p>League points: <%= @infos[:league_points] %></p>
               </div>
             </div>
           </div>
