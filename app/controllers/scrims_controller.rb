@@ -11,8 +11,9 @@ class ScrimsController < ApplicationController
     @scrim.team_host = Team.find(params[:team_id])
     @scrim.team_visitor = current_user.team
     if @scrim.save
-      flash[:notice] = "Bravo !"
+      flash[:notice] = "Your scrim demand has been sent !"
       redirect_to team_path(@team_host)
+
     else
       render :new
     end
