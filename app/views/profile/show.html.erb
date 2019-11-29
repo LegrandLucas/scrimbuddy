@@ -7,6 +7,7 @@
       <div class="stat-category">
         Personnal statistics
       </div>
+
       <div class="player-stats">
         <div class="row">
           <div class="col-4">
@@ -55,6 +56,17 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="stat-category">
+        SoloQ history
+      </div>
+
+      <div class="history-cards">
+        <% matches = @user.five_last_matches_infos_from_riot %>
+        <% matches.first(4).each do |match| %>
+          <%= render 'shared/match-history', match: match %>
+        <% end %>
       </div>
     </div>
   </div>.
