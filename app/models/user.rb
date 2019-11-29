@@ -14,17 +14,23 @@ class User < ApplicationRecord
     summoner_infos   = scrapping_summoner_infos_from_riot_games
     stats_url        = "https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/#{summoner_infos['id']}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
     stats_serialized = open(stats_url).read
-    response_api     = JSON.parse(stats_serialized).first
-    total_games      = response_api["wins"] + response_api["losses"]
-    {
-      total_winning_game: response_api["wins"],
-      total_loosing_game: response_api["losses"],
-      total_games: total_games,
-      per_cent_games: (response_api["wins"] * 100) / total_games,
-      tier: response_api["tier"],
-      rank: response_api["rank"],
-      league_points: response_api["leaguePoints"]
-    }
+
+    responses_api     = JSON.parse(stats_serialized)
+
+
+    unless responses_api.empty?
+      response_api = responses_api.first
+      total_games      = response_api["wins"] + response_api["losses"]
+      {
+        total_winning_game: response_api["wins"],
+        total_loosing_game: response_api["losses"],
+        total_games: total_games,
+        per_cent_games: (response_api["wins"] * 100) / total_games,
+        tier: response_api["tier"],
+        rank: response_api["rank"],
+        league_points: response_api["leaguePoints"]
+      }
+    end
   end
 
   def five_last_matches_infos_from_riot
