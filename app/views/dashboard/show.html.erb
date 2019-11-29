@@ -1,18 +1,22 @@
-<div class="container">
-  <section class="panel banner left">
-    <div class="sidebar"></div>
-  </section>
+<div class="row">
+  <div class="container-dahsboard">
 
-  <section class="panel navbar middle">
-    <div class="row">
+    <div class="column left">
+      <div class="sidebar"></div>
+    </div>
+
+    <div class="column middle">
       <%= render 'shared/navbar-dashboard' %>
+
+      <div class="team-box">
+      <%= render 'shared/team-card-messages' %>
+      </div>
+
     </div>
-  </section>
 
-  <section class="panel information right">
-    <div class="row">
-
+    <div class="column right">
+      <div class="sidebar-right"></div>
     </div>
-  </section>
 
+  </div>
 </div>
