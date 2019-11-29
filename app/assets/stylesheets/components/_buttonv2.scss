@@ -5,8 +5,6 @@
   color: $sb-dark-blue;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  padding: 20px;
-  text-align: center;
   transition: background 0.2s ease;
   margin-bottom: 20px;
   width: 100%;
@@ -19,5 +17,10 @@
 }
 
 .btn-v2 a {
+  text-align: center;
+}
+
+.new-scrim-btn {
+  margin-top: 10px;
   text-align: center;
 }

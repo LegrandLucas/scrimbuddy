@@ -1,14 +1,19 @@
 <div class="d-flex">
-  <% @team.users.each do |user| %>
-    <% if user.role != "Coach" %>
+  <div class="col-1">
+  </div>
+  <% players = team.users.where(user_type: 'player') %>
+  <% players.each do |user| %>
+    <div class="col-2">
       <div class="player-card-team">
         <%= link_to profile_path(user) do %>
           <%= image_tag user.avatar, class: "card-image-avatar" %>
-          <p ><%= user.pseudo %>-<%= user.role %></p>
+          <p ><%= user.pseudo %> - <%= user.role %></p>
         <% end %>
       </div>
-    <% end %>
+    </div>
   <% end %>
+  <div class="col-1">
+  </div>
 </div>
 
 
