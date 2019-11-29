@@ -3,14 +3,14 @@ class ReviewsController < ApplicationController
   before_action :set_review, only: %i[edit update destroy]
   def new
     @review = Review.new
-    authorize @review
+    # authorize @review
   end
 
   def create
     @review       = Review.new(review_params)
     @review.scrim = @scrim
     @review.user  = current_user
-    authorize @review
+    # authorize @review
     @review.save
   end
 
@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
 
   def update
     @scrim = @review.scrim
-    authorize @review
+    # authorize @review
     if @review.update(review_params)
       redirect_to scrim_path(@scrim)
     else
@@ -30,7 +30,7 @@ class ReviewsController < ApplicationController
 
   def destroy
     scrim = @review.scrim
-    authorize @review
+    # authorize @review
     @review.destroy
     redirect_to scrim_path(scrim)
   end

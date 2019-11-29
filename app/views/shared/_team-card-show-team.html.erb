@@ -1,4 +1,3 @@
-
 <div class="container">
   <div class="card-container">
     <% team.users.each do |user| %>
@@ -15,12 +14,12 @@
     </div>
     <h2>Location</h2>
     <div class="bottom-card">
-      <h4><strong>From:</strong> <%= team.country %></h4>
+      <h4> <%= team.country %></h4>
     </div>
     <h2>Coach</h2>
     <div class="bottom-card">
 
-      <%=  user.pseudo  %>
+      <h4><%=  user.pseudo  %></h4>
       <% end %>
     </div>
 

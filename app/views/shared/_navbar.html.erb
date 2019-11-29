@@ -2,7 +2,7 @@
   <div class="sb-container">
     <div class="d-flex justify-content-between">
       <%= link_to root_path do %>
-        <%= image_tag "https://myrealdomain.com/images/random-logo-6.png" %>
+      <%= image_tag("logo/scrimBuddy.png", :alt => "logo") %>
       <% end %>
       <div class="sb-navbar">
         <li class="sb-list">
@@ -19,7 +19,7 @@
           <% if user_signed_in? %>
             <div class="dropdown-content">
               <%= link_to "Profile", dashboard_path(current_user), class: "link" %>
-              <%= link_to "Logout", "/", class: "link" %>
+              <%= link_to "Logout", destroy_user_session_path, class: "link", method: :delete %>
             </div>
           <% end %>
         </li>

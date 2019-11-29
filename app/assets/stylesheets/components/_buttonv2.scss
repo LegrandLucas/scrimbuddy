@@ -3,16 +3,21 @@
   border-radius: 5px;
   box-shadow: -1px 2px #00000075;
   color: #F8F0F0FF;
-  display: inline-block;
+  display: flex;
   font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  padding: 3px 125px;
+  padding: 20px;
   text-align: center;
   transition: background 0.2s ease;
+  margin-bottom: 20px;
 }
 
 .btn-v2:hover {
   background: #348498;
   color: #F8F0F0FF;
   text-decoration: none;
+}
+
+.btn-v2 a {
+  text-align: center;
 }
