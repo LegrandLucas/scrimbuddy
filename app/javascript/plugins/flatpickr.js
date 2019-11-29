@@ -3,7 +3,7 @@ import 'flatpickr/dist/themes/airbnb.css';
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin";
 
 flatpickr("#start_game", {
-  altInpurt: true,
+  altInput: true,
   minDate: "today",
   dateFormat: "d-m-Y H:i",
   enableTime: true,
