@@ -2,7 +2,7 @@
 .gif-container {
   position: relative;
   background-image: asset-url("gamer_800x600.gif");
-  height: calc(100vh - 90px);
+  height: calc(100vh - 70px);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -33,21 +33,23 @@
   right: 14vw;
   width: 20vw;
   opacity: 1;
+  margin-bottom: 40px;
 }
 
 .home-text h1 {
-  font-size: 40px;
+  font-size: 35px;
   margin-bottom: 15px;
   font-weight: bold;
+  margin: 0px -50px 0px 0px;
 }
 
 .home-text h3 {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 15px;
 }
 
 .home-text a {
-  font-size: 24px;
+  font-size: 20px;
 }
 // // Specific CSS for your home-page
 // .gif-container {
