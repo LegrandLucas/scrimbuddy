@@ -1,13 +1,11 @@
-<div class="row d-flex ">
+<div class="d-flex">
   <% @team.users.each do |user| %>
-    <%= link_to profile_path(user) do %>
-      <div class="col-2">
-        <div class="player-card m-2">
-          <%= image_tag user.avatar, class: "avatar-xl" %>
-          <div class="player-card-infos">
-            <p class="text-center"><%= user.pseudo %> - <%= user.role %> </p>
-          </div>
-        </div>
+    <% if user.role != "Coach" %>
+      <div class="player-card-team">
+        <%= link_to profile_path(user) do %>
+          <%= image_tag user.avatar, class: "card-image-avatar" %>
+          <p ><%= user.pseudo %>-<%= user.role %></p>
+        <% end %>
       </div>
     <% end %>
   <% end %>
