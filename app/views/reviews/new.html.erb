@@ -1,0 +1,37 @@
+<div class="sb-container">
+
+  <%# @scrim.team_visitor.each do |team| %>
+  <h2>Add a review to your scrim with <%= @scrim.team_visitor.name %></h2>
+  <div class="review-background">
+    <div>
+      <strong><h3>Punctuality</h3></strong> <p> Was the enemy team on time?</p>
+    </div>
+    <div>
+      <strong><h3>Professionalism</h3></strong> <p> Was the enemy professional?</p>
+    </div>
+    <div>
+      <strong><h3>Fair play</h3></strong> <p> Was the enemy team fair play?</p>
+    </div>
+    <% @scrim.team_visitor.name %> <h3><%= @scrim.team_visitor.name %>'s rating</h3>
+    <%# end %>
+  </div>
+</div>
+
+<%# simple_form_for do |f| %>
+<%# f.input :rating, collection: 1..5 %>
+<%# f.input :rating, collection: 1..5 %>
+<%# f.input :rating, collection: 1..5 %>
+<%# f.submit "Add your review", class: "form-control" %>
+<%# end %>
+
+
+<!--
+<#% if @team.display_add_review_form(current_user) %>
+        <div id="last" class="category">
+          <h3>Add a review</h3>
+          <div id="new_review" class="form-container">
+            <#%= render 'shared/review_form', team: @team, review: @review %>
+          </div>
+          <p></p>
+        </div>
+        <#% end %> -->

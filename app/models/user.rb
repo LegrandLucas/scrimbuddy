@@ -79,6 +79,11 @@ class User < ApplicationRecord
     end
   end
 
+
+  def scrims
+    self.team.scrims
+  end
+
   private
 
   def scrapping_summoner_infos_from_riot_games
@@ -94,4 +99,6 @@ class User < ApplicationRecord
     games          = response_api["matches"]
     games.first(5)
   end
+
+
 end
