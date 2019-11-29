@@ -1,15 +1,23 @@
-<section class="panel banner right">
-  <div class="sidebar">
+<div class="row">
+  <div class="container-dahsboard">
 
-  </div>
-</section>
+    <div class="column left">
+      <div class="sidebar"></div>
+    </div>
 
-<div class="container">
-  <div class="sidebar-image">
+    <div class="column middle">
+      <%= render 'shared/navbar-dashboard' %>
 
-  </div>
-  <div class="row">
-    <%= render 'shared/navbar-dashboard' %>
+      <div class="team-box">
+      <%= render 'shared/team-card-messages' %>
+      </div>
+
+    </div>
+
+    <div class="column right">
+      <div class="sidebar-right"></div>
+    </div>
+
   </div>
   SCRIM LIST
   <% @next_scrims.each do |scrim| %>
