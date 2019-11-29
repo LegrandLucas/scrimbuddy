@@ -12,7 +12,7 @@ class ScrimsController < ApplicationController
     @scrim.team_visitor = current_user.team
     if @scrim.save
       flash[:notice] = "Bravo !"
-      redirect_to team_path(@team_host)
+      redirect_to dashboard_path(current_user)
     else
       render :new
     end
