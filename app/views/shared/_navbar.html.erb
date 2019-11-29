@@ -8,9 +8,11 @@
         <li class="sb-list">
           <%= link_to "Teams", teams_path, class: "sb-link" %>
         </li>
-        <li class="sb-list">
-          <%= link_to "Chat room", dashboard_path(current_user), class: "sb-link" %>
-        </li>
+        <% if user_signed_in? %>
+          <li class="sb-list">
+            <%= link_to "Chat room", dashboard_path(current_user), class: "sb-link" %>
+          </li>
+        <% end %>
         <li class="sb-list active">
           <%= link_to "Add a scrim", root_path, class: "sb-link" %>
         </li>
