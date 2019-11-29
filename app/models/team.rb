@@ -23,7 +23,7 @@ class Team < ApplicationRecord
   end
 
   def display_add_review_btn(user)
-    user.scrims.map(&:team).include?(self)
+    user.scrims.map { |scrim| scrim.team_visitor == self || scrim.team_host == self }
     # user.scrim.select { |scrim| scrim.end_game < Date.today }.map(&:team).include?(self)
   end
 end

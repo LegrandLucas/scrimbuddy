@@ -10,7 +10,7 @@
       <div class="new-scrim-btn">
         <%= link_to "Book scrim", new_team_scrim_path(@team), class: "btn-v2 form-control" %>
         <% if @team.display_add_review_btn(current_user) %>
-          <%= link_to "Add a review", new_scrim_review(@team.scrims.last), class: "btn-v2 form-control" %>
+          <%= link_to "Add a review", root_path, class: "btn-v2 form-control" %>
         <% end %>
       </div>
     </div>
