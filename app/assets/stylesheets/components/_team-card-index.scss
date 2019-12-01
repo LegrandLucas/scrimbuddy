@@ -9,7 +9,12 @@ a:hover{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
+.index-team-card{
+  margin-bottom: 40px;
+}
+
 .team-card > img {
+  border-radius: 2px;
   height: 200px;
   object-fit: cover;
   display: flex;
@@ -31,28 +36,32 @@ a:hover{
 
 .team-card-infos h2{
   font-size: 16px;
-  margin-left: -10px;
-  font-weight: bold
+  font-weight: bold;
+  text-shadow:1px 1px black;
 }
 
 .team-card-infos ul{
-  display: flex
+  display: flex;
+  filter: drop-shadow(2px 2px 2px #222);
 }
 
 .team-card-infos li{
   text-decoration: none;
   list-style: none;
-  color: $orange
+  color: $orange;
 }
 
 .team-card-infos .team-card-avatar {
   position: absolute;
   left: 20px;
-  top: -30px;
+  top: -40px;
   width: 40px;
 }
 
 .avatar-team {
   width: 60px;
+}
 
+.card-conatainer {
+  margin: 100px -15px -15px 15px;
 }

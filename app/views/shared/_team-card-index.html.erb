@@ -1,28 +1,28 @@
-
-
-<div class="row d-flex ">
-  <% @teams.each do |team| %>
-  <div class="col-4">
-    <%= link_to team_path(team) do  %>
-    <div class="team-card m-2">
-      <% team.images.each do |image|%>
-      <%= image_tag image %>
-      <div class="team-card-infos">
-        <h2><%= team.name%></h2>
-        <div class="team-card-avatar">
-          <%= image_tag image, class: "avatar-team" %>
+<div class="card-conatainer">
+  <div class="row d-flex ">
+    <% @teams.each do |team| %>
+    <div class="col-4 index-team-card">
+      <%= link_to team_path(team) do  %>
+      <div class="team-card m-2">
+        <% team.images.each do |image|%>
+        <%= image_tag image %>
+        <div class="team-card-infos">
+          <h2><%= team.name%></h2>
+          <div class="team-card-avatar">
+            <%= image_tag image, class: "avatar-team" %>
+          </div>
+          <ul>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+            <li><i class="fas fa-star"></i></li>
+          </ul>
         </div>
-        <ul>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-          <li><i class="fas fa-star"></i></li>
-        </ul>
       </div>
+      <% end %>
+      <% end %>
     </div>
     <% end %>
-    <% end %>
   </div>
-  <% end %>
 </div>
