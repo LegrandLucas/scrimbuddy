@@ -11,12 +11,14 @@
   img {
       width: 60px;
       align-self: center;
+      filter: drop-shadow(2px 2px 2px #313030);
     }
 
     a {
       display: flex;
       text-decoration: none;
       color: white;
+      filter: drop-shadow(2px 2px 2px #313030);
     }
 }
 
