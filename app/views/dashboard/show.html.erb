@@ -1,41 +1,34 @@
 <div class='wrapper-dashboard'>
   <div class='row-dashboard'>
 
-    <div class='column-dashboard'>
+    <div class='column-dashboard-left'>
       <div class="sidebar"></div>
     </div>
 
 
-    <div class="column middle">
-      <%= render 'shared/navbar-dashboard' %>
 
+        <div class='column-dashboard'>
+          <div class="middle">
+            <%= render 'shared/navbar-dashboard' %>
+            <div class="team-box">
+              <% @next_scrims.each do |scrim| %>
+              <%= render 'shared/team-card-messages' %>
+              <%= scrim %>
+              <% end %>
+            </div>
 
-      <div class="team-box">
-      <%= render 'shared/team-card-messages' %>
-
-    <div class='column-dashboard'>
-      <div class="middle">
-        <%= render 'shared/navbar-dashboard' %>
-        <div class="team-box">
-          <% @next_scrims.each do |scrim| %>
-          <%= render 'shared/team-card-messages' %>
-          <%= scrim %>
-          <% end %>
+          </div>
         </div>
 
-      </div>
-    </div>
+        <div class='column-dashboard'>
+          <div class="sidebar-right">
+            <h3>Useful information</h3>
+            <div class="dashboard-player-info">
+              <%= render 'shared/player_card_dashboard' %>
+            </div>
+          </div>
 
-    <div class='column-dashboard'>
-      <div class="sidebar-right">
-        <h3>Useful information</h3>
-        <div class="dashboard-player-info">
-        <%= render 'shared/player_card_dashboard' %>
-        </div>
-      </div>
     </div>
-
   </div>
 </div>
-
 <%# This is a great comment! %>
