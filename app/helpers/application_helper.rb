@@ -1,13 +1,12 @@
 module ApplicationHelper
 
   def hours_in_days
-    (8..20).to_a
+    (12..20).to_a
   end
 
   def minutes_in_shifts
     ["00", "15", "30", "45"]
   end
-
 
   def shifts
     shifts = []
@@ -19,5 +18,4 @@ module ApplicationHelper
     end
     shifts
   end
-
 end

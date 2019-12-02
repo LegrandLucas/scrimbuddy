@@ -21,7 +21,7 @@ class ScrimsController < ApplicationController
     @scrim.end_game = end_game
     if @scrim.save
       flash[:notice] = "Your scrim demand has been sent !"
-      redirect_to team_path(@team_host)
+      redirect_to dashboard_path
 
     else
       render :new
