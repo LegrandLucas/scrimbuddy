@@ -1,8 +1,7 @@
-
-
+<% unless active_team.nil? %>
+  <% active_team.users.each do |user| %>
     <div class="player-card">
       <div class="player-card-content">
-        <% current_user.team.users.each do |user| %>
           <%= image_tag (user.avatar), class: "avatar" %>
           <div class="text-block">
             <div class="flex-item">
@@ -10,9 +9,11 @@
               <strong>Role:</strong> <%= user.role %>
             </div>
           </div>
-        <% end %>
       </div>
-     </div>
+    </div>
+  <% end %>
+<% end %>
+
 
 
 

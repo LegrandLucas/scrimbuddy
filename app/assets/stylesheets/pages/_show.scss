@@ -1,10 +1,8 @@
 .wrapper-dashboard {
-  display: flex;
   justify-content: space-between;
 }
 
 .row-dashboard {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
@@ -13,10 +11,15 @@
 
 .column-dashboard-left {
 /* here we put the styling for the image that will be added on this div*/
+.sidebar {
+  background-image: asset-url("games.png");
+  background-size: cover;
+  height: 100vh;
+  width: 330px;
+}
 }
 
 .column-dashboard {
-  display: flex;
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
@@ -32,6 +35,7 @@
     text-align: center;
     margin-top: 15px;
     text-shadow: 1px 1px #DDC;
+    padding: 10px;
   }
 }
 
@@ -39,12 +43,6 @@
   height: 100px;
 }
 
-.sidebar {
-  background-image: asset-url("games.png");
-  background-size: cover;
-  height: 100%;
-  width: 330px;
-}
 
 .team-box a:hover{
   color: #f1f1f1;

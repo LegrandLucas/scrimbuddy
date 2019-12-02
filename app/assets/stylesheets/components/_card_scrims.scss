@@ -13,7 +13,7 @@
 
 .card-scrims img {
   height: 120px;
-  width: 120px;
+  width: 121px;
   object-fit: cover;
   border-right: 1px solid lightgrey;
   padding: 10px;
@@ -25,12 +25,13 @@
   margin: 0;
   color: black;
   text-shadow: 1px 1px #DDC;
-    &:hover {
+      &:hover {
     color: #348498;
   }
 }
 
 .card-scrims p {
+  color: black;
   font-size: 15px;
   line-height: 1.4;
   opacity: .7;

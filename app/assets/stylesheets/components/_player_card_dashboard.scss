@@ -1,19 +1,17 @@
 
 .dashboard-player-info {
-    display: flex;
-
  .player-card {
    background: red;
    border-radius: 5px;
-   width: 300px;
-   height: 110px;
-   display: flex;
+   width: 80%;
+   // height: 110px;
+   flex-direction: column;
    align-items: center;
    padding: 10px;
    margin: 10px 20px 10px 20px;
 
    .avatar {
-     height: 70px;
+     height: 80px;
      width: 80px;
      border-radius: 50%;
      margin: 5px;
@@ -25,14 +23,13 @@
     }
 
    .player-card-content {
-     display: flex;
-     flex-direction: column;
-     height: 50px;
+      display: flex;
+      align-items: center;
+      // height: 50px;
     }
   }
 
  .flex-item {
-   display: flex;
    flex-direction: column;
   }
 }

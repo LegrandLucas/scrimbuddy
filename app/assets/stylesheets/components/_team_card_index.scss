@@ -24,7 +24,6 @@ a:hover{
 
 .team-card-infos {
   padding: 16px;
-  display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
@@ -41,7 +40,6 @@ a:hover{
 }
 
 .team-card-infos ul{
-  display: flex;
   filter: drop-shadow(2px 2px 2px #222);
 }
 
