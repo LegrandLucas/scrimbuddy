@@ -1,34 +1,36 @@
 <div class='wrapper-dashboard'>
-  <div class='row-dashboard'>
+  <div class='row'>
+    <div class="col-2">
+      <div class='column-dashboard-left'>
 
-    <div class='column-dashboard-left'>
+        <div class="sidebar"></div>
 
-      <div class="sidebar"></div>
-
+      </div>
     </div>
 
+    <div class="col-5">
+      <div class='column-dashboard'>
+        <div class="middle">
 
+          <%= render 'shared/navbar-dashboard' %>
 
-        <div class='column-dashboard'>
-          <div class="middle">
-            <%= render 'shared/navbar-dashboard' %>
-            <div class="team-box">
+          <div class="team-box">
+            <%= render 'shared/team_card' %>
+          </div>
 
-              <%= render 'shared/team_card' %>
+        </div>
+      </div>
+    </div>
 
-            </div>
-
+    <div class="col-5">
+      <div class='column-dashboard'>
+        <div class="sidebar-right">
+          <h3>Useful information</h3>
+          <div class="dashboard-player-info">
+            <%= render 'shared/player_card_dashboard', active_team: @active_team %>
           </div>
         </div>
-
-        <div class='column-dashboard'>
-          <div class="sidebar-right">
-            <h3>Useful information</h3>
-            <div class="dashboard-player-info">
-              <%= render 'shared/player_card_dashboard' %>
-            </div>
-          </div>
-
+      </div>
     </div>
   </div>
 </div>

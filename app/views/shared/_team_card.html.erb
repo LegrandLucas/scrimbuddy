@@ -1,16 +1,14 @@
 <% @user.scrims.each do |scrim| %>
-
   <% if scrim.team_visitor.name == @user.team.name %>
-    <% scrim.team_host.images.each do |image|%>
+    <%= link_to dashboard_path(team: scrim.team_host.id) do %>
       <div class="card-scrims">
-        <%= image_tag image %>
-
-        <div class="card-scrims-infos">
-          <h2><%= scrim.team_host.name %></h2>
-
-        </div>
+        <% scrim.team_host.images.each do |image|%>
+          <%= image_tag image %>
+          <div class="card-scrims-infos">
+            <h2><%= scrim.team_host.name %></h2>
+          </div>
+        <% end %>
       </div>
-
     <% end %>
   <% end %>
 <% end %>

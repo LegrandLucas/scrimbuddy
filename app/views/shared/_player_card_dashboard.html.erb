@@ -1,22 +1,20 @@
-<div id="row">
-   <div class="col-xs-12 col-md-6 col-lg-3">
+<% unless active_team.nil? %>
+  <% active_team.users.each do |user| %>
     <div class="player-card">
-      <div class="body">
-        <% current_user.team.users.each do |user| %>
+      <div class="player-card-content">
           <%= image_tag (user.avatar), class: "avatar" %>
-          <div class="text-bloc">
-            <div>
-              <strong>Pseudo:</strong> <%= user.pseudo %>
-            </div>
-            <div>
+          <div class="text-block">
+            <div class="flex-item">
+              <strong>Pseudo:</strong> <%= user.pseudo %><br>
               <strong>Role:</strong> <%= user.role %>
             </div>
           </div>
-        <% end %>
       </div>
-     </div>
-  </div>
-</div>
+    </div>
+  <% end %>
+<% end %>
+
+
 
 
 
