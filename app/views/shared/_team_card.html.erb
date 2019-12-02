@@ -1,8 +1,8 @@
 <% @user.scrims.each do |scrim| %>
 
   <% if scrim.team_visitor.name == @user.team.name %>
-    <% scrim.team_host.images.each do |image|%>
       <div class="card-scrims">
+    <% scrim.team_host.images.each do |image|%>
         <%= image_tag image %>
 
         <div class="card-scrims-infos">
