@@ -1,12 +1,17 @@
 .card-scrims {
+  border-radius: 4px;
   overflow: hidden;
   height: 120px;
-  width: 300px;
+  width: 35em;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  margin-bottom: 3px
+  margin: 20px 0px 20px 30px;
+      &:hover {
+      color: #348498;
+    }
+
 }
 
 .card-scrims img {
@@ -17,14 +22,15 @@
 }
 
 .card-scrims h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
-  color: black
+  color: black;
+  text-shadow: 1px 1px #DDC;
 }
 
 .card-scrims p {
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
