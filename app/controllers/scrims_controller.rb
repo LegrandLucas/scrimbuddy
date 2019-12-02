@@ -2,6 +2,10 @@ class ScrimsController < ApplicationController
   before_action :set_team_host, only: %i[new create]
   before_action :set_scrim, only: %i[edit update destroy]
 
+  def index
+    @scrims = Scrim.all
+  end
+
   def new
     @scrim = Scrim.new
   end

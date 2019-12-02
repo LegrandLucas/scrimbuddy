@@ -1,0 +1,5 @@
+<%= simple_form_for [team, scrim] do |f| %>
+  <%= f.input :start_game, as: :string, input_html: { id: "start_game" } %>
+  <%= f.input :end_game, as: :string, input_html: { id: "end_game" } %>
+  <%= f.submit "Book scrim", class: "btn-ca"%>
+<% end %>
