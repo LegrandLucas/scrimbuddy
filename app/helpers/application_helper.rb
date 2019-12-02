@@ -1,5 +1,4 @@
 module ApplicationHelper
-
   def hours_in_days
     (12..20).to_a
   end
