@@ -1,44 +1,18 @@
-<div class='wrapper-dashboard'>
-  <div class='row-dashboard'>
 
-    <div class='column-dashboard-left'>
-      <div class="sidebar"></div>
-    </div>
-
-
-
-    <div class='column-dashboard'>
-      <div class="middle">
-        <%= render 'shared/navbar-dashboard' %>
-        <div class="team-box">
-          <div class="message-card">
-
-          </div>
-
-          <h3>My conversation with <%= @friend.pseudo %></h3>
-          <% @messages.each do |message| %>
-          <ul>
-            <li><p><%= message.sender.pseudo %> says : <%= message.content %></p></li>
-          </ul>
-          <% end %>
-
-          <%= simple_form_for [@friend, @message] do |f| %>
-          <%= f.input :content %>
-          <%= f.submit "Send a message", class: "btn btn-primary" %>
-          <% end %>
-
-          <%= link_to 'Back to conversations', conversations_path %>
+  <div class="container-fluid">
+    <div class='row'>
+      <div class="col-4">
+        <div class="sidebar">
 
         </div>
-
+      </div>
+      <div class='col-8'>
+        <div class="middle">
+          <%= render 'shared/navbar-dashboard' %>
+          <%= render 'messages/chat' %>
+        </div>
       </div>
     </div>
-
-    <div class='column-dashboard'>
-
-
-    </div>
   </div>
-</div>
 <%# This is a great comment! %>
 
