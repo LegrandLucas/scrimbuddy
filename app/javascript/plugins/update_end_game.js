@@ -19,13 +19,11 @@ const updateEndGame = () => {
         const hour_readable = hour < 10 ? `0${hour}` : hour
         const end_time = `${hour_readable}:${time[1]}`
         endHourInput.value = end_time
-
+        buttonElement.classList.toggle("green-mode");
         // toggle active class on the button
       })
-
     })
   }
-
 }
 
 export { updateEndGame }
