@@ -6,7 +6,8 @@
   margin-left: 10px;
   margin-bottom: 10px;
   background-opacity: 0.5;
-  padding: 5px
+  padding: 5px;
+
 }
 
 .chat-box {
@@ -17,4 +18,8 @@
 .sender {
   align-self: flex-end;
   background-color: $sb-light-blue;
+}
+
+.message-image {
+  align-self: flex-end;
 }

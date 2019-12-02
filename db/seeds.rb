@@ -773,29 +773,29 @@ fncMatch7 = Scrim.create!(
   team_visitor_champions: "Lissandra JarvanIV Vayne Sivir Alistar"
   )
 
-# message1 = Message.create!(
-#   content: "Hello, is it still okay for tomorrow ?",
-#   sender: falco,
-#   receiver: mephisto,
-#   )
+message1 = Message.create!(
+  content: "Hello, is it still okay for tomorrow ?",
+  sender: falco,
+  receiver: mephisto,
+  )
 
-# message2 = Message.create!(
-#   content: "Yes and for you ?",
-#   sender: mephisto,
-#   receiver: falco,
-#   )
+message2 = Message.create!(
+  content: "Yes and for you ?",
+  sender: mephisto,
+  receiver: falco,
+  )
 
-# message3 = Message.create!(
-#   content: "Yes, can we just do it earlier ? 30 minutes earlier than planed ?",
-#   sender: falco,
-#   receiver: mephisto,
-#   )
+message3 = Message.create!(
+  content: "Yes, can we just do it earlier ? 30 minutes earlier than planed ?",
+  sender: falco,
+  receiver: mephisto,
+  )
 
-# message4 = Message.create!(
-#   content: "I asked the guys, no problem, see you tomorrow",
-#   sender: mephisto,
-#   receiver: falco,
-#   )
+message4 = Message.create!(
+  content: "I asked the guys, no problem, see you tomorrow",
+  sender: mephisto,
+  receiver: falco,
+  )
 
 puts "Finished!"
 

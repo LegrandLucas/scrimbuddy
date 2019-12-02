@@ -3,14 +3,15 @@
 
   <% @messages.each do |message| %>
   <% if message.sender == current_user %>
+  <div class="message-image">
+    <%= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
+  </div>
     <div class="card-chat sender">
-    <% image_tag message.sender.avatar, class: "avatar" %>
       <p><%= message.content %></p>
-      <%= raise %>
     </div>
   <% else %>
+    <%= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
     <div class="card-chat">
-    <% image_tag message.sender.avatar, class: "avatar" %>
        <p><%= message.content %></p>
     </div>
   <% end %>
