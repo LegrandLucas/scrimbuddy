@@ -8,10 +8,7 @@
   display: flex;
   align-items: center;
   margin: 20px 0px 20px 30px;
-      &:hover {
-      color: #348498;
-    }
-
+  cursor: pointer;
 }
 
 .card-scrims img {
@@ -19,18 +16,12 @@
   width: 120px;
   object-fit: cover;
   border-right: 1px solid lightgrey;
+  padding: 10px;
 }
 
-.card-scrims h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-  color: black;
-  text-shadow: 1px 1px #DDC;
-}
 
 .card-scrims p {
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;
@@ -39,4 +30,15 @@
 
 .card-scrims .card-scrims-infos {
   padding: 16px;
+
+.card-scrims h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: black;
+  text-shadow: 1px 1px #DDC;
+}
+    &:hover {
+    color: #348498;
+  }
 }

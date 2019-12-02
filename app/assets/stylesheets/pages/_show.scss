@@ -20,9 +20,11 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  margin-left: 177px;
 }
 
 .sidebar-right {
+  width: 70%;
   background-color: #D2D2D2;
   margin-top: 190px;
   height: 100%;
@@ -30,6 +32,7 @@
   h3{
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
     text-shadow: 1px 1px #DDC;
   }
 }
@@ -40,10 +43,15 @@
 
 .sidebar {
   background-color: rgba(255,80,47,0.2);
+  opacity: 0.3;
   height: 100%;
   width: 330px;
 }
 
 .team-box a:hover{
   color: #f1f1f1;
+}
+
+.dashboard-player-info {
+  margin-left: 34px;
 }
