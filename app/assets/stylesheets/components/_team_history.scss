@@ -1,0 +1,59 @@
+.team-champions img {
+  width: 50px;
+  height: 50px;
+}
+
+.team-match-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.score {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.win-match {
+  background-color: rgb(163, 207, 236);
+}
+
+.lose-match {
+  background-color: rgb(226, 182, 179);
+}
+
+.team-match {
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.team_logo img {
+  height: 50px;
+  width: 50px;
+}
+
+.winner-text {
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  font-size: 32px;
+}
+
+.winner-text p {
+  margin: 0;
+}
+
+.team_host {
+  width: 100%;
+}
+
+.team_visitor {
+  width: 100%;
+}

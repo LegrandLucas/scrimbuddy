@@ -6,8 +6,14 @@ class TeamsController < ApplicationController
   end
 
   def show
-    @coach = @team.users.where(user_type: 'coach')
+    @coach = @team.coach
+    @scrims = @team.scrims_against_current_user_team(current_user)
     @scrim = Scrim.new
+    @bookings = @team.scrims
+    @bookings_dates = @bookings.map do |booking|
+      booking.start_game.to_date
+    end
+    # passer tout cela à la vue
   end
 
   def new
