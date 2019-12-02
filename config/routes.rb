@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :scrims, only: %i[udpate destroy] do
     resources :reviews, only: %i[new create]
   end
-  resources :profile, only: [:show]
+  resources :profiles, only: [:show]
   get '/dashboard', to: "profiles#dashboard"
   get 'conversations', to: 'messages#conversations'
   resources :users do

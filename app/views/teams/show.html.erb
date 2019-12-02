@@ -18,17 +18,32 @@
         <h2 class="stat-category">Team players</h2>
         <%= render 'shared/player-card-show', team: @team %>
         <h2 class="stat-category">Match history</h2>
+
+      </div>
+      <div class="d-flex" id="middle-infos">
+        <h2><i class="fas fa-map-marker-alt"></i> Location: <%= @team.country %></h2>
+        <h2><i class="fas fa-user-tie"></i> Coach: <%= @coach[0].pseudo %></h2>
+      </div>
+      <div id="bottom-infos">
+        <h2><i class="far fa-file-alt"></i> Description: </h2><p><%= @team.description %></p>
       </div>
 
+      <h2 class="stat-category">Team players</h2>
+      <%= render 'shared/player-card-show', team: @team %>
+      <h2 class="stat-category">Match history</h2>
+      <% @scrims.each do |scrim| %>
+        <%= render 'shared/team_history', scrim: scrim %>
+      <% end %>
+    </div>
 
-      <div class="col-4">
 
-        <div class="booking-card">
-          <div class="booking-form">
-            <h4><%= image_tag @team.images.first, class: "team-logo-book-card" %></h4>
-            <h4>Book a scrim with <%= @team.name %></h4>
-            <%= render "shared/booking_form", team: @team, scrim: @scrim %>
-          </div>
+    <div class="col-4">
+
+      <div class="booking-card">
+        <div class="booking-form">
+          <h4><%= image_tag @team.images.first, class: "team-logo-book-card" %></h4>
+          <h4>Book a scrim with <%= @team.name %></h4>
+          <%= render "shared/booking_form", team: @team, scrim: @scrim %>
         </div>
       </div>
     </div>
