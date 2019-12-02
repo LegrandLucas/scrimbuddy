@@ -39,7 +39,8 @@
 }
 
 .sidebar {
-  background-color: rgba(255,80,47,0.2);
+  background-image: asset-url("games.png");
+  background-size: cover;
   height: 100%;
   width: 330px;
 }

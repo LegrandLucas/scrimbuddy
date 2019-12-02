@@ -8,6 +8,7 @@ class TeamsController < ApplicationController
   def show
     @coach = @team.coach
     @scrims = @team.scrims_against_current_user_team(current_user)
+    @scrim = Scrim.new
   end
 
   def new

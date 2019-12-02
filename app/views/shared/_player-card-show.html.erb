@@ -1,20 +1,15 @@
-<div class="d-flex">
-  <div class="col-1">
-  </div>
+<div class="d-flex" style="place-content: space-evenly">
   <% players = team.users.where(user_type: 'player') %>
   <% players.each do |user| %>
-    <div class="col-2">
-      <div class="player-card-team">
-        <%= link_to profile_path(user) do %>
-          <%= image_tag user.avatar, class: "card-image-avatar" %>
-          <p ><%= user.pseudo %> - <%= user.role %></p>
-        <% end %>
-      </div>
+  <div class="col-2">
+    <div class="player-card-team">
+      <%= link_to profile_path(user) do %>
+      <%= image_tag user.avatar, class: "card-image-avatar" %>
+      <p ><%= user.pseudo %> - <%= user.role %></p>
+      <% end %>
     </div>
-  <% end %>
-  <div class="col-1">
   </div>
+  <% end %>
 </div>
-
 
 
