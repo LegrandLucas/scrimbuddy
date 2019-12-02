@@ -5,7 +5,7 @@
       <%= image_tag (@user.avatar), class: "profile-pic" %>
     </div>
   </div>
-    <h2>Information</h2>
+    <h2 class="text-center">Information</h2>
   <div class="middle-card">
     <div class="player-full-name">
     <h4><strong>Name:</strong> <%= @user.first_name %>  <%= @user.last_name %></h4>
@@ -14,23 +14,10 @@
     <h4><strong>Role:</strong> <%= @user.role %></h4>
     </div>
   </div>
-  <h2>Competitive</h2>
+  <h2 class="text-center">Competitive</h2>
   <div class="bottom-card">
     <div class="team-name">
     <h4><strong>Team:</strong> <%= @user.team.name %></h4>
-    </div>
-    <div>
-    <h4>
-      <p><strong>Favorite champ:</strong></p>
-      <div class="most-played-champions">
-        <% most_played_champions = @user.most_champions_played %>
-        <% most_played_champions.each do |champion| %>
-          <div class="played-champion">
-            <%= champion['championId'] %>
-          </div>
-        <% end %>
-      </div>
-    </h4>
     </div>
   </div>
 </div>

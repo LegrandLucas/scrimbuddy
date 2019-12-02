@@ -1,0 +1,33 @@
+
+  h4 {
+    color: white;
+    text-shadow: 1px 1px #DDC;
+  }
+
+  label {
+    color: white;
+    font-weight: 900;
+  }
+
+  .text-muted {
+    color: white !important;
+    float: right;
+  }
+
+
+  .btn {
+    background-color: $sb-dark-blue;
+    color: white;
+    font-weight: 900;
+    margin-top: 20px;
+  }
+
+  .scrim_end_game, .scrim_start_game {
+    margin-right: 470px;
+  }
+
+  .form-group {
+    margin: 0 200px;
+  }
+}
+

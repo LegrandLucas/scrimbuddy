@@ -22,10 +22,6 @@
     }
 }
 
-.sb-container {
-  margin: 0 auto;
-  width: 90%;
-}
 
 .sb-navbar {
   display: flex;
@@ -85,4 +81,11 @@
   display: block;
 }
 
+.nav-avatar {
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  object-fit: cover
+}
 /*Enfin fini!*/
+

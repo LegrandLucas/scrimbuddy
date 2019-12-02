@@ -1,0 +1,13 @@
+<%= link_to user_messages_path(user) do %>
+  <div class="message-card">
+    <div>
+      <%= image_tag team.images.first, class: "image" %>
+    </div>
+    <div>
+      <div class ="content">
+        <h3><%= team.name %></h3>
+        <p><%= user.pseudo %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
