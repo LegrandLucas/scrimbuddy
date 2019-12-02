@@ -1,0 +1,29 @@
+<h3>My conversation with <%= @friend.pseudo %></h3>
+<div class="chat-box">
+
+  <% @messages.each do |message| %>
+  <% if message.sender == current_user %>
+  <div class="message-image">
+    <%= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
+  </div>
+    <div class="card-chat sender">
+      <p><%= message.content %></p>
+    </div>
+  <% else %>
+    <%= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
+    <div class="card-chat">
+       <p><%= message.content %></p>
+    </div>
+  <% end %>
+  <% end %>
+
+  <%= simple_form_for [@friend, @message] do |f| %>
+  <%= f.input :content%>
+  <%= f.submit "Send a message", class: "btn btn-primary" %>
+  <% end %>
+
+  <%= link_to 'Back to conversations', conversations_path %>
+</div>
+
+
+
