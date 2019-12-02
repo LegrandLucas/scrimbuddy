@@ -8,6 +8,11 @@ class TeamsController < ApplicationController
   def show
     @coach = @team.users.where(user_type: 'coach')
     @scrim = Scrim.new
+    @bookings = @team.scrims
+    @bookings_dates = @bookings.map do |booking|
+      booking.start_game.to_date
+    end
+    # passer tout cela à la vue
   end
 
   def new
