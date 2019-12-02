@@ -1,7 +1,7 @@
 .team-logo-show-team {
-  height: 100px;
+  height: 150px;
   position: center;
-  margin: 10px;
+  margin-bottom: -3vh;
 }
 
 .background-logo-show-team {
@@ -9,9 +9,16 @@
   place-content: center;
   justify-content: center;
   align-items: center;
-  margin: 5vw auto;
+  margin: 4vh auto;
 }
 
+.team-players-bloc {
+  margin-bottom: 2vw;
+}
+
+.match-history-bloc {
+  margin-bottom: 10vw;
+}
 
 #middle-infos {
   border-bottom: 1px solid lightgray;
@@ -38,5 +45,13 @@
 }
 
 .team-logo-book-card {
-  height: 50px;
+  height: 70px;
+}
+
+#team-name-show-team {
+  text-align: center;
+}
+
+.green-mode {
+  background-color: #1EDD88;
 }
