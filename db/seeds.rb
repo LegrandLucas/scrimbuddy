@@ -10,6 +10,7 @@
 puts "Destroy all seeds..."
 Scrim.destroy_all
 Team.destroy_all
+Message.destroy_all
 User.destroy_all
 
 
@@ -171,8 +172,8 @@ mephisto = User.create!(
   role: "Coach"
 )
 
-avatar_mephisto_path = Rails.root.join('app', 'assets', 'images', 'troud.png')
-mephisto.avatar.attach(io: File.open(avatar_mephisto_path), filename: 'troud.png', content_type: 'image/png')
+avatar_mephisto_path = Rails.root.join('app', 'assets', 'images', 'lucas.png')
+mephisto.avatar.attach(io: File.open(avatar_mephisto_path), filename: 'lucas.png', content_type: 'image/png')
 
 
 wunder = User.create!(
