@@ -7,6 +7,7 @@ class TeamsController < ApplicationController
 
   def show
     @coach = @team.users.where(user_type: 'coach')
+    @scrim = Scrim.new
   end
 
   def new
