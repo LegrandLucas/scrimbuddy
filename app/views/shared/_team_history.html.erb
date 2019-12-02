@@ -1,0 +1,21 @@
+<div class="match">
+  <div class="team-match-infos">
+    <div class="team">
+      <% scrim[:team_host_champions].split.each do |team_host_champion| %>
+        <div class="team-champions">
+          <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_host_champion}.png" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="score">
+      <%= scrim[:team_host_kills] %> - <%= scrim[:team_visitor_kills] %>
+    </div>
+    <div class="team">
+      <% scrim[:team_visitor_champions].split.each do |team_visitor_champion| %>
+        <div class="team-champions">
+          <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_visitor_champion}.png" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

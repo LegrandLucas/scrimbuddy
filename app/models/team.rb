@@ -2,7 +2,7 @@ class Team < ApplicationRecord
   has_many_attached :images
   has_one_attached :logo
   has_many :users, dependent: :destroy
-  has_many :reviews, dependent: :destroy
+  # has_many :team_histories, dependent: :destroy
 
   def scrims_host
     Scrim.where(team_host: self)
@@ -14,6 +14,15 @@ class Team < ApplicationRecord
 
   def scrims
     scrims_host + scrims_visitor
+  end
+
+  def scrims_against_current_user_team(user)
+    scrims = scrims_host.where(team_visitor: user.team) + scrims_visitor.where(team_host: user.team)
+    scrims.sort_by { |scrim| scrim.start_game }.reverse
+  end
+
+  def coach
+    users.where(user_type: 'coach')
   end
 
   def next_scrims_confirmed

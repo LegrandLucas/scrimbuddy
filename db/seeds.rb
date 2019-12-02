@@ -11,10 +11,9 @@ puts "Destroy all seeds..."
 Scrim.destroy_all
 Team.destroy_all
 User.destroy_all
-Review.destroy_all
 
 
-puts "Creating users, teams, reviews and scrims..."
+puts "Creating users, teams and scrims..."
 
 fnatic = Team.create!(
   name: "FNATIC",
@@ -634,110 +633,175 @@ avatar_duke_path = Rails.root.join('app', 'assets', 'images', 'duke.png')
 duke.avatar.attach(io: File.open(avatar_duke_path), filename: 'duke.png', content_type: 'image/png')
 
 
-scrim1 = Scrim.create!(
-  start_game: DateTime.new(2019,11,01,11,20,00),
-  end_game: DateTime.new(2019,11,01,11,20,00),
-  result: "Win",
+# scrim1 = Scrim.create!(
+#   start_game: DateTime.new(2019,11,01,11,20,00),
+#   end_game: DateTime.new(2019,11,01,11,20,00),
+#   result: "Win",
+#   team_host: vitality,
+#   team_visitor: fnatic,
+#   confirmation: true
+#   )
+
+# scrim2 = Scrim.create!(
+#   start_game: DateTime.new(2019,10,30,10,30,00),
+#   end_game: DateTime.new(2019,10,30,12,20,00),
+#   result: "Win",
+#   team_host: fnatic,
+#   team_visitor: gtwo,
+#   confirmation: false
+#   )
+
+# scrim3 = Scrim.create!(
+#   start_game: DateTime.new(2019,10,29,10,30,00),
+#   end_game: DateTime.new(2019,10,29,12,20,00),
+#   result: "Lost",
+#   team_host: fnatic,
+#   team_visitor: splyce,
+#   confirmation: false
+#   )
+
+# scrim4 = Scrim.create!(
+#   start_game: DateTime.new(2019,12,02,10,30,00),
+#   end_game: DateTime.new(2019,12,02,12,20,00),
+#   result: "Lost",
+#   team_host: fnatic,
+#   team_visitor: splyce,
+#   confirmation: false
+#   )
+
+# scrim5 = Scrim.create!(
+#   start_game: DateTime.new(2019,11,03,17,30,00),
+#   end_game: DateTime.new(2019,11,03,19,30,00),
+#   result: "Lost",
+#   team_host: splyce,
+#   team_visitor: fnatic,
+#   confirmation: true
+#   )
+
+# scrim6 = Scrim.create!(
+#   start_game: DateTime.new(2019,11,05,17,30,00),
+#   end_game: DateTime.new(2019,11,05,19,30,00),
+#   result: "Lost",
+#   team_host: fcschalke,
+#   team_visitor: fnatic,
+#   confirmation: true
+#   )
+
+
+fncMatch1 = Scrim.create!(
+  start_game: DateTime.new(2019,11,5,17,30,00),
+  end_game: DateTime.new(2019,11,5,18,30,00),
+  confirmation: true,
   team_host: vitality,
   team_visitor: fnatic,
-  confirmation: true
+  team_host_kills: 8,
+  team_visitor_kills: 19,
+  winner: :team_visitor,
+  team_host_champions: "Lucian JarvanIV Taliyah Ezreal Braum",
+  team_visitor_champions: "Gangplank Karthus Lissandra Vayne Alistar"
   )
 
-scrim2 = Scrim.create!(
-  start_game: DateTime.new(2019,10,30,10,30,00),
-  end_game: DateTime.new(2019,10,30,12,20,00),
-  result: "Win",
+fncMatch2 = Scrim.create!(
+  start_game: DateTime.new(2019,11,6,17,30,00),
+  end_game: DateTime.new(2019,11,6,18,30,00),
+  confirmation: true,
   team_host: fnatic,
-  team_visitor: gtwo,
-  confirmation: false
+  team_visitor: vitality,
+  team_host_kills: 14,
+  team_visitor_kills: 5,
+  winner: :team_host,
+  team_host_champions: "Aatrox Karthus Lissandra Kaisa Tresh",
+  team_visitor_champions: "Kennen JarvanIV Zoe Tristana Braum"
   )
 
-scrim3 = Scrim.create!(
-  start_game: DateTime.new(2019,10,29,10,30,00),
-  end_game: DateTime.new(2019,10,29,12,20,00),
-  result: "Lost",
+fncMatch3 = Scrim.create!(
+  start_game: DateTime.new(2019,11,7,17,30,00),
+  end_game: DateTime.new(2019,11,7,18,30,00),
+  confirmation: true,
+  team_host: vitality,
+  team_visitor: fnatic,
+  team_host_kills: 7,
+  team_visitor_kills: 27,
+  winner: :team_visitor,
+  team_host_champions: "Jayce Gragas Yazuo Jinx Tresh",
+  team_visitor_champions: "Sion RekSai Kayle Sivir Braum"
+  )
+
+fncMatch4 = Scrim.create!(
+  start_game: DateTime.new(2019,11,8,17,30,00),
+  end_game: DateTime.new(2019,11,8,18,30,00),
+  confirmation: true,
   team_host: fnatic,
   team_visitor: splyce,
-  confirmation: false
+  team_host_kills: 13,
+  team_visitor_kills: 11,
+  winner: :team_host,
+  team_host_champions: "JarvanIV Karthus Syndra Sivir Alistar",
+  team_visitor_champions: "Jayce RekSai Corki Zoe TahmKench"
   )
 
-scrim4 = Scrim.create!(
-  start_game: DateTime.new(2019,12,02,10,30,00),
-  end_game: DateTime.new(2019,12,02,12,20,00),
-  result: "Lost",
-  team_host: fnatic,
-  team_visitor: splyce,
-  confirmation: false
-  )
-
-scrim5 = Scrim.create!(
-  start_game: DateTime.new(2019,11,03,17,30,00),
-  end_game: DateTime.new(2019,11,03,19,30,00),
-  result: "Lost",
+fncMatch5 = Scrim.create!(
+  start_game: DateTime.new(2019,11,9,17,30,00),
+  end_game: DateTime.new(2019,11,9,18,30,00),
+  confirmation: true,
   team_host: splyce,
   team_visitor: fnatic,
-  confirmation: true
+  team_host_kills: 19,
+  team_visitor_kills: 10,
+  winner: :team_host,
+  team_host_champions: "Sion Skarner Ryze Tristana Braum",
+  team_visitor_champions: "Chogath RekSai Kayle Sivir Tresh"
   )
 
-scrim6 = Scrim.create!(
-  start_game: DateTime.new(2019,11,05,17,30,00),
-  end_game: DateTime.new(2019,11,05,19,30,00),
-  result: "Lost",
-  team_host: fcschalke,
+fncMatch6 = Scrim.create!(
+  start_game: DateTime.new(2019,11,10,17,30,00),
+  end_game: DateTime.new(2019,11,10,18,30,00),
+  confirmation: true,
+  team_host: fnatic,
+  team_visitor: splyce,
+  team_host_kills: 18,
+  team_visitor_kills: 20,
+  winner: :team_host,
+  team_host_champions: "Aatrox JarvanIV Lissandra Vayne Rakan",
+  team_visitor_champions: "Shen RekSai Azir Jinx Tresh"
+  )
+
+fncMatch7 = Scrim.create!(
+  start_game: DateTime.new(2019,11,11,17,30,00),
+  end_game: DateTime.new(2019,11,11,18,30,00),
+  confirmation: true,
+  team_host: splyce,
   team_visitor: fnatic,
-  confirmation: true
+  team_host_kills: 8,
+  team_visitor_kills: 21,
+  winner: :team_visitor,
+  team_host_champions: "Shen Hecarim Sylas Veigar TahmKench",
+  team_visitor_champions: "Lissandra JarvanIV Vayne Sivir Alistar"
   )
 
-review1 = Review.create!(
-  punctuality_rate: 4,
-  professionalism_rate: 3,
-  fair_play_rate: 5,
-  team: fnatic,
-  user: grabzz,
-  scrim: scrim1,
- )
+# message1 = Message.create!(
+#   content: "Hello, is it still okay for tomorrow ?",
+#   sender: falco,
+#   receiver: mephisto,
+#   )
 
-review2 = Review.create!(
-  punctuality_rate: 5,
-  professionalism_rate: 2,
-  fair_play_rate: 5,
-  team: fnatic,
-  user: duke,
-  scrim: scrim5,
- )
+# message2 = Message.create!(
+#   content: "Yes and for you ?",
+#   sender: mephisto,
+#   receiver: falco,
+#   )
 
-review3 = Review.create!(
-  punctuality_rate: 5,
-  professionalism_rate: 5,
-  fair_play_rate: 5,
-  team: fnatic,
-  user: falco,
-  scrim: scrim6,
- )
+# message3 = Message.create!(
+#   content: "Yes, can we just do it earlier ? 30 minutes earlier than planed ?",
+#   sender: falco,
+#   receiver: mephisto,
+#   )
 
-message1 = Message.create!(
-  content: "Hello, is it still okay for tomorrow ?",
-  sender: falco,
-  receiver: mephisto,
-  )
-
-message2 = Message.create!(
-  content: "Yes and for you ?",
-  sender: mephisto,
-  receiver: falco,
-  )
-
-message3 = Message.create!(
-  content: "Yes, can we just do it earlier ? 30 minutes earlier than planed ?",
-  sender: falco,
-  receiver: mephisto,
-  )
-
-message4 = Message.create!(
-  content: "I asked the guys, no problem, see you tomorrow",
-  sender: mephisto,
-  receiver: falco,
-  )
+# message4 = Message.create!(
+#   content: "I asked the guys, no problem, see you tomorrow",
+#   sender: mephisto,
+#   receiver: falco,
+#   )
 
 puts "Finished!"
 

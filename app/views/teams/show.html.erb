@@ -4,6 +4,9 @@
       <h2 class="stat-category">Team players</h2>
       <%= render 'shared/player-card-show', team: @team %>
       <h2 class="stat-category">Match history</h2>
+      <% @scrims.each do |scrim| %>
+        <%= render 'shared/team_history', scrim: scrim %>
+      <% end %>
     </div>
     <div class="col-4">
       <%= render 'shared/team-card-show-team', team: @team, coach: @coach %>
@@ -15,8 +18,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="footer fixed-bottom">
-  <%= render 'shared/footer' %>
 </div>

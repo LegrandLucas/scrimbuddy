@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_28_131058) do
+ActiveRecord::Schema.define(version: 2019_12_02_100236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,25 +46,15 @@ ActiveRecord::Schema.define(version: 2019_11_28_131058) do
     t.index ["sender_id"], name: "index_messages_on_sender_id"
   end
 
-  create_table "reviews", force: :cascade do |t|
-    t.integer "punctuality_rate"
-    t.integer "professionalism_rate"
-    t.integer "fair_play_rate"
-    t.bigint "team_id"
-    t.bigint "user_id"
-    t.bigint "scrim_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["scrim_id"], name: "index_reviews_on_scrim_id"
-    t.index ["team_id"], name: "index_reviews_on_team_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
-  end
-
   create_table "scrims", force: :cascade do |t|
-    t.string "result"
     t.boolean "confirmation", default: false
     t.bigint "team_host_id"
     t.bigint "team_visitor_id"
+    t.string "winner"
+    t.integer "team_host_kills"
+    t.integer "team_visitor_kills"
+    t.string "team_host_champions"
+    t.string "team_visitor_champions"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "end_game"
@@ -80,6 +70,21 @@ ActiveRecord::Schema.define(version: 2019_11_28_131058) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "description"
+  end
+
+  create_table "user_histories", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "team_one_kills"
+    t.integer "team_two_kills"
+    t.time "duration"
+    t.string "winner"
+    t.string "team_one_champions"
+    t.string "team_two_champions"
+    t.string "team_one_players"
+    t.string "team_two_players"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_histories_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -105,10 +110,8 @@ ActiveRecord::Schema.define(version: 2019_11_28_131058) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "messages", "users", column: "receiver_id"
   add_foreign_key "messages", "users", column: "sender_id"
-  add_foreign_key "reviews", "scrims"
-  add_foreign_key "reviews", "teams"
-  add_foreign_key "reviews", "users"
   add_foreign_key "scrims", "teams", column: "team_host_id"
   add_foreign_key "scrims", "teams", column: "team_visitor_id"
+  add_foreign_key "user_histories", "users"
   add_foreign_key "users", "teams"
 end
