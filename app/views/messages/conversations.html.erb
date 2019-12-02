@@ -14,9 +14,7 @@
           <% else %>
             <h3>My conversations</h3>
             <% @users_with_conversation.each do |user| %>
-              <%= link_to user_messages_path(user) do %>
-                <p>Conversation with <%= user.pseudo %></p>
-              <% end %>
+              <%= render "messages/card", user: user, team: user.team %>
             <% end %>
           <% end %>
         </div>
@@ -28,6 +26,3 @@
 
   </div>
 </div>
-<%# This is a great comment! %>
-
-
