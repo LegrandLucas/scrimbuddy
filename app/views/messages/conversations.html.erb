@@ -1,0 +1,28 @@
+<div class='wrapper-dashboard'>
+  <div class='row-dashboard'>
+
+    <div class='column-dashboard-left'>
+      <div class="sidebar"></div>
+    </div>
+
+    <div class='column-dashboard'>
+      <div class="middle">
+        <%= render 'shared/navbar-dashboard' %>
+        <div class="team-box">
+          <% if @users_with_conversation.empty? %>
+            <h3>You have no conversations yet</h3>
+          <% else %>
+            <h3>My conversations</h3>
+            <% @users_with_conversation.each do |user| %>
+              <%= render "messages/card", user: user, team: user.team %>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class='column-dashboard'>
+    </div>
+
+  </div>
+</div>
