@@ -17,7 +17,7 @@ class Team < ApplicationRecord
   end
 
   def scrims_against_current_user_team(user)
-    scrims = scrims_host.where(team_visitor: user.team) + scrims_visitor.where(team_host: user.team)
+    scrims = scrims_host.where(team_visitor: user.team).select { |scrim| scrim.end_game < Date.today } + scrims_visitor.where(team_host: user.team).select { |scrim| scrim.end_game < Date.today }
     scrims.sort_by { |scrim| scrim.start_game }.reverse
   end
 

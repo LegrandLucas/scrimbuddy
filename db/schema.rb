@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2019_12_02_100236) do
     t.boolean "confirmation", default: false
     t.bigint "team_host_id"
     t.bigint "team_visitor_id"
-    t.string "winner"
+    t.string "winner_team"
     t.integer "team_host_kills"
     t.integer "team_visitor_kills"
     t.string "team_host_champions"

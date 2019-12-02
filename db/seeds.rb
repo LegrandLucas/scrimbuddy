@@ -633,59 +633,53 @@ avatar_duke_path = Rails.root.join('app', 'assets', 'images', 'duke.png')
 duke.avatar.attach(io: File.open(avatar_duke_path), filename: 'duke.png', content_type: 'image/png')
 
 
-# scrim1 = Scrim.create!(
-#   start_game: DateTime.new(2019,11,01,11,20,00),
-#   end_game: DateTime.new(2019,11,01,11,20,00),
-#   result: "Win",
-#   team_host: vitality,
-#   team_visitor: fnatic,
-#   confirmation: true
-#   )
+scrim1 = Scrim.create!(
+  start_game: DateTime.new(2019,12,12,15,30,00),
+  end_game: DateTime.new(2019,12,12,18,30,00),
+  team_host: vitality,
+  team_visitor: fnatic,
+  confirmation: false,
+  )
 
-# scrim2 = Scrim.create!(
-#   start_game: DateTime.new(2019,10,30,10,30,00),
-#   end_game: DateTime.new(2019,10,30,12,20,00),
-#   result: "Win",
-#   team_host: fnatic,
-#   team_visitor: gtwo,
-#   confirmation: false
-#   )
+scrim2 = Scrim.create!(
+  start_game: DateTime.new(2019,12,14,10,30,00),
+  end_game: DateTime.new(2019,12,14,12,30,00),
+  team_host: fnatic,
+  team_visitor: gtwo,
+  confirmation: false
+  )
 
-# scrim3 = Scrim.create!(
-#   start_game: DateTime.new(2019,10,29,10,30,00),
-#   end_game: DateTime.new(2019,10,29,12,20,00),
-#   result: "Lost",
-#   team_host: fnatic,
-#   team_visitor: splyce,
-#   confirmation: false
-#   )
+scrim3 = Scrim.create!(
+  start_game: DateTime.new(2019,12,20,10,30,00),
+  end_game: DateTime.new(2019,12,20,12,20,00),
+  team_host: fnatic,
+  team_visitor: splyce,
+  confirmation: false
+  )
 
-# scrim4 = Scrim.create!(
-#   start_game: DateTime.new(2019,12,02,10,30,00),
-#   end_game: DateTime.new(2019,12,02,12,20,00),
-#   result: "Lost",
-#   team_host: fnatic,
-#   team_visitor: splyce,
-#   confirmation: false
-#   )
+scrim4 = Scrim.create!(
+  start_game: DateTime.new(2019,12,8,10,30,00),
+  end_game: DateTime.new(2019,12,8,12,20,00),
+  team_host: fnatic,
+  team_visitor: splyce,
+  confirmation: false
+  )
 
-# scrim5 = Scrim.create!(
-#   start_game: DateTime.new(2019,11,03,17,30,00),
-#   end_game: DateTime.new(2019,11,03,19,30,00),
-#   result: "Lost",
-#   team_host: splyce,
-#   team_visitor: fnatic,
-#   confirmation: true
-#   )
+scrim5 = Scrim.create!(
+  start_game: DateTime.new(2019,12,10,17,30,00),
+  end_game: DateTime.new(2019,12,10,19,30,00),
+  team_host: splyce,
+  team_visitor: fnatic,
+  confirmation: false
+  )
 
-# scrim6 = Scrim.create!(
-#   start_game: DateTime.new(2019,11,05,17,30,00),
-#   end_game: DateTime.new(2019,11,05,19,30,00),
-#   result: "Lost",
-#   team_host: fcschalke,
-#   team_visitor: fnatic,
-#   confirmation: true
-#   )
+scrim6 = Scrim.create!(
+  start_game: DateTime.new(2019,12,13,17,30,00),
+  end_game: DateTime.new(2019,12,13,19,30,00),
+  team_host: fcschalke,
+  team_visitor: fnatic,
+  confirmation: false
+  )
 
 
 fncMatch1 = Scrim.create!(
@@ -694,9 +688,9 @@ fncMatch1 = Scrim.create!(
   confirmation: true,
   team_host: vitality,
   team_visitor: fnatic,
+  winner_team: "fnatic",
   team_host_kills: 8,
   team_visitor_kills: 19,
-  winner: :team_visitor,
   team_host_champions: "Lucian JarvanIV Taliyah Ezreal Braum",
   team_visitor_champions: "Gangplank Karthus Lissandra Vayne Alistar"
   )
@@ -707,10 +701,10 @@ fncMatch2 = Scrim.create!(
   confirmation: true,
   team_host: fnatic,
   team_visitor: vitality,
+  winner_team: "fnatic",
   team_host_kills: 14,
   team_visitor_kills: 5,
-  winner: :team_host,
-  team_host_champions: "Aatrox Karthus Lissandra Kaisa Tresh",
+  team_host_champions: "Aatrox Karthus Lissandra Kaisa Thresh",
   team_visitor_champions: "Kennen JarvanIV Zoe Tristana Braum"
   )
 
@@ -720,10 +714,10 @@ fncMatch3 = Scrim.create!(
   confirmation: true,
   team_host: vitality,
   team_visitor: fnatic,
+  winner_team: "fnatic",
   team_host_kills: 7,
   team_visitor_kills: 27,
-  winner: :team_visitor,
-  team_host_champions: "Jayce Gragas Yazuo Jinx Tresh",
+  team_host_champions: "Jayce Gragas Yasuo Jinx Thresh",
   team_visitor_champions: "Sion RekSai Kayle Sivir Braum"
   )
 
@@ -733,9 +727,9 @@ fncMatch4 = Scrim.create!(
   confirmation: true,
   team_host: fnatic,
   team_visitor: splyce,
+  winner_team: "fnatic",
   team_host_kills: 13,
   team_visitor_kills: 11,
-  winner: :team_host,
   team_host_champions: "JarvanIV Karthus Syndra Sivir Alistar",
   team_visitor_champions: "Jayce RekSai Corki Zoe TahmKench"
   )
@@ -746,11 +740,11 @@ fncMatch5 = Scrim.create!(
   confirmation: true,
   team_host: splyce,
   team_visitor: fnatic,
+  winner_team: "splyce",
   team_host_kills: 19,
   team_visitor_kills: 10,
-  winner: :team_host,
   team_host_champions: "Sion Skarner Ryze Tristana Braum",
-  team_visitor_champions: "Chogath RekSai Kayle Sivir Tresh"
+  team_visitor_champions: "Chogath RekSai Kayle Sivir Thresh"
   )
 
 fncMatch6 = Scrim.create!(
@@ -759,11 +753,11 @@ fncMatch6 = Scrim.create!(
   confirmation: true,
   team_host: fnatic,
   team_visitor: splyce,
+  winner_team: "fnatic",
   team_host_kills: 18,
   team_visitor_kills: 20,
-  winner: :team_host,
   team_host_champions: "Aatrox JarvanIV Lissandra Vayne Rakan",
-  team_visitor_champions: "Shen RekSai Azir Jinx Tresh"
+  team_visitor_champions: "Shen RekSai Azir Jinx Thresh"
   )
 
 fncMatch7 = Scrim.create!(
@@ -772,9 +766,9 @@ fncMatch7 = Scrim.create!(
   confirmation: true,
   team_host: splyce,
   team_visitor: fnatic,
+  winner_team: "fnatic",
   team_host_kills: 8,
   team_visitor_kills: 21,
-  winner: :team_visitor,
   team_host_champions: "Shen Hecarim Sylas Veigar TahmKench",
   team_visitor_champions: "Lissandra JarvanIV Vayne Sivir Alistar"
   )

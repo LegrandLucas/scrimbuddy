@@ -14,6 +14,17 @@ class User < ApplicationRecord
     self.team.scrims
   end
 
+  def friends
+    friends = Message.where(sender: self).map { |message| message.receiver} + Message.where(receiver: self).map { |message| message.sender}
+    friends.uniq
+  end
+
+  def conversation_with(friend_id)
+    friend       = User.find(friend_id)
+    conversation = Message.where(sender: self, receiver: friend) + Message.where(sender: friend, receiver: self)
+    conversation.sort_by { |message| message.created_at }
+  end
+
   # def scraping_summoner_stats_from_riot_games
   #   summoner_infos   = scrapping_summoner_infos_from_riot_games
   #   stats_url        = "https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/#{summoner_infos['id']}?api_key=#{ENV['RIOT_GAMES_API_KEY']}"
@@ -102,6 +113,8 @@ class User < ApplicationRecord
   #   summoner_serialized = open(URI.parse(URI.escape(summoner_url))).read
   #   JSON.parse(summoner_serialized)
   # end
+
+  private
 
   # def five_last_matches_from_riot
   #   summoner_infos = scrapping_summoner_infos_from_riot_games

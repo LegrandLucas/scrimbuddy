@@ -6,7 +6,7 @@ class CreateScrims < ActiveRecord::Migration[5.2]
       t.boolean :confirmation, default: false
       t.references :team_host, foreign_key: {to_table: :teams}
       t.references :team_visitor, foreign_key: {to_table: :teams}
-      t.string :winner
+      t.string :winner_team
       t.integer :team_host_kills
       t.integer :team_visitor_kills
       t.string :team_host_champions
