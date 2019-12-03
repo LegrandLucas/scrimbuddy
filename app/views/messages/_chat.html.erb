@@ -1,4 +1,4 @@
-<h3>My conversation with <%= @friend.pseudo %></h3>
+<h3>My conversation with <%= @friend.first_name %></h3>
 <div class="chat-box">
 
   <% @messages.each do |message| %>
@@ -16,7 +16,7 @@
     </div>
   <% end %>
   <% end %>
-  <%= render 'messages/form' %>
+  <%= render 'messages/form', friend: @friend, message: @message %>
   <%= link_to 'Back to conversations', conversations_dashboard_path %>
 </div>
 

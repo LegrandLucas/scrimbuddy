@@ -1,4 +1,4 @@
-<%= simple_form_for([@friend, @message], remote: true) do |f| %>
+<%= simple_form_for([friend, message], remote: true) do |f| %>
   <%= f.input :content%>
   <%= f.submit "Send a message", class: "btn btn-primary" %>
-  <% end %>
+<% end %>
