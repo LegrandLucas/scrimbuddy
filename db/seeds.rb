@@ -776,27 +776,80 @@ fncMatch7 = Scrim.create!(
 
 message1 = Message.create!(
   content: "Hello, is it still okay for tomorrow ?",
-  sender: falco,
+  sender: duke,
   receiver: mephisto,
   )
 
 message2 = Message.create!(
   content: "Yes and for you ?",
   sender: mephisto,
-  receiver: falco,
+  receiver: duke,
   )
 
 message3 = Message.create!(
   content: "Yes, can we just do it earlier ? 30 minutes earlier than planed ?",
-  sender: falco,
+  sender: duke,
   receiver: mephisto,
   )
 
 message4 = Message.create!(
   content: "I asked the guys, no problem, see you tomorrow",
   sender: mephisto,
+  receiver: duke,
+  )
+
+message5 = Message.create!(
+  content: "I asked the guys, no problem, see you tomorrow",
+  sender: mephisto,
+  receiver: duke,
+  )
+
+message6 = Message.create!(
+  content: "Hello",
+  sender: falco,
+  receiver: mephisto,
+  )
+
+message7 = Message.create!(
+  content: "Hi man",
+  sender: mephisto,
   receiver: falco,
   )
+
+message8 = Message.create!(
+  content: "Hello, are you available at the dates I sent to you ?",
+  sender: mephisto,
+  receiver: yamato,
+  )
+
+message9 = Message.create!(
+  content: "Yes, I accept it",
+  sender: yamato,
+  receiver: mephisto,
+  )
+
+message10 = Message.create!(
+  content: "Perfect, see you",
+  sender: mephisto,
+  receiver: yamato,
+  )
+
+message11 = Message.create!(
+  content: "Hello, how are you ? ",
+  sender: mephisto,
+  receiver: grabzz,
+  )
+
+
+message12 = Message.create!(
+  content: "Just to display messages cards.",
+  sender: grabzz,
+  receiver: mephisto,
+  )
+
+
+
+
 
 puts "Finished!"
 

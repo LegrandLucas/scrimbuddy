@@ -8,10 +8,10 @@
       <%= f.input :end_hour, as: :string, readonly: true %>
     </div>
   </div>
-  <div class="form-group">
+  <div class="form-group scrim-booking-form">
 
-    <button class="btn btn-success end_shift_btn" data-hours="3">3 games</button>
-    <button class="btn btn-success end_shift_btn" data-hours="5">5 games</button>
+    <button class="btn btn-success end_shift_btn d-none" id="scrim-btn" data-hours="3">3 games</button>
+    <button class="btn btn-success end_shift_btn d-none" id="scrim-btn2" data-hours="5">5 games</button>
   </div>
-  <%= f.submit "Book scrim", class: "btn-ca", id:"sweet-alert-demo" %>
+  <%= f.submit "Book scrim", class: "btn-ca btn-book-scrim-form", id:"sweet-alert-demo" %>
 <% end %>

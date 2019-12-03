@@ -6,19 +6,19 @@
     </div>
 
     <div class='column-dashboard'>
-      <div class="middle">
-        <%= render 'shared/navbar_dashboard' %>
+        <%= render 'dashboards/navbar' %>
         <div class="team-box">
           <% if @users_with_conversation.empty? %>
             <h3>You have no conversations yet</h3>
           <% else %>
-            <h3>My conversations</h3>
+            <h3 class="m-3">Chat Room</h3>
             <% @users_with_conversation.each do |user| %>
-              <%= render "messages/card", user: user, team: user.team %>
+              <div class="messages-link">
+                <%= render "messages/card", user: user, team: user.team %>
+              </div>
             <% end %>
           <% end %>
         </div>
-      </div>
     </div>
 
     <div class='column-dashboard'>
