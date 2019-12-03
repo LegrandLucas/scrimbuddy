@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   end
   resources :messages, only: %i[destroy]
   resource :dashboard do
-    get 'conversations'
+    resources :conversations, only: [:index ,:show]
   end
 end
 

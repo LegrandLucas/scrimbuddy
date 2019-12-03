@@ -1,7 +1,5 @@
-<h3>My conversation with <%= @friend.first_name %></h3>
-
 <div id="messages" class="chat-box">
-  <% @messages.each do |message| %>
+  <% messages.each do |message| %>
     <% if message.sender == current_user %>
       <%= render "messages/show", message: message, reverse: true, sender: true %>
     <% else %>
@@ -14,5 +12,4 @@
   <% end %>
 </div>
 
-<%= render 'messages/form', friend: @friend, message: @message %>
-<%= link_to 'Back to conversations', conversations_dashboard_path %>
+<%= render 'messages/form', friend: friend, message: Message.new %>
