@@ -92,6 +92,8 @@ bwipo = User.create!(
   pseudo: "Bwipo",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -107,6 +109,8 @@ broxah = User.create!(
   pseudo: "Broxah",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -122,6 +126,8 @@ nemesis = User.create!(
   pseudo: "Nemesis",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -138,6 +144,8 @@ rekkles = User.create!(
   pseudo: "Rekkles",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
 )
 
@@ -154,6 +162,8 @@ hylissang = User.create!(
   pseudo: "Hylissangh",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -169,6 +179,8 @@ mephisto = User.create!(
   pseudo: "Mephisto",
   team: fnatic,
   user_type: "Coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
 )
 
@@ -185,6 +197,8 @@ wunder = User.create!(
   pseudo: "Wunder",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -200,6 +214,8 @@ jankos = User.create!(
   pseudo: "Jankos",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -216,6 +232,8 @@ caps = User.create!(
   pseudo: "Caps",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -232,6 +250,8 @@ perkz = User.create!(
   pseudo: "PerkZ",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -248,6 +268,8 @@ mikyx = User.create!(
   pseudo: "Mikyx",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -262,6 +284,8 @@ grabzz = User.create!(
   pseudo: "Grabzz",
   team: gtwo,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
@@ -277,6 +301,8 @@ odoamne = User.create!(
   pseudo: "Odoamne",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -292,6 +318,8 @@ trick = User.create!(
   pseudo: "Trick",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -308,6 +336,8 @@ abbedagge = User.create!(
   pseudo: "Abbedagge",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -323,6 +353,8 @@ upset = User.create!(
   pseudo: "Upset",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -338,6 +370,8 @@ ignar = User.create!(
   pseudo: "IgNar",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -352,6 +386,8 @@ falco = User.create!(
   pseudo: "Falco",
   team: fcschalke,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
@@ -368,6 +404,8 @@ dandan = User.create!(
   pseudo: "Dan Dan",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -383,8 +421,12 @@ kirei = User.create!(
   pseudo: "Kirei",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
+
+
 
 avatar_kirei_path = Rails.root.join('app', 'assets', 'images', 'kirei.png')
 kirei.avatar.attach(io: File.open(avatar_kirei_path), filename: 'kirei.png', content_type: 'image/png')
@@ -399,6 +441,8 @@ febiven = User.create!(
   pseudo: "Febiven",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -416,6 +460,8 @@ neon = User.create!(
   pseudo: "Neon",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -431,6 +477,8 @@ hiva = User.create!(
   pseudo: "H1iva",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -438,31 +486,31 @@ avatar_hiva_path = Rails.root.join('app', 'assets', 'images', 'hiva.png')
 hiva.avatar.attach(io: File.open(avatar_hiva_path), filename: 'hiva.png', content_type: 'image/png')
 
 
-puts "CREATING JANDRO"
-jandro = User.create!(
-  first_name: "Alejandro",
-  last_name: "Fernández-Valdés",
-  email: "jandro@misfits.com",
-  password: "azerty",
-  pseudo: "Jandro",
-  season_wins: 0,
-  season_losses: 0,
-  team: misfits,
-  user_type: "coach",
-  role: "Coach"
-  )
+# puts "CREATING JANDRO"
+# jandro = User.create!(
+#   first_name: "Alejandro",
+#   last_name: "Fernández-Valdés",
+#   email: "jandro@misfits.com",
+#   password: "azerty",
+#   pseudo: "Jandro",
+#   season_wins: 0,
+#   season_losses: 0,
+#   team: misfits,
+#   user_type: "coach",
+#   role: "Coach"
+# )
 
-puts "                  "
-puts "                  "
-puts "                  "
-puts "                  "
-puts "ATTACH PICTURES"
-avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
-jandro.avatar.attach(io: File.open(avatar_jandro_path), filename: 'jandro.png', content_type: 'image/png')
-puts "                  "
-puts "                  "
-puts "                  "
-puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "ATTACH PICTURES"
+# avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
+# jandro.avatar.attach(io: File.open(avatar_jandro_path), filename: 'jandro.png', content_type: 'image/png')
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
 
 cabochard = User.create!(
   first_name: "Lucas",
@@ -493,6 +541,8 @@ mowgli = User.create!(
   pseudo: "Mowgli",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -508,6 +558,8 @@ jiizuke = User.create!(
   pseudo: "Jiizuke",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -523,6 +575,8 @@ attila = User.create!(
   pseudo: "Attila",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -538,6 +592,8 @@ jactroll = User.create!(
   pseudo: "Jactroll",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -552,6 +608,8 @@ yamato = User.create!(
   pseudo: "YamatoCannon",
   team: vitality,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
@@ -669,6 +727,8 @@ duke = User.create!(
   pseudo: "Duke",
   team: splyce,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
