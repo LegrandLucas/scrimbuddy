@@ -34,7 +34,7 @@
         <div class="booking-form">
           <h4><%= image_tag @team.images.first, class: "team-logo-book-card" %></h4>
           <h4>Book a scrim with <%= @team.name %></h4>
-          <%= render "booking_form", team: @team, scrim: @scrim %>
+          <%= render "scrims/booking_form", team: @team, scrim: @scrim %>
         </div>
       </div>
     </div>
@@ -43,6 +43,6 @@
 
 <div
   id="booking-form-div"
-  data-bookings="<%= @bookings_dates.to_json %>"
+  data-scrims="<%= @scrims_dates.to_json %>"
 ></div>
 
