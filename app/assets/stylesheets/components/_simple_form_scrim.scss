@@ -13,8 +13,27 @@
   color: white;
   font-weight: 900;
   border-radius: 4px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear 1s;
+}
+
+.end_shift_btn:hover {
+  width: 46%;
+  background-color: #1EDD88;
+  color: white;
+}
+
+
+
+.end_shift_btn.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .btn-book-scrim-form {
   width: 100%;
 }
+
+
+
