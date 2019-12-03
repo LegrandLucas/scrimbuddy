@@ -46,12 +46,7 @@
     margin-bottom: 5px;
   }
 
-  .profile-pic {
-    height: 290px;
-    align-self: center;
-    position: absolute;
-    bottom: 0px;
-  }
+
 
   .middle-card {
     color: black;
@@ -94,3 +89,117 @@
   }
 }
 
+.profile-pic {
+  height: 290px;
+}
+
+.position-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.general-player-infos {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 20px;
+}
+
+.player-general-informations{
+  border-bottom: 1px solid lightgray;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.player-banner {
+  height: 300px;
+  width: 100%;
+  background-color: rgb(230, 230, 230);
+  // background-color: rgba(255, 80, 45, 0.3);
+  text-align: center;
+  position: relative;
+}
+
+.banner-container {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.player-pseudo-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.player-avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.name-icon {
+  font-size: 40px;
+}
+
+.rank_image img {
+  height: 250px;
+}
+
+.player-statistics {
+  text-align: center;
+}
+
+.player-statistics p {
+  text-shadow: none;
+  font-size: 20px;
+  margin: 0;
+}
+
+.diagram {
+  height: 250px;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 50%;
+}
+
+.stat-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.stat-category {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: $sb-orange;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.champions-images  img {
+  width: 75px;
+  height: 75px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.champions-images {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
