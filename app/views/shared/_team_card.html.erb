@@ -6,6 +6,8 @@
           <%= image_tag image %>
           <div class="card-scrims-infos">
             <h2><%= scrim.team_host.name %></h2>
+            <p><%= scrim.start_game.strftime('%a, %d %b %Y') %></p>
+            <p><%= scrim.start_game.strftime('%H:%M') %> - <%= scrim.end_game.strftime('%H:%m') %></p>
           </div>
         <% end %>
       </div>

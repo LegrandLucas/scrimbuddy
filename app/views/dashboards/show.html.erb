@@ -15,7 +15,8 @@
           <%= render 'shared/navbar_dashboard' %>
 
           <div class="team-box">
-            <%= render 'shared/team_card' %>
+            <%= render 'shared/team_card', next_scrims: @user.team %>
+
           </div>
 
         </div>
