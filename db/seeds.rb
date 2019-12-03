@@ -878,8 +878,76 @@ message12 = Message.create!(
   )
 
 
+playerHistory1 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 17,
+  team_two_kills: 24,
+  duration: 1510,
+  winner: "team_two",
+  team_one_champions: "Tristana Khazix Orianna Xayah Karma",
+  team_two_champions: "Gangplank LeeSin Katarina Kaisa Morgana",
+  team_one_players: "SPY Vizicsacsi, I am LeBron v2, PABLO NAVEIRAS, NoNemAgain, Luka Cica",
+  team_two_players: "Mr Ascendant, Shëun, Tråkig karaktär, IGY Kxng, Mizune4",
+  player_team: 'team_one'
+  )
 
+playerHistory2 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 23,
+  team_two_kills: 38,
+  duration: 1453,
+  winner: "team_two",
+  team_one_champions: "Gnar Gragas Katarina Xayah Leona",
+  team_two_champions: "Camille Diana Kassadin Jhin Rakan",
+  team_one_players: "SPY Vizicsacsi, NorthTomb0286, Bcs I Cân, Mıkσtσ Suoh, FYN Lilipp",
+  team_two_players: "TwTv Drututt, Unbreakable Bond, IZI toucouille, west ch, Wheilltur",
+  player_team: 'team_one'
+  )
 
+playerHistory3 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 37,
+  team_two_kills: 37,
+  duration: 1666,
+  winner: "team_one",
+  team_one_champions: "Neeko Kayn Ryze Ashe Thresh",
+  team_two_champions: "Gangplank Karthus Yasuo Kaisa Pyke",
+  team_one_players: "SPY Vizicsacsi, AUDI RS 7 1000HP, Grrumpyx, REC Woolite, ttommy shelby",
+  team_two_players: "NilleNalley, Triestìno, kingofwarrior66, destroy you, Dadju abuser",
+  player_team: 'team_one'
+  )
+
+playerHistory4 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 37,
+  team_two_kills: 37,
+  duration: 1666,
+  winner: "team_one",
+  team_one_champions: "Neeko Kayn Ryze Ashe Thresh",
+  team_two_champions: "Gangplank Karthus Yasuo Kaisa Pyke",
+  team_one_players: "SPY Vizicsacsi, AUDI RS 7 1000HP, Grrumpyx, REC Woolite, ttommy shelby",
+  team_two_players: "NilleNalley, Triestìno, kingofwarrior66, destroy you, Dadju abuser",
+  player_team: 'team_one'
+  )
+
+playerHistory5 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 37,
+  team_two_kills: 37,
+  duration: 2064,
+  winner: "team_two",
+  team_one_champions: "Renekton Ekko Ahri Jhin Notilus",
+  team_two_champions: "Ryze Kayn Kassadin MissFortune FiddleStick",
+  team_one_players: "SPY Vizicsacsi, Totally BoB, give me mid ok, Squirt gun, OwnerOfR",
+  team_two_players: "try h4rder, L1 2 10, Xenagoras, Lapin du Néant, Nelun",
+  player_team: 'team_one'
+  )
 
 puts "Finished!"
 
+
+# vizicsacsi
+# xerxe
+# humanoid
+# kobbe
+# tore

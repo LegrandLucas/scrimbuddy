@@ -57,3 +57,24 @@
 .team_visitor {
   width: 100%;
 }
+
+
+.duration-text {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  font-size: 24px;
+}
+
+.duration-text p {
+  margin: 0;
+}
+
+.player-score {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}

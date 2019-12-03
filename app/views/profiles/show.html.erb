@@ -109,6 +109,8 @@
   </div>
 
   <div class="history-cards">
-
+    <% @user.user_histories.each do |match| %>
+      <%= render 'shared/user_history', user: @user, match: match %>
+    <% end %>
   </div>
 </div>
