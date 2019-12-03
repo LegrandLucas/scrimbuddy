@@ -13,7 +13,6 @@ Scrim.destroy_all
 Team.destroy_all
 User.destroy_all
 
-
 puts "Creating users, teams and scrims..."
 
 fnatic = Team.create!(
