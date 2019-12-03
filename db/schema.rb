@@ -76,12 +76,13 @@ ActiveRecord::Schema.define(version: 2019_12_02_100236) do
     t.bigint "user_id"
     t.integer "team_one_kills"
     t.integer "team_two_kills"
-    t.time "duration"
+    t.integer "duration"
     t.string "winner"
     t.string "team_one_champions"
     t.string "team_two_champions"
     t.string "team_one_players"
     t.string "team_two_players"
+    t.string "player_team"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_user_histories_on_user_id"
