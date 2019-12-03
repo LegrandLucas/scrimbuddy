@@ -1,5 +1,5 @@
 <%= simple_form_for [team, scrim] do |f| %>
-  <%= f.input :start_game, label: "Date", as: :hidden, as: :string, input_html: { class: "d-none", id: "start_game" } %>
+  <%= f.input :start_game, label: false, as: :hidden, as: :string, input_html: { class: "d-none", id: "start_game" } %>
   <div class="row">
     <div class="col-6">
       <%= f.input :start_hour,  collection: shifts %>
