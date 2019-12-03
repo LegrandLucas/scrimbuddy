@@ -8,9 +8,9 @@
 # require 'faker'
 
 puts "Destroy all seeds..."
+Message.destroy_all
 Scrim.destroy_all
 Team.destroy_all
-Message.destroy_all
 User.destroy_all
 
 
