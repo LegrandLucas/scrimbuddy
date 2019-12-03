@@ -16,12 +16,7 @@
     </div>
   <% end %>
   <% end %>
-
-  <%= simple_form_for [@friend, @message] do |f| %>
-  <%= f.input :content%>
-  <%= f.submit "Send a message", class: "btn btn-primary" %>
-  <% end %>
-
+  <%= render 'messages/form' %>
   <%= link_to 'Back to conversations', conversations_path %>
 </div>
 
