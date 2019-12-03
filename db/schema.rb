@@ -99,7 +99,12 @@ ActiveRecord::Schema.define(version: 2019_12_02_100236) do
     t.string "first_name"
     t.string "last_name"
     t.string "user_type"
+    t.integer "season_wins"
+    t.integer "season_losses"
+    t.string "rank"
+    t.integer "league_points"
     t.string "lol_account"
+    t.string "most_used_champions"
     t.bigint "team_id"
     t.string "role"
     t.index ["email"], name: "index_users_on_email", unique: true

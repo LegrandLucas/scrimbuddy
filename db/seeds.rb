@@ -461,7 +461,12 @@ cabochard = User.create!(
   pseudo: "Cabochard",
   team: vitality,
   user_type: "player",
-  role: "Top"
+  role: "Top",
+  season_wins: 255,
+  season_losses: 208,
+  rank: 'MASTER I',
+  league_points: 116,
+  most_used_champions: "Mordekaiser Akali Kled Gragas Renekton"
   )
 
 avatar_cabochard_path = Rails.root.join('app', 'assets', 'images', 'cabochard.png')
@@ -546,11 +551,16 @@ vizicsacsi = User.create!(
   last_name: "Kiss",
   email: "tamas@splyce.com",
   password: "azerty",
-  lol_account: "aN Vizicsacsi",
+  lol_account: "SPY Vizicsacsi",
   pseudo: "Vizicsacsi",
   team: splyce,
   user_type: "player",
-  role: "Top"
+  role: "Top",
+  season_wins: 281,
+  season_losses: 236,
+  rank: 'DIAMOND I',
+  league_points: 75,
+  most_used_champions: "Kennen Aatrox JarvanIV Renekton Gangplank"
   )
 
 avatar_vizicsacsi_path = Rails.root.join('app', 'assets', 'images', 'vizicsacsi.png')
@@ -565,7 +575,12 @@ xerxe = User.create!(
   pseudo: "Xerxe",
   team: splyce,
   user_type: "player",
-  role: "Jungler"
+  role: "Jungler",
+  season_wins: 423,
+  season_losses: 356,
+  rank: 'CHALLENGER I',
+  league_points: 715,
+  most_used_champions: "Shyvana KhaZix Hecarim Nidalee Kayn"
   )
 
 avatar_xerxe_path = Rails.root.join('app', 'assets', 'images', 'xerxe.png')
@@ -577,11 +592,16 @@ humanoid = User.create!(
   last_name: "Brázda",
   email: "marek@splyce.com",
   password: "azerty",
-  lol_account: "Humanoid",
+  lol_account: "Positive tryhard",
   pseudo: "Humanoid",
   team: splyce,
   user_type: "player",
-  role: "Mid"
+  role: "Mid",
+  season_wins: 459,
+  season_losses: 379,
+  rank: 'CHALLENGER I',
+  league_points: 1009,
+  most_used_champions: "Akali Cassiopeia Kaisa Ryze Tristana"
   )
 
 avatar_humanoid_path = Rails.root.join('app', 'assets', 'images', 'humanoid.png')
@@ -597,7 +617,12 @@ kobbe = User.create!(
   pseudo: "Kobbe",
   team: splyce,
   user_type: "player",
-  role: "Carry AD"
+  role: "Carry AD",
+  season_wins: 608,
+  season_losses: 524,
+  rank: 'CHALLENGER I',
+  league_points: 710,
+  most_used_champions: "Kaisa Senna Xayah Lucian Yasuo"
   )
 
 avatar_kobbe_path = Rails.root.join('app', 'assets', 'images', 'kobbe.png')
@@ -610,10 +635,15 @@ tore = User.create!(
   email: "tore@splyce.com",
   password: "azerty",
   lol_account: "ekstra stor Tore",
-  pseudo: "Tore",
+  pseudo: "Norskeren",
   team: splyce,
   user_type: "player",
-  role: "Support"
+  role: "Support",
+  season_wins: 476,
+  season_losses: 399,
+  rank: 'CHALLENGER I',
+  league_points: 648,
+  most_used_champions: "Alistar Orianna Irelia Ryze Morgana"
   )
 
 avatar_tore_path = Rails.root.join('app', 'assets', 'images', 'tore.png')
