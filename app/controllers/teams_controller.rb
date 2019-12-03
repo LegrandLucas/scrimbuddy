@@ -6,10 +6,13 @@ class TeamsController < ApplicationController
   end
 
   def show
+    @team_user    = current_user.team
     @coach        = @team.coach
     @scrims       = @team.scrims_against_current_user_team(current_user)
     @scrim        = Scrim.new
-    @scrims_dates = @team.scrims.map { |scrim| scrim.start_game }
+    # @scrims_dates = @team.scrims.map { |scrim| scrim.start_game } + @team_user.scrims.map { |scrim| scrim.start_game }
+    # Refacto by Alex
+    @scrims_dates = @team.scrims.map(&:start_game) + @team_user.scrims.map(&:start_game)
   end
 
   def new
