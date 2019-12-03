@@ -1,0 +1,8 @@
+<div class="d-flex justify-content-start <%= "flex-row-reverse" if reverse %>">
+  <div class="message-image">
+    <%= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
+  </div>
+  <div class="card-chat <%= "sender" if sender %>">
+    <p><%= message.content %></p>
+  </div>
+</div>

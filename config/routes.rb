@@ -9,12 +9,13 @@ Rails.application.routes.draw do
     resources :reviews, only: %i[new create]
   end
   resources :profiles, only: [:show]
-  get '/dashboard', to: "profiles#dashboard", as: :dashboard
-  get 'conversations', to: 'messages#conversations'
   resources :users do
     resources :messages, only: [:index, :create]
   end
   resources :messages, only: %i[destroy]
+  resource :dashboard do
+    get 'conversations'
+  end
 end
 
 

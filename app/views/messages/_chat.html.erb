@@ -1,29 +1,18 @@
-<h3>My conversation with <%= @friend.pseudo %></h3>
-<div class="chat-box">
+<h3>My conversation with <%= @friend.first_name %></h3>
 
+<div id="messages" class="chat-box">
   <% @messages.each do |message| %>
-  <% if message.sender == current_user %>
-  <div class="message-image">
-    <%= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
-  </div>
-    <div class="card-chat sender">
-      <p><%= message.content %></p>
-    </div>
-  <% else %>
-    <%= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
-    <div class="card-chat">
-       <p><%= message.content %></p>
-    </div>
+    <% if message.sender == current_user %>
+      <%= render "messages/show", message: message, reverse: true, sender: true %>
+    <% else %>
+      <%= render "messages/show", message: message, reverse: false, sender: false %>
+      <%#= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
+<!--       <div class="card-chat">
+         <p><%= message.content %></p>
+      </div> -->
+    <% end %>
   <% end %>
-  <% end %>
-
-  <%= simple_form_for [@friend, @message] do |f| %>
-  <%= f.input :content%>
-  <%= f.submit "Send a message", class: "btn btn-primary" %>
-  <% end %>
-
-  <%= link_to 'Back to conversations', conversations_path %>
 </div>
 
-
-
+<%= render 'messages/form', friend: @friend, message: @message %>
+<%= link_to 'Back to conversations', conversations_dashboard_path %>

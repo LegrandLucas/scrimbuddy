@@ -1,7 +1,9 @@
 
 .dashboard-player-info {
+    padding: 5px;
+    margin-left: 40px;
  .player-card {
-   background: red;
+   background: #427a8859;
    border-radius: 5px;
    width: 80%;
    // height: 110px;
@@ -12,14 +14,15 @@
 
    .avatar {
      height: 80px;
-     width: 80px;
+     width: 100px;
      border-radius: 50%;
      margin: 5px;
+     filter: drop-shadow(3px 2px 2px #3E3B3B6E);
     }
 
    .text-block {
      margin-left: 10px;
-     text-shadow: 1px 1px #BABDB6FF;
+     text-shadow: 1px 1px #929281;
     }
 
    .player-card-content {

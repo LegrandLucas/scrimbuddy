@@ -1,0 +1,17 @@
+<%= simple_form_for [team, scrim] do |f| %>
+  <%= f.input :start_game, label: false, as: :hidden, as: :string, input_html: { class: "d-none", id: "start_game" } %>
+  <div class="row">
+    <div class="col-6">
+      <%= f.input :start_hour,  collection: shifts %>
+    </div>
+    <div class="col-6">
+      <%= f.input :end_hour, as: :string, readonly: true %>
+    </div>
+  </div>
+  <div class="form-group scrim-booking-form">
+
+    <button class="btn btn-success end_shift_btn d-none" id="scrim-btn" data-hours="3">3 games</button>
+    <button class="btn btn-success end_shift_btn d-none" id="scrim-btn2" data-hours="5">5 games</button>
+  </div>
+  <%= f.submit "Book scrim", class: "btn-ca btn-book-scrim-form", id:"sweet-alert-demo" %>
+<% end %>

@@ -1,8 +1,8 @@
 .card-scrims {
   border-radius: 4px;
   overflow: hidden;
-  height: 120px;
-  width: 35em;
+  height: 180px;
+  width: 600px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -27,6 +27,7 @@
   text-shadow: 1px 1px #DDC;
       &:hover {
     color: #348498;
+    transition: .5s;
   }
 }
 

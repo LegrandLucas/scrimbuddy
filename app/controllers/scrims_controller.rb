@@ -11,6 +11,7 @@ class ScrimsController < ApplicationController
   end
 
   def create
+    sleep 2
     start_game = parse_date_time(params[:scrim][:start_game], params[:scrim][:start_hour])
     end_game = parse_date_time(params[:scrim][:start_game], params[:scrim][:end_hour])
 
