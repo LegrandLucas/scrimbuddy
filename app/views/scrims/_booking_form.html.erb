@@ -1,6 +1,3 @@
-
-
-
 <%= simple_form_for [team, scrim] do |f| %>
   <%= f.input :start_game, label: "Date", as: :hidden, as: :string, input_html: { id: "start_game" } %>
   <%= f.input :start_hour,  collection: shifts %>

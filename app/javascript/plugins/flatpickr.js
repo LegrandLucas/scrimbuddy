@@ -17,7 +17,7 @@ if (scrimForm) {
     inline: true,
     minDate: "today",
     dateFormat: "d-m-Y",
-    disable: bookings
+    disable: ["2019-12-10", "2019-12-15"]
   });
 }
 
