@@ -438,31 +438,31 @@ avatar_hiva_path = Rails.root.join('app', 'assets', 'images', 'hiva.png')
 hiva.avatar.attach(io: File.open(avatar_hiva_path), filename: 'hiva.png', content_type: 'image/png')
 
 
-puts "CREATING JANDRO"
-jandro = User.create!(
-  first_name: "Alejandro",
-  last_name: "Fernández-Valdés",
-  email: "jandro@misfits.com",
-  password: "azerty",
-  pseudo: "Jandro",
-  season_wins: 0,
-  season_losses: 0,
-  team: misfits,
-  user_type: "coach",
-  role: "Coach"
-  )
+# puts "CREATING JANDRO"
+# jandro = User.create!(
+#   first_name: "Alejandro",
+#   last_name: "Fernández-Valdés",
+#   email: "jandro@misfits.com",
+#   password: "azerty",
+#   pseudo: "Jandro",
+#   season_wins: 0,
+#   season_losses: 0,
+#   team: misfits,
+#   user_type: "coach",
+#   role: "Coach"
+# )
 
-puts "                  "
-puts "                  "
-puts "                  "
-puts "                  "
-puts "ATTACH PICTURES"
-avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
-jandro.avatar.attach(io: File.open(avatar_jandro_path), filename: 'jandro.png', content_type: 'image/png')
-puts "                  "
-puts "                  "
-puts "                  "
-puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "ATTACH PICTURES"
+# avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
+# jandro.avatar.attach(io: File.open(avatar_jandro_path), filename: 'jandro.png', content_type: 'image/png')
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
 
 cabochard = User.create!(
   first_name: "Lucas",
