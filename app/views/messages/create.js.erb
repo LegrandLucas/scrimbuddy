@@ -1,20 +1,18 @@
-console.log("je suis dans create")
-// function refreshForm(innerHTML) {
-//   const newMessageForm = document.getElementById('new_message');
-//   newMessageForm.innerHTML = innerHTML;
-// }
+function refreshForm(innerHTML) {
+  const newMessageForm = document.getElementById('new_message');
+  newMessageForm.innerHTML = innerHTML;
+}
 
-// function addMessage(messageHTML) {
-//   const messages = document.getElementById('messages');
-//   messages.insertAdjacentHTML('beforeend', messageHTML);
-// }
+function addMessage(messageHTML) {
+  const messages = document.getElementById('messages');
+  messages.insertAdjacentHTML('beforeend', messageHTML);
+}
 
 <% if @message.errors.any? %>
-  console.log("je marche")
-  // refreshForm('<%= j render "messages/form", friend: @friend, message: @message %>');
+  refreshForm('<%= j render "messages/form", friend: @friend, message: @message %>');
 <% else %>
-  console.log("je marche pas")
-  // addMessage('<%= j render "messages/chat", message: @message %>');
-  // refreshForm('<%= j render "messages/form", friend: @friend, message: Message.new %>');
+  addMessage('<%= j render "messages/show", message: @message %>')
+  refreshForm('<%= j render "messages/form", friend: @friend, message: Message.new %>');
 <% end %>
+
 

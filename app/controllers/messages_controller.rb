@@ -15,7 +15,7 @@ class MessagesController < ApplicationController
     @message          = Message.new(message_params)
     @message.sender   = current_user
     @message.receiver = @friend
-    @messages         = current_user.conversation_with(params[:user_id])
+    # @messages         = current_user.conversation_with(params[:user_id])
     if @message.save
       respond_to do |format|
         format.html { redirect_to user_messages_path(@friend) }
