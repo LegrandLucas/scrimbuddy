@@ -1,28 +1,114 @@
-<div class="sb-container">
-  <div class="row">
-    <div class="col-4">
-      <%= render 'shared/player_card_show_player' %>
+<div class="player-banner">
+  <div class="banner-container">
+    <div class="row">
+      <div class="col-3">
+        <div class="general-player-infos">
+          <div class="name-icon"><i class="fas fa-user"></i></div>
+          <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="player-pseudo-image">
+          <div>
+            <%= image_tag (@user.avatar), class: "player-avatar" %>
+          </div>
+          <h1 id="team-name-show-team"><%= @user.pseudo %></h1>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="general-player-infos">
+          <% if @user.role == "Top" %>
+            <div><%= image_tag "position/Position_Top", class: "position-icon" %></div>
+          <% elsif @user.role == "Jungler" %>
+            <div><%= image_tag "position/Position_Jungle", class: "position-icon" %></div>
+          <% elsif @user.role == "Mid" %>
+            <div><%= image_tag "position/Position_Mid", class: "position-icon" %></div>
+          <% else %>
+            <div><%= image_tag "position/Position_Bot", class: "position-icon" %></div>
+          <% end %>
+          <h2><%= @user.role %></h2>
+        </div>
+      </div>
     </div>
-    <div class="col-8">
-      <div class="stat-category">
-        Personnal statistics
-      </div>
-
-      <div class="player-stats">
-       TODO
-      </div>
-
-      <div class="stat-category">
-        SoloQ history
-      </div>
-
-      <div class="history-cards">
-
-      </div>
-    </div>
-  </div>.
+  </div>
 </div>
 
-<div class="footer">
-  <%= render 'shared/footer' %>
+<div class="sb-container">
+  <div class="stat-category">
+    Personnal statistics
+  </div>
+
+  <div class="player-statistics">
+    <div class="row">
+
+      <div class="col-4">
+        <div class="stat-infos">
+          <div class="diagram">
+            <p><%= @win_rate %>%</p>
+          </div>
+          <div class="games">
+            <p><%= @total_match %> games played:</p>
+            <p><%= @user[:season_wins] %>W / <%= @user[:season_losses] %>L</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="stat-infos">
+          <div class="rank_image">
+            <% if @user[:rank].include?("CHALLENGER") %>
+              <%= image_tag 'ranking/Emblem_Challenger' %>
+            <% elsif @user[:rank].include?("GRANDMASTER") %>
+              <%= image_tag 'ranking/Emblem_Grandmaster' %>
+            <% elsif @user[:rank].include?("MASTER") %>
+              <%= image_tag 'ranking/Emblem_Master' %>
+            <% elsif @user[:rank].include?("DIAMOND") %>
+              <%= image_tag 'ranking/Emblem_Diamond' %>
+            <% elsif @user[:rank].include?("PLATINUM") %>
+              <%= image_tag 'ranking/Emblem_Platinum' %>
+            <% elsif @user[:rank].include?("GOLD") %>
+              <%= image_tag 'ranking/Emblem_Gold' %>
+            <% elsif @user[:rank].include?("SILVER") %>
+              <%= image_tag 'ranking/Emblem_Silver' %>
+            <% else %>
+              <%= image_tag 'ranking/Emblem_Bronze' %>
+            <% end %>
+          </div>
+
+          <div class="stats">
+            <p><strong>Rank:</strong> <%= @user[:rank] %></p>
+            <p><strong>League Points:</strong> <%= @user[:league_points] %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="stat-infos">
+          <div class="champions-images">
+            <div class="d-flex justify-content-center">
+              <% @most_used_champions.first(3).each do |champion| %>
+                <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{champion}.png" %>
+              <% end %>
+            </div>
+            <div class="d-flex justify-content-center">
+              <% @most_used_champions.last(2).each do |champion| %>
+                <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{champion}.png" %>
+              <% end %>
+            </div>
+          </div>
+
+          <p><strong>Most used champions</strong></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="stat-category">
+    SoloQ history
+  </div>
+
+  <div class="history-cards">
+
+  </div>
 </div>
