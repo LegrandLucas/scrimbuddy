@@ -1,17 +1,14 @@
-<% @user.scrims.each do |scrim| %>
-  <% if scrim.team_visitor.name == @user.team.name %>
-    <%= link_to dashboard_path(team: scrim.team_host.id) do %>
-      <div class="card-scrims">
-        <% scrim.team_host.images.each do |image|%>
-          <%= image_tag image %>
-          <div class="card-scrims-infos">
-            <h2><%= scrim.team_host.name %></h2>
-            <p><strong>Date: </strong><%= scrim.start_game.strftime('%a, %d %b %Y') %></p>
-            <p><strong>Time: </strong><%= scrim.start_game.strftime('%H:%M') %> - <%= scrim.end_game.strftime('%H:%m') %></p>
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+<% next_scrims.each do |scrim| %>
+  <%= link_to dashboard_path(team: scrim.team_host.id) do %>
+    <div class="card-scrims">
+      <% scrim.team_host.images.each do |image|%>
+        <%= image_tag image %>
+        <div class="card-scrims-infos">
+          <h2><%= scrim.team_host.name %></h2>
+          <p><strong>Date: </strong><%= scrim.start_game.strftime('%a, %d %b %Y') %></p>
+          <p><strong>Time: </strong><%= scrim.start_game.strftime('%H:%M') %> - <%= scrim.end_game.strftime('%H:%m') %></p>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 <% end %>
-

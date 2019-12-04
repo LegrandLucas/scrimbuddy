@@ -1,0 +1,28 @@
+<% invitations_sent.each do |invitation| %>
+  <div class="invitation-card-scrims">
+    <div class="row">
+      <div class="col-2">
+        <div class="team-visitor-logo">
+          <%= image_tag invitation.team_visitor.images.first %>
+        </div>
+      </div>
+
+      <div class="col-5">
+        <div class="team-visitor-infos">
+          <h2><%= invitation.team_visitor.name %></h2>
+          <p><strong>Date: </strong><%= invitation.start_game.strftime('%a, %d %b %Y') %></p>
+          <p><strong>Time: </strong><%= invitation.start_game.strftime('%H:%M') %> - <%= invitation.end_game.strftime('%H:%m') %></p>
+        </div>
+      </div>
+
+      <div class="col-5">
+        <div class="invitation-statut">
+          <h4>STATUT:</h2>
+          <% if invitation.confirmation == false %>
+            <p>Waiting for <%= invitation.team_visitor.name.capitalize %>'s answer</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

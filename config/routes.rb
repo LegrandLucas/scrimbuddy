@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :messages, only: %i[destroy]
   resource :dashboard do
     resources :conversations, only: [:index ,:show]
+    get "invitations"
   end
 end
 
