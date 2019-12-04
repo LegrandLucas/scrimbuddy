@@ -1,34 +1,19 @@
+<% if defined?(friend) %>
+  <% is_active_tab = current_page?(dashboard_conversations_path) || current_page?(dashboard_conversation_path(friend)) %>
+<% else %>
+  <% is_active_tab = false %>
+<% end %>
+
 <div>
   <ul class="list-inline tabs-underlined">
     <li>
-      <% link_to 'Program', dashboard_path, class: "tab-underlined active"%>
-   <!--  <li class="nav-item <%# 'active' if current_page?(dashboard_path) %>"> -->
-      <%# link_to 'Program', dashboard_path, class: "nav-link tab-underlined active"%>
+      <%= link_to 'Program', dashboard_path, class: "tab-underlined #{'active' if current_page?(dashboard_path)}" %>
     </li>
     <li>
       <%= link_to 'Invitations', '', class: "tab-underlined"%>
     </li>
     <li>
-      <%= link_to 'Messages', dashboard_conversations_path, class: "tab-underlined"%>
+      <%= link_to 'Messages', dashboard_conversations_path, class: "tab-underlined #{'active' if is_active_tab}"%>
     </li>
   </ul>
 </div>
-
-
-<!-- <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item">
-    <a class="nav-link active" id="home-tab" data-toggle="tab" href="dashboard_path" role="tab" aria-controls="home" aria-selected="true">Program</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" id="contact-tab" data-toggle="tab" href="dashboard_conversations_path" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-  </li>
-</ul>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>
-  <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
-  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
-</div>
- -->
