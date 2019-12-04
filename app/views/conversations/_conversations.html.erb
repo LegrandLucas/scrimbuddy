@@ -6,11 +6,11 @@
     <div class='col-10'>
       <%= render 'dashboards/navbar', friend: friend %>
       <div class="d-flex">
-        <div class="team-box">
+        <div class="team-box border-right">
           <% if @users_with_conversation.empty? %>
             <h3>You have no conversations yet</h3>
           <% else %>
-            <h3 class="m-3">Chat Room</h3>
+            <h3 class="m-3 mb-3 ">Chat Room</h3>
             <% @users_with_conversation.each do |user| %>
               <div class="messages-link">
                 <%= render "messages/card", user: user, team: user.team %>
@@ -19,7 +19,10 @@
           <% end %>
         </div>
         <div class="m-3 dashboard-conversation">
-          <h3>My conversation with <%= friend.first_name %></h3>
+          <div  class="d-flex align-items-center mb-3 border-bottom">
+            <%= image_tag friend.team.images.first, class: "avatar mr-4" %>
+            <h3 class= "align-self-center "><%= friend.pseudo %> - <%= friend.team.name %></h3>
+          </div>
           <%= render "messages/chat", friend: friend, messages: messages %>
         </div>
 

@@ -13,7 +13,7 @@
 .chat-box {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: calc(100vh - 342px);
   overflow: scroll
 }
 
@@ -29,3 +29,7 @@
 .dashboard-conversation{
   width: 100%;
 }
+
+// .input-message .form-control{
+//   width: 500px
+//   }

@@ -1,4 +1,10 @@
 <%= simple_form_for([friend, message], remote: true) do |f| %>
-  <%= f.input :content%>
-  <%= f.submit "Send a message", class: "btn btn-primary" %>
+  <div class="form-row">
+    <div class="col-9">
+      <%= f.input :content, label: false, class: "rounded-3"%>
+    </div>
+    <div class="col-3">
+      <%= f.submit "Send a message", class: "btn-ca mt-2 w-100" %>
+    </div>
+  </div>
 <% end %>

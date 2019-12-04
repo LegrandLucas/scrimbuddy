@@ -1,4 +1,4 @@
-<div id="messages" class="chat-box">
+<div id="messages" class="chat-box mb-2">
   <% messages.each do |message| %>
     <% if message.sender == current_user %>
       <%= render "messages/show", message: message, reverse: true, sender: true %>
@@ -13,3 +13,4 @@
 </div>
 
 <%= render 'messages/form', friend: friend, message: Message.new %>
+
