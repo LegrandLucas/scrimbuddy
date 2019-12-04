@@ -45,7 +45,7 @@ class ScrimsController < ApplicationController
 
   def destroy
     @scrim.destroy
-    redirect_to team_path(@team_host)
+    redirect_to invitations_dashboard_path
   end
 
   private

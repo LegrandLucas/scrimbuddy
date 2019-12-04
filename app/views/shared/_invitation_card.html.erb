@@ -19,7 +19,7 @@
         <%= link_to scrim_path(scrim), method: :patch, class: "accept" do %>
           <p><i class="fas fa-check-circle"></i> - ACCEPT</p>
         <% end %>
-        <%= link_to root_path, class: "decline" , remote: true do %>
+        <%= link_to scrim_path(scrim), class: "decline", method: :delete do %>
           <p><i class="fas fa-times-circle"></i> - DECLINE</p>
         <% end %>
       </div>
