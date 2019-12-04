@@ -785,8 +785,8 @@ scrim6 = Scrim.create!(
 
 
 fncMatch1 = Scrim.create!(
-  start_game: DateTime.new(2019,11,5,17,30,00),
-  end_game: DateTime.new(2019,11,5,18,30,00),
+  start_game: DateTime.new(2019,12,5,17,30,00),
+  end_game: DateTime.new(2019,12,5,18,30,00),
   confirmation: true,
   team_host: vitality,
   team_visitor: fnatic,
@@ -798,8 +798,8 @@ fncMatch1 = Scrim.create!(
   )
 
 fncMatch2 = Scrim.create!(
-  start_game: DateTime.new(2019,11,6,17,30,00),
-  end_game: DateTime.new(2019,11,6,18,30,00),
+  start_game: DateTime.new(2019,12,6,17,30,00),
+  end_game: DateTime.new(2019,12,6,18,30,00),
   confirmation: true,
   team_host: fnatic,
   team_visitor: vitality,
@@ -824,8 +824,8 @@ fncMatch3 = Scrim.create!(
   )
 
 fncMatch4 = Scrim.create!(
-  start_game: DateTime.new(2019,11,8,17,30,00),
-  end_game: DateTime.new(2019,11,8,18,30,00),
+  start_game: DateTime.new(2019,12,7,17,30,00),
+  end_game: DateTime.new(2019,12,7,18,30,00),
   confirmation: true,
   team_host: fnatic,
   team_visitor: splyce,
