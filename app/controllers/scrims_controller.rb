@@ -17,18 +17,14 @@ class ScrimsController < ApplicationController
 
     @scrim = Scrim.new
     # @scrim.confirmation = false
-    p @scrim
     @scrim.team_host    = current_user.team
     @scrim.team_visitor = Team.find(params[:team_id])
     @scrim.start_game   = start_game
     @scrim.end_game     = end_game
-    p "BEFORE SAVE"
-    p @scrim
+
     if @scrim.save
-      p "AFTER SAVE"
-      p @scrim
       flash[:notice] = "Your scrim demand has been sent !"
-      redirect_to dashboard_path
+      redirect_to invitations_dashboard_path
     else
       render :new
     end
