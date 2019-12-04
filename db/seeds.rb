@@ -8,11 +8,10 @@
 # require 'faker'
 
 puts "Destroy all seeds..."
+Message.destroy_all
 Scrim.destroy_all
 Team.destroy_all
-Message.destroy_all
 User.destroy_all
-
 
 puts "Creating users, teams and scrims..."
 
@@ -92,6 +91,8 @@ bwipo = User.create!(
   pseudo: "Bwipo",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -107,6 +108,8 @@ broxah = User.create!(
   pseudo: "Broxah",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -122,6 +125,8 @@ nemesis = User.create!(
   pseudo: "Nemesis",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -138,6 +143,8 @@ rekkles = User.create!(
   pseudo: "Rekkles",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
 )
 
@@ -154,6 +161,8 @@ hylissang = User.create!(
   pseudo: "Hylissangh",
   team: fnatic,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -169,6 +178,8 @@ mephisto = User.create!(
   pseudo: "Mephisto",
   team: fnatic,
   user_type: "Coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
 )
 
@@ -185,6 +196,8 @@ wunder = User.create!(
   pseudo: "Wunder",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -200,6 +213,8 @@ jankos = User.create!(
   pseudo: "Jankos",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -216,6 +231,8 @@ caps = User.create!(
   pseudo: "Caps",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -232,6 +249,8 @@ perkz = User.create!(
   pseudo: "PerkZ",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -248,6 +267,8 @@ mikyx = User.create!(
   pseudo: "Mikyx",
   team: gtwo,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -262,6 +283,8 @@ grabzz = User.create!(
   pseudo: "Grabzz",
   team: gtwo,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
@@ -277,6 +300,8 @@ odoamne = User.create!(
   pseudo: "Odoamne",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -292,6 +317,8 @@ trick = User.create!(
   pseudo: "Trick",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -308,6 +335,8 @@ abbedagge = User.create!(
   pseudo: "Abbedagge",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -323,6 +352,8 @@ upset = User.create!(
   pseudo: "Upset",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -338,6 +369,8 @@ ignar = User.create!(
   pseudo: "IgNar",
   team: fcschalke,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -352,6 +385,8 @@ falco = User.create!(
   pseudo: "Falco",
   team: fcschalke,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
@@ -368,6 +403,8 @@ dandan = User.create!(
   pseudo: "Dan Dan",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Top"
   )
 
@@ -383,8 +420,12 @@ kirei = User.create!(
   pseudo: "Kirei",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
+
+
 
 avatar_kirei_path = Rails.root.join('app', 'assets', 'images', 'kirei.png')
 kirei.avatar.attach(io: File.open(avatar_kirei_path), filename: 'kirei.png', content_type: 'image/png')
@@ -399,6 +440,8 @@ febiven = User.create!(
   pseudo: "Febiven",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -416,6 +459,8 @@ neon = User.create!(
   pseudo: "Neon",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -431,6 +476,8 @@ hiva = User.create!(
   pseudo: "H1iva",
   team: misfits,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -438,19 +485,31 @@ avatar_hiva_path = Rails.root.join('app', 'assets', 'images', 'hiva.png')
 hiva.avatar.attach(io: File.open(avatar_hiva_path), filename: 'hiva.png', content_type: 'image/png')
 
 
-jandro = User.create!(
-  first_name: "Alejandro",
-  last_name: "Fernández-Valdés",
-  email: "jandro@misfits.com",
-  password: "azerty",
-  pseudo: "Jandro",
-  team: misfits,
-  user_type: "coach",
-  role: "Coach"
-  )
+# puts "CREATING JANDRO"
+# jandro = User.create!(
+#   first_name: "Alejandro",
+#   last_name: "Fernández-Valdés",
+#   email: "jandro@misfits.com",
+#   password: "azerty",
+#   pseudo: "Jandro",
+#   season_wins: 0,
+#   season_losses: 0,
+#   team: misfits,
+#   user_type: "coach",
+#   role: "Coach"
+# )
 
-avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
-jandro.avatar.attach(io: File.open(avatar_jandro_path), filename: 'jandro.png', content_type: 'image/png')
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "ATTACH PICTURES"
+# avatar_jandro_path = Rails.root.join('app', 'assets', 'images', 'jandro.png')
+# jandro.avatar.attach(io: File.open(avatar_jandro_path), filename: 'jandro.png', content_type: 'image/png')
+# puts "                  "
+# puts "                  "
+# puts "                  "
+# puts "                  "
 
 cabochard = User.create!(
   first_name: "Lucas",
@@ -461,7 +520,12 @@ cabochard = User.create!(
   pseudo: "Cabochard",
   team: vitality,
   user_type: "player",
-  role: "Top"
+  role: "Top",
+  season_wins: 255,
+  season_losses: 208,
+  rank: 'MASTER I',
+  league_points: 116,
+  most_used_champions: "Mordekaiser Akali Kled Gragas Renekton"
   )
 
 avatar_cabochard_path = Rails.root.join('app', 'assets', 'images', 'cabochard.png')
@@ -476,6 +540,8 @@ mowgli = User.create!(
   pseudo: "Mowgli",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Jungler"
   )
 
@@ -491,6 +557,8 @@ jiizuke = User.create!(
   pseudo: "Jiizuke",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Mid"
   )
 
@@ -506,6 +574,8 @@ attila = User.create!(
   pseudo: "Attila",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Carry AD"
   )
 
@@ -521,6 +591,8 @@ jactroll = User.create!(
   pseudo: "Jactroll",
   team: vitality,
   user_type: "player",
+  season_wins: 0,
+  season_losses: 0,
   role: "Support"
   )
 
@@ -535,6 +607,8 @@ yamato = User.create!(
   pseudo: "YamatoCannon",
   team: vitality,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
@@ -546,11 +620,16 @@ vizicsacsi = User.create!(
   last_name: "Kiss",
   email: "tamas@splyce.com",
   password: "azerty",
-  lol_account: "aN Vizicsacsi",
+  lol_account: "SPY Vizicsacsi",
   pseudo: "Vizicsacsi",
   team: splyce,
   user_type: "player",
-  role: "Top"
+  role: "Top",
+  season_wins: 281,
+  season_losses: 236,
+  rank: 'DIAMOND I',
+  league_points: 75,
+  most_used_champions: "Kennen Aatrox JarvanIV Renekton Gangplank"
   )
 
 avatar_vizicsacsi_path = Rails.root.join('app', 'assets', 'images', 'vizicsacsi.png')
@@ -565,7 +644,12 @@ xerxe = User.create!(
   pseudo: "Xerxe",
   team: splyce,
   user_type: "player",
-  role: "Jungler"
+  role: "Jungler",
+  season_wins: 423,
+  season_losses: 356,
+  rank: 'CHALLENGER I',
+  league_points: 715,
+  most_used_champions: "Shyvana KhaZix Hecarim Nidalee Kayn"
   )
 
 avatar_xerxe_path = Rails.root.join('app', 'assets', 'images', 'xerxe.png')
@@ -577,11 +661,16 @@ humanoid = User.create!(
   last_name: "Brázda",
   email: "marek@splyce.com",
   password: "azerty",
-  lol_account: "Humanoid",
+  lol_account: "Positive tryhard",
   pseudo: "Humanoid",
   team: splyce,
   user_type: "player",
-  role: "Mid"
+  role: "Mid",
+  season_wins: 459,
+  season_losses: 379,
+  rank: 'CHALLENGER I',
+  league_points: 1009,
+  most_used_champions: "Akali Cassiopeia Kaisa Ryze Tristana"
   )
 
 avatar_humanoid_path = Rails.root.join('app', 'assets', 'images', 'humanoid.png')
@@ -597,7 +686,12 @@ kobbe = User.create!(
   pseudo: "Kobbe",
   team: splyce,
   user_type: "player",
-  role: "Carry AD"
+  role: "Carry AD",
+  season_wins: 608,
+  season_losses: 524,
+  rank: 'CHALLENGER I',
+  league_points: 710,
+  most_used_champions: "Kaisa Senna Xayah Lucian Yasuo"
   )
 
 avatar_kobbe_path = Rails.root.join('app', 'assets', 'images', 'kobbe.png')
@@ -610,10 +704,15 @@ tore = User.create!(
   email: "tore@splyce.com",
   password: "azerty",
   lol_account: "ekstra stor Tore",
-  pseudo: "Tore",
+  pseudo: "Norskeren",
   team: splyce,
   user_type: "player",
-  role: "Support"
+  role: "Support",
+  season_wins: 476,
+  season_losses: 399,
+  rank: 'CHALLENGER I',
+  league_points: 648,
+  most_used_champions: "Alistar Orianna Irelia Ryze Morgana"
   )
 
 avatar_tore_path = Rails.root.join('app', 'assets', 'images', 'tore.png')
@@ -627,6 +726,8 @@ duke = User.create!(
   pseudo: "Duke",
   team: splyce,
   user_type: "coach",
+  season_wins: 0,
+  season_losses: 0,
   role: "Coach"
   )
 
@@ -848,8 +949,76 @@ message12 = Message.create!(
   )
 
 
+playerHistory1 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 17,
+  team_two_kills: 24,
+  duration: 1510,
+  winner: "team_two",
+  team_one_champions: "Tristana Khazix Orianna Xayah Karma",
+  team_two_champions: "Gangplank LeeSin Katarina Kaisa Morgana",
+  team_one_players: "SPY Vizicsacsi, I am LeBron v2, PABLO NAVEIRAS, NoNemAgain, Luka Cica",
+  team_two_players: "Mr Ascendant, Shëun, Tråkig karaktär, IGY Kxng, Mizune4",
+  player_team: 'team_one'
+  )
 
+playerHistory2 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 23,
+  team_two_kills: 38,
+  duration: 1453,
+  winner: "team_two",
+  team_one_champions: "Gnar Gragas Katarina Xayah Leona",
+  team_two_champions: "Camille Diana Kassadin Jhin Rakan",
+  team_one_players: "SPY Vizicsacsi, NorthTomb0286, Bcs I Cân, Mıkσtσ Suoh, FYN Lilipp",
+  team_two_players: "TwTv Drututt, Unbreakable Bond, IZI toucouille, west ch, Wheilltur",
+  player_team: 'team_one'
+  )
 
+playerHistory3 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 37,
+  team_two_kills: 37,
+  duration: 1666,
+  winner: "team_one",
+  team_one_champions: "Neeko Kayn Ryze Ashe Thresh",
+  team_two_champions: "Gangplank Karthus Yasuo Kaisa Pyke",
+  team_one_players: "SPY Vizicsacsi, AUDI RS 7 1000HP, Grrumpyx, REC Woolite, ttommy shelby",
+  team_two_players: "NilleNalley, Triestìno, kingofwarrior66, destroy you, Dadju abuser",
+  player_team: 'team_one'
+  )
+
+playerHistory4 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 37,
+  team_two_kills: 37,
+  duration: 1666,
+  winner: "team_one",
+  team_one_champions: "Neeko Kayn Ryze Ashe Thresh",
+  team_two_champions: "Gangplank Karthus Yasuo Kaisa Pyke",
+  team_one_players: "SPY Vizicsacsi, AUDI RS 7 1000HP, Grrumpyx, REC Woolite, ttommy shelby",
+  team_two_players: "NilleNalley, Triestìno, kingofwarrior66, destroy you, Dadju abuser",
+  player_team: 'team_one'
+  )
+
+playerHistory5 = UserHistory.create!(
+  user: vizicsacsi,
+  team_one_kills: 37,
+  team_two_kills: 37,
+  duration: 2064,
+  winner: "team_two",
+  team_one_champions: "Renekton Ekko Ahri Jhin Notilus",
+  team_two_champions: "Ryze Kayn Kassadin MissFortune FiddleStick",
+  team_one_players: "SPY Vizicsacsi, Totally BoB, give me mid ok, Squirt gun, OwnerOfR",
+  team_two_players: "try h4rder, L1 2 10, Xenagoras, Lapin du Néant, Nelun",
+  player_team: 'team_one'
+  )
 
 puts "Finished!"
 
+
+# vizicsacsi
+# xerxe
+# humanoid
+# kobbe
+# tore

@@ -1,0 +1,71 @@
+<% if match[:winner] == match[:player_team] %>
+  <div class="win-match team-match">
+    <div class="row">
+      <div class="col-2">
+        <div class="winner-text">
+          <p>VICTORY</p>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="duration-text">
+          <p><%= match[:duration] / 60 %>min <%= match[:duration] % 60 %></p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-around team_host col-3">
+        <% match[:team_one_champions].split.each do |team_one_champion| %>
+          <div class="team-champions">
+            <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="player-score col-2">
+        <%= match[:team_one_kills] %> - <%= match[:team_two_kills] %>
+      </div>
+
+      <div class="d-flex justify-content-around team_visitor col-3">
+        <% match[:team_two_champions].split.each do |team_two_champion| %>
+          <div class="team-champions">
+            <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_two_champion}.png" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <div class="lose-match team-match">
+    <div class="row">
+      <div class="col-2">
+        <div class="winner-text">
+          <p>DEFEAT</p>
+        </div>
+      </div>
+
+      <div class="col-2">
+        <div class="duration-text">
+          <p><%= match[:duration] / 60 %>min <%= match[:duration] % 60 %></p>
+        </div>
+      </div>
+      <div class="d-flex justify-content-around team_host col-3">
+        <% match[:team_one_champions].split.each do |team_one_champion| %>
+          <div class="team-champions">
+            <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="player-score col-2">
+        <%= match[:team_one_kills] %> - <%= match[:team_two_kills] %>
+      </div>
+
+      <div class="d-flex justify-content-around team_visitor col-3">
+        <% match[:team_two_champions].split.each do |team_two_champion| %>
+          <div class="team-champions">
+            <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_two_champion}.png" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

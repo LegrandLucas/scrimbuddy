@@ -8,13 +8,13 @@ Rails.application.routes.draw do
   resources :scrims, only: %i[udpate destroy] do
     resources :reviews, only: %i[new create]
   end
-  resources :profile, only: [:show]
+  resources :profiles, only: [:show]
   resources :users do
     resources :messages, only: [:index, :create]
   end
   resources :messages, only: %i[destroy]
   resource :dashboard do
-    get 'conversations'
+    resources :conversations, only: [:index ,:show]
   end
 end
 

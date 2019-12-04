@@ -10,8 +10,4 @@ class DashboardsController < ApplicationController
 
     params[:team].present? ? @active_team = Team.find(params[:team]) : @active_team = @first_next_scrim.first_team_against(current_user)
   end
-
-  def conversations
-    @users_with_conversation = current_user.friends
-  end
 end

@@ -1,18 +1,12 @@
 <div class='wrapper-dashboard'>
   <div class='row'>
-    <div class="col-2">
-      <div class='column-dashboard-left'>
-
-        <div class="sidebar"></div>
-
-      </div>
-    </div>
+    <%= render "dashboards/sidebar" %>
 
     <div class="col-5">
       <div class='column-dashboard'>
         <div class="middle">
 
-          <%= render 'shared/navbar_dashboard' %>
+          <%= render 'navbar' %>
 
           <div class="team-box">
             <%= render 'shared/team_card', next_scrims: @next_scrims %>

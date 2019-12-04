@@ -1,12 +1,11 @@
 <div class='wrapper-dashboard'>
   <div class='row'>
 
-    <div class='column-dashboard-left'>
-      <div class="sidebar"></div>
-    </div>
+    <%= render "dashboards/sidebar" %>
 
-    <div class='column-dashboard'>
-        <%= render 'dashboards/navbar' %>
+    <div class='col-10'>
+      <%= render 'dashboards/navbar', friend: friend %>
+      <div class="d-flex">
         <div class="team-box">
           <% if @users_with_conversation.empty? %>
             <h3>You have no conversations yet</h3>
@@ -19,10 +18,13 @@
             <% end %>
           <% end %>
         </div>
-    </div>
+        <div class="m-3 dashboard-conversation">
+          <h3>My conversation with <%= friend.first_name %></h3>
+          <%= render "messages/chat", friend: friend, messages: messages %>
+        </div>
 
-    <div class='column-dashboard'>
-    </div>
+      </div>
 
+    </div>
   </div>
 </div>

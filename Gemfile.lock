@@ -164,13 +164,12 @@ GEM
     sassc (2.2.1)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
+      railties (>= 3.1)
       railties (>= 4.0.0)
       sassc (>= 2.0)
       sprockets (> 3.0)
       sprockets-rails
       tilt
-
-      railties (>= 3.1)
     simple_form (5.0.1)
       actionpack (>= 5.0)
       activemodel (>= 5.0)
@@ -228,7 +227,6 @@ DEPENDENCIES
   rails (= 5.2.3)
   redis
   sassc-rails
-  scrollreveal-rails
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

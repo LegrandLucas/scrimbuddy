@@ -13,9 +13,9 @@
 /* here we put the styling for the image that will be added on this div*/
 .sidebar {
   background-image: asset-url("games.png");
-  background-size: cover;
-  height: 100vh;
-  width: 330px;
+  background-size:  cover;
+  height:           100vh;
+  width:            100%;
 }
 }
 
@@ -51,3 +51,4 @@
   color: #f1f1f1;
   }
 }
+
