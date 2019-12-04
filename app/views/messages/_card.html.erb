@@ -1,5 +1,11 @@
+<% if defined?(friend) %>
+  <% is_active_tab = current_page?(dashboard_conversations_path) || current_page?(dashboard_conversation_path(friend)) %>
+<% else %>
+  <% is_active_tab = false %>
+<% end %>
+
 <%= link_to dashboard_conversation_path(user) do %>
-  <div class="message-card m-3">
+  <div class="message-card m-3 ">
     <div class="content">
       <%= image_tag team.images.first, class: "image" %>
       <div>
