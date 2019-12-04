@@ -14,9 +14,10 @@
 .sidebar {
   background-image: asset-url("games.png");
   background-size:  cover;
-  height:           100vh;
+  height:           107vh;
   width:            100%;
-}
+  background-position: 0 0;
+ }
 }
 
 .column-dashboard {
@@ -27,15 +28,15 @@
 
 .sidebar-right {
   background-color: #acbcbf73;
-  margin-top: 190px;
+  margin-top: 210px;
   // height: 100%;
   border-radius: 5px;
   width: 60%;
-  margin-left: 17%;
+  margin-left: 9%;
 
   h3{
-    text-align: center;
-    margin-top: 15px;
+    text-align: left;
+    margin-left: 30px;
     text-shadow: 1px 1px #929281;
     padding: 10px;
   }
@@ -47,6 +48,8 @@
 
 
 .team-box {
+  padding: 5px;
+  margin: 30px 5px 5px 80px;
   a:hover{
   color: #f1f1f1;
   }
