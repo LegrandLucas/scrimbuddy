@@ -1,15 +1,91 @@
+.new-navbar {
+  color: white;
+  background-color: $sb-light-blue;
+  position: relative;
+  z-index: 3;
+  height: 55px;
+
+
+  .content {
+    width: 90%;
+    margin: 0 auto;
+
+  }
+
+  .elements {
+    min-height: 55px;
+    height: 100%;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    filter: drop-shadow(2px 2px 2px #313030);
+
+
+    &:hover {
+      opacity: 0.5;
+      border-bottom: solid 2px;
+    }
+  }
+
+
+
+  .sb-link {
+    padding-right: 20px;
+  }
+  .nav-avatar {
+    border-radius: 50%;
+    background-color: white;
+    object-fit: cover
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: black;
+    min-width: 160px;
+    border: solid 0.5px #f9f9f9;
+    padding: 5px 0px;
+    z-index: 1;
+  }
+
+  .dropdown-content .link:hover {
+    color: white;
+    background-color: $sb-light-blue;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+
+/*/*
 .nav-container {
+  height: 60px;
   position: relative;
   background-color: $sb-light-blue;
-  display: contents;
   color: white;
   display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
   z-index: 3;
 
   img {
-      width: 60px;
+      width: 40px;
+      height: 40px;
       align-self: center;
       filter: drop-shadow(2px 2px 2px #313030);
     }
@@ -20,14 +96,19 @@
       color: white;
       filter: drop-shadow(2px 2px 2px #313030);
     }
+
+    a:hover {
+      opacity: 0.5;
+      border-bottom: solid 2px;
+    }
 }
 
 
 .sb-navbar {
   display: flex;
   color: white;
-  align-items: center;
-  list-style-type: none;
+  /*align-items: center;*/
+/*  list-style-type: none;
   height: 10vh;
 
 
@@ -42,10 +123,7 @@
 
   }
 
-  a:hover {
-    opacity: 0.5;
-    border-bottom: solid 2px;
-  }
+
 
   ul {
     list-style-type: none;
@@ -57,36 +135,8 @@
   width: 50px;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  color: black;
-  min-width: 160px;
-  border: solid 0.5px #f9f9f9;
-  padding: 5px 0px;
-  z-index: 1;
-}
 
-.dropdown-content .link:hover {
-  color: white;
-  background-color: $sb-light-blue;
-}
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.nav-avatar {
-  height: 60px;
-  border-radius: 50%;
-  background-color: white;
-  object-fit: cover
-}
-/*Enfin fini!*/
+*/
 
