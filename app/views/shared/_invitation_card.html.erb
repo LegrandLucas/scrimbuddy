@@ -17,12 +17,12 @@
 
       <div class="col-5">
         <div class="answer">
-          <div class="accept">
+          <%= link_to scrim_path(invitation), class: "accept" , remote: true do %>
             <p><i class="fas fa-check-circle"></i> - ACCEPT</p>
-          </div>
-          <div class="decline">
+          <% end %>
+          <%= link_to current_page, class: "decline" , remote: true do %>
             <p><i class="fas fa-times-circle"></i> - DECLINE</p>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>

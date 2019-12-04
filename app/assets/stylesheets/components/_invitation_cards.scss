@@ -6,6 +6,8 @@
   display: flex;
   align-items: center;
   padding: 20px;
+  margin-bottom: 10px;
+
 
   .team-host-logo img, .team-visitor-logo img {
     height: 100%;
@@ -70,7 +72,7 @@
 .invitation-statut {
   justify-content: center;
   border-radius: 4px;
-  background-color: rgba(230, 230, 230, 0.5);
+  background-color: rgba(280, 80, 47, 0.5);
 }
 
 
@@ -83,4 +85,10 @@
   width: 100%;
   margin-bottom: 15px;
   border-bottom: 1px solid black;
+}
+
+
+.all-initations {
+  overflow: scroll;
+  height: calc(100vh - 370px);
 }

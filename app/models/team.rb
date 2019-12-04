@@ -32,11 +32,11 @@ class Team < ApplicationRecord
   end
 
   def invitations_received
-    Scrim.where("team_visitor_id = ? AND confirmation = ? AND start_game <= ? AND start_game > ?", self, false, Date.today + 7, Date.today)
+    Scrim.where("team_visitor_id = ? AND confirmation = ? AND start_game > ?", self, false, Date.today)
   end
 
   def invitations_sent
-    Scrim.where("team_host_id = ? AND confirmation = ? AND start_game <= ? AND start_game > ?", self, false, Date.today + 7, Date.today)
+    Scrim.where("team_host_id = ? AND confirmation = ? AND start_game > ?", self, false, Date.today)
   end
 
   def display_add_review_btn(user)
