@@ -14,9 +14,10 @@
 .sidebar {
   background-image: asset-url("games.png");
   background-size:  cover;
-  height:           100vh;
+  height:           107vh;
   width:            100%;
-}
+  background-position: 0 0;
+ }
 }
 
 .column-dashboard {
