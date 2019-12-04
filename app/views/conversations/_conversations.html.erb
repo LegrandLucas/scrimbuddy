@@ -4,7 +4,7 @@
     <%= render "dashboards/sidebar" %>
 
     <div class='col-10'>
-      <%= render 'dashboards/navbar' %>
+      <%= render 'dashboards/navbar', friend: friend %>
       <div class="d-flex">
         <div class="team-box">
           <% if @users_with_conversation.empty? %>

@@ -1,4 +1,4 @@
-/*.navbar-container{
+.navbar-container{
   float: left;
   margin-top: 100px;
   margin-bottom: 70px;
@@ -19,6 +19,10 @@
   cursor: pointer;
   text-decoration: none;
   border-bottom: 4px solid transparent;
+  &.active {
+    opacity: 1;
+    border-bottom: 2px solid #555555;
+  }
 }
 
 .tabs-underlined > li > a:hover {
@@ -32,4 +36,3 @@
   margin: 30px;
   font-weight: 800;
 }
-*/
