@@ -9,25 +9,24 @@
   align-items: center;
   font-size: 25px;
   padding: 10px;
-  margin: 100px 5px 15px 70px;
 }
 
 .tabs-underlined .tab-underlined {
-  color: black;
+  color: #9F9F9F;
   padding: 8px;
   margin: 8px 16px;
-  opacity: .4;
+  // opacity: .4;
   cursor: pointer;
   text-decoration: none;
-  border-bottom: 4px solid transparent;
+  border-bottom: 2px solid transparent;
   &.active {
-    opacity: 1;
+    color: black;
     border-bottom: 2px solid #555555;
   }
 }
 
 .tabs-underlined > li > a:hover {
-  opacity: 1;
+  color: black;
   border-bottom: 2px solid #555555;
 }
 

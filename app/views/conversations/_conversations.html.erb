@@ -13,7 +13,7 @@
             <h3 class="m-3 mb-3 ">Chat Room</h3>
             <% @users_with_conversation.each do |user| %>
               <div class="messages-link">
-                <%= render "messages/card", user: user, team: user.team %>
+                <%= render "messages/card", user: user, team: user.team, friend: @friend %>
               </div>
             <% end %>
           <% end %>

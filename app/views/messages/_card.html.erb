@@ -5,7 +5,7 @@
 <% end %>
 
 <%= link_to dashboard_conversation_path(user) do %>
-  <div class="message-card m-3 ">
+  <div class="message-card m-3 <%= 'active' if user == friend %>">
     <div class="content">
       <%= image_tag team.images.first, class: "image" %>
       <div>
