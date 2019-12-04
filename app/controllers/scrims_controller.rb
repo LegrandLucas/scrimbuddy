@@ -13,17 +13,22 @@ class ScrimsController < ApplicationController
   def create
     sleep 2
     start_game = parse_date_time(params[:scrim][:start_game], params[:scrim][:start_hour])
-    end_game = parse_date_time(params[:scrim][:start_game], params[:scrim][:end_hour])
+    end_game   = parse_date_time(params[:scrim][:start_game], params[:scrim][:end_hour])
 
-    @scrim = Scrim.new(scrim_params)
-    @scrim.team_host = Team.find(params[:team_id])
-    @scrim.team_visitor = current_user.team
-    @scrim.start_game = start_game
-    @scrim.end_game = end_game
+    @scrim = Scrim.new
+    # @scrim.confirmation = false
+    p @scrim
+    @scrim.team_host    = current_user.team
+    @scrim.team_visitor = Team.find(params[:team_id])
+    @scrim.start_game   = start_game
+    @scrim.end_game     = end_game
+    p "BEFORE SAVE"
+    p @scrim
     if @scrim.save
+      p "AFTER SAVE"
+      p @scrim
       flash[:notice] = "Your scrim demand has been sent !"
       redirect_to dashboard_path
-
     else
       render :new
     end
@@ -52,7 +57,7 @@ class ScrimsController < ApplicationController
   end
 
   def scrim_params
-    params.require(:scrim).permit(:result, :confirmation)
+    params.require(:scrim).permit(:result)
   end
 
   def set_team_host

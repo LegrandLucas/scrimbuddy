@@ -1,0 +1,36 @@
+<div class='wrapper-dashboard'>
+  <div class='row'>
+    <%= render "dashboards/sidebar" %>
+
+    <div class="col-10">
+      <%= render 'navbar' %>
+      <div class="row">
+        <div class="col-6">
+          <div class='column-dashboard'>
+            <div class="middle">
+              <div class="invitations-received-box">
+                <div class="invitation-type">
+                  <h2>Invitations received</h2>
+                </div>
+                <%= render 'shared/invitation_card', user: @user, invitations_received: @invitations_received %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class='column-dashboard'>
+            <div class="middle">
+              <div class="invitations-received-box">
+                <div class="invitation-type">
+                  <h2>Invitations sent</h2>
+                </div>
+                <%= render 'shared/invitation_card_sent', user: @user, invitations_sent: @invitations_sent %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
