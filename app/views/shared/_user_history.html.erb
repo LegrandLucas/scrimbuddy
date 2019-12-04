@@ -9,14 +9,40 @@
 
       <div class="col-2">
         <div class="duration-text">
-          <p><%= match[:duration] / 60 %>min <%= match[:duration] % 60 %></p>
+          <p>
+            <% seconds = match[:duration] % 60 %>
+            <%= match[:duration] / 60 %>min
+            <% if seconds < 10 %>0<% end %><%= seconds %>
+          </p>
         </div>
       </div>
       <div class="d-flex justify-content-around team_host col-3">
         <% match[:team_one_champions].split.each do |team_one_champion| %>
-          <div class="team-champions">
-            <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
-          </div>
+          <% if @user.role == "Top" && team_one_champion == match[:team_one_champions].split[0] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Jungler" && team_one_champion == match[:team_one_champions].split[1] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Mid"  && team_one_champion == match[:team_one_champions].split[2] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Support"  && team_one_champion == match[:team_one_champions].split[4] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Carry AD"  && team_one_champion == match[:team_one_champions].split[3] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% else %>
+            <div class="team-champions">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% end %>
         <% end %>
       </div>
 
@@ -44,14 +70,40 @@
 
       <div class="col-2">
         <div class="duration-text">
-          <p><%= match[:duration] / 60 %>min <%= match[:duration] % 60 %></p>
+          <p>
+            <% seconds = match[:duration] % 60 %>
+            <%= match[:duration] / 60 %>min
+            <% if seconds < 10 %>0<% end %><%= seconds %>
+          </p>
         </div>
       </div>
       <div class="d-flex justify-content-around team_host col-3">
         <% match[:team_one_champions].split.each do |team_one_champion| %>
-          <div class="team-champions">
-            <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
-          </div>
+          <% if @user.role == "Top" && team_one_champion == match[:team_one_champions].split[0] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Jungler" && team_one_champion == match[:team_one_champions].split[1] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Mid"  && team_one_champion == match[:team_one_champions].split[2] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Support"  && team_one_champion == match[:team_one_champions].split[4] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% elsif @user.role == "Carry AD"  && team_one_champion == match[:team_one_champions].split[3] %>
+            <div class="team-champions player-champion">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% else %>
+            <div class="team-champions">
+              <%= image_tag "http://ddragon.leagueoflegends.com/cdn/9.23.1/img/champion/#{team_one_champion}.png" %>
+            </div>
+          <% end %>
         <% end %>
       </div>
 

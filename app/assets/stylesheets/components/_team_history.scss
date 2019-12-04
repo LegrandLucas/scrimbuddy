@@ -78,3 +78,11 @@
   justify-content: center;
   font-size: 24px;
 }
+
+.player-champion {
+  border: 3px solid $sb-orange;
+}
+
+.team_host, .team_visitor {
+  align-items: center
+}
