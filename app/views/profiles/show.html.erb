@@ -59,21 +59,21 @@
         <div class="stat-infos">
           <div class="rank_image">
             <% if @user[:rank].include?("CHALLENGER") %>
-              <%= image_tag 'ranking/Emblem_Challenger' %>
+              <%= image_tag 'ranking/Emblem_Challenger.png' %>
             <% elsif @user[:rank].include?("GRANDMASTER") %>
-              <%= image_tag 'ranking/Emblem_Grandmaster' %>
+              <%= image_tag 'ranking/Emblem_Grandmaster.png' %>
             <% elsif @user[:rank].include?("MASTER") %>
-              <%= image_tag 'ranking/Emblem_Master' %>
+              <%= image_tag 'ranking/Emblem_Master.png' %>
             <% elsif @user[:rank].include?("DIAMOND") %>
-              <%= image_tag 'ranking/Emblem_Diamond' %>
+              <%= image_tag 'ranking/Emblem_Diamond.png' %>
             <% elsif @user[:rank].include?("PLATINUM") %>
-              <%= image_tag 'ranking/Emblem_Platinum' %>
+              <%= image_tag 'ranking/Emblem_Platinum.png' %>
             <% elsif @user[:rank].include?("GOLD") %>
-              <%= image_tag 'ranking/Emblem_Gold' %>
+              <%= image_tag 'ranking/Emblem_Gold.png' %>
             <% elsif @user[:rank].include?("SILVER") %>
-              <%= image_tag 'ranking/Emblem_Silver' %>
+              <%= image_tag 'ranking/Emblem_Silver.png' %>
             <% else %>
-              <%= image_tag 'ranking/Emblem_Bronze' %>
+              <%= image_tag 'ranking/Emblem_Bronze.png' %>
             <% end %>
           </div>
 
