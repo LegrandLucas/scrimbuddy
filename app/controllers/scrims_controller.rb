@@ -38,8 +38,7 @@ class ScrimsController < ApplicationController
   end
 
   def update
-    @scrim.confirmation = false
-    # @scrim.confirmation = true
+    @scrim.confirmation = true
     @scrim.save
     redirect_to invitations_dashboard_path
   end
