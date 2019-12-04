@@ -1,30 +1,28 @@
-<% invitations_received.each do |invitation| %>
-  <div class="invitation-card-scrims">
-    <div class="row">
-      <div class="col-2">
-        <div class="team-host-logo">
-          <%= image_tag invitation.team_host.images.first %>
-        </div>
+<div class="invitation-card-scrims">
+  <div class="row">
+    <div class="col-2">
+      <div class="team-host-logo">
+        <%= image_tag scrim.team_host.images.first %>
       </div>
+    </div>
 
-      <div class="col-5">
-        <div class="team-host-infos">
-          <h2><%= invitation.team_host.name %></h2>
-          <p><strong>Date: </strong><%= invitation.start_game.strftime('%a, %d %b %Y') %></p>
-          <p><strong>Time: </strong><%= invitation.start_game.strftime('%H:%M') %> - <%= invitation.end_game.strftime('%H:%m') %></p>
-        </div>
+    <div class="col-5">
+      <div class="team-host-infos">
+        <h2><%= scrim.team_host.name %></h2>
+        <p><strong>Date: </strong><%= scrim.start_game.strftime('%a, %d %b %Y') %></p>
+        <p><strong>Time: </strong><%= scrim.start_game.strftime('%H:%M') %> - <%= scrim.end_game.strftime('%H:%m') %></p>
       </div>
+    </div>
 
-      <div class="col-5">
-        <div class="answer">
-          <%= link_to scrim_path(invitation), class: "accept" , remote: true do %>
-            <p><i class="fas fa-check-circle"></i> - ACCEPT</p>
-          <% end %>
-          <%= link_to current_page, class: "decline" , remote: true do %>
-            <p><i class="fas fa-times-circle"></i> - DECLINE</p>
-          <% end %>
-        </div>
+    <div class="col-5">
+      <div class="answer">
+        <%= link_to scrim_path(scrim), method: :patch, class: "accept" do %>
+          <p><i class="fas fa-check-circle"></i> - ACCEPT</p>
+        <% end %>
+        <%= link_to root_path, class: "decline" , remote: true do %>
+          <p><i class="fas fa-times-circle"></i> - DECLINE</p>
+        <% end %>
       </div>
     </div>
   </div>
-<% end %>
+</div>

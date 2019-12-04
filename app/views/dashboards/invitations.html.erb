@@ -13,7 +13,9 @@
                   <h2>Invitations received</h2>
                 </div>
                 <div class="all-initations">
-                  <%= render 'shared/invitation_card', user: @user, invitations_received: @invitations_received %>
+                  <% @invitations_received.each do |scrim| %>
+                    <%= render 'shared/invitation_card', user: @user, scrim: scrim %>
+                  <% end %>
                 </div>
               </div>
             </div>
