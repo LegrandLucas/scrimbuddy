@@ -1,6 +1,6 @@
 meta_product_name: "scrimBuddy"
 meta_title: "ScrimBuddy | Find professionals League of Legends scrims"
 meta_description: "Finding professionals League of Legends scrims partners has been a pain problem for Head Coach from eSport organisation. We centralize all the tools required for them. | ScrimBuddy"
-meta_image: "sb-cover.png" # should exist in `app/assets/images/`
+meta_image: "sb-cover-min.png" # should exist in `app/assets/images/`
 twitter_account: "@tilted_crunch"   # required for Twitter Cards
 
