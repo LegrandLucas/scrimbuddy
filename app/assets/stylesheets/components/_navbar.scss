@@ -1,3 +1,49 @@
+.navbar-main {
+  height: 60px;
+  width: 100%;
+  background-color: $sb-light-blue;
+  color: white;
+  z-index: 3;
+  display: flex;
+
+  .sb-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      align-self: center;
+      filter: drop-shadow(2px 2px 2px #313030);
+      text-decoration: none;
+    }
+
+    a {
+      display: flex;
+      text-decoration: none;
+      color: white;
+      filter: drop-shadow(2px 2px 2px #313030);
+ }
+
+    .text-navbar-main {
+      display: flex;
+      align-items: center;
+    }
+
+    .sb-link {
+      margin-left: 20px;
+
+        &:hover {
+          opacity: 0.5;
+          border-bottom: solid 2px;
+      }
+    }
+}
+
+/*
 .nav-container {
   position: relative;
   background-color: $sb-light-blue;
@@ -9,7 +55,8 @@
   z-index: 3;
 
   img {
-      width: 60px;
+      width: 40px;
+      height: 40px;
       align-self: center;
       filter: drop-shadow(2px 2px 2px #313030);
     }
@@ -21,8 +68,8 @@
       filter: drop-shadow(2px 2px 2px #313030);
     }
 }
-
-
+*/
+/*
 .sb-navbar {
   display: flex;
   color: white;
@@ -81,12 +128,12 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
+*/
 .nav-avatar {
   height: 60px;
   border-radius: 50%;
   background-color: white;
   object-fit: cover
 }
-/*Enfin fini!*/
+
 

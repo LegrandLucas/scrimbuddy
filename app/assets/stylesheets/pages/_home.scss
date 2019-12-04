@@ -1,4 +1,4 @@
-// Specific CSS for your home-page
+
 .gif-container {
   position: relative;
   background-image: asset-url("gamer_800x600.gif");
@@ -7,12 +7,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  z-index: 1;
-  // filter: brightness(1.2);
+  z-index: -1;
 }
 
 .white-circle {
-  background-color: rgba(250, 250, 250, 0.8); // A changer si on modifie le filter brightness
+  background-color: rgba(250, 250, 250, 0.8);
   width: 80vw;
   height: 80vw;
   border-radius: 50%;
@@ -30,7 +29,7 @@
 
 .home-text {
   position: absolute;
-  bottom: 14vw;
+  bottom: 18vw;
   right: 14vw;
   width: 20vw;
   opacity: 1;
@@ -51,35 +50,3 @@
   /*text-shadow: 1px 1px #d27c98;*/
 }
 
-.home-text a {
-  font-size: 20px;
-  /*text-shadow: -1px 1px #4a62a7e6;*/
-}
-// // Specific CSS for your home-page
-// .gif-container {
-//   width: 100%;
-//   height: calc(100vh - 70px);
-//   background-size: cover;
-//   background-image: url("home-gif.gif");
-// }
-
-// .white-circle {
-//   background-color: white;
-//   width: 80vw;
-//   height: 80vw;
-//   border-radius: 50%;
-//   position: absolute;
-//   top: -40vw;
-//   left: -40vw;
-// }
-
-// .navbar {
-//   z-index: 2;
-// }
-
-// .home-text {
-//   position: absolute;
-//   bottom: 14vw;
-//   right: 14vw;
-//   width: 20vw;
-// }

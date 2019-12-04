@@ -1,33 +1,31 @@
-<div class="nav-container">
+<div class="navbar-main">
   <div class="sb-container">
-    <div class="d-flex justify-content-between">
+    <div>
       <%= link_to root_path do %>
       <%= image_tag("logo/scrimBuddy.png", :alt => "logo") %>
       <% end %>
-      <div class="sb-navbar">
-        <li class="sb-list">
-          <%= link_to "Teams", teams_path, class: "sb-link" %>
-        </li>
-        <% if user_signed_in? %>
-          <li class="sb-list">
-            <%= link_to "Profile", dashboard_path, class: "sb-link" %>
-          </li>
-        <% end %>
-        <li class="sb-link dropdown">
+    </div>
+    <div class="text-navbar-main">
+      <div>
+        <%= link_to "Teams", teams_path, class: "sb-link" %>
+      </div>
+      <% if user_signed_in? %>
+      <div>
+        <%= link_to "Profile", dashboard_path, class: "sb-link" %>
+      </div>
+      <% end %>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <% if user_signed_in? %>
-            <%= image_tag current_user.avatar, class: "nav-avatar dropdown-toggle bg-white", id: "navbarDropdown" %>
-            <div class="dropdown-content">
-              <%= link_to "Logout", destroy_user_session_path, class: "link", method: :delete %>
-            </div>
-          <% end %>
-        </li>
+          <%= image_tag current_user.avatar, class: "nav-avatar dropdown-toggle", id: "dropdownMenuButton" %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to "Logout", destroy_user_session_path, class: "dropdown-item link", method: :delete %>
+        </div>
+        <% end %>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
 
