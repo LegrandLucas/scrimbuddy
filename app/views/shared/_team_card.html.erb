@@ -1,4 +1,4 @@
-<% @user.scrims.each do |scrim| %>
+<% next_scrims.each do |scrim| %>
   <% if scrim.team_visitor.name == @user.team.name %>
     <%= link_to dashboard_path(team: scrim.team_host.id) do %>
       <div class="card-scrims">

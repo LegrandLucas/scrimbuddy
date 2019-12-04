@@ -2,7 +2,9 @@ class ProfilesController < ApplicationController
   def show
     @user = User.find(params[:id])
     @total_match = @user[:season_wins] + @user[:season_losses]
-    @win_rate = (@user[:season_wins] * 100) / @total_match
+    if @total_match > 0
+      @win_rate = (@user[:season_wins] * 100) / @total_match
+    end
     @most_used_champions = @user[:most_used_champions].split(" ")
   end
 

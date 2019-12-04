@@ -649,7 +649,7 @@ xerxe = User.create!(
   season_losses: 356,
   rank: 'CHALLENGER I',
   league_points: 715,
-  most_used_champions: "Shyvana KhaZix Hecarim Nidalee Kayn"
+  most_used_champions: "Shyvana Khazix Hecarim Nidalee Kayn"
   )
 
 avatar_xerxe_path = Rails.root.join('app', 'assets', 'images', 'xerxe.png')
@@ -1007,18 +1007,271 @@ playerHistory5 = UserHistory.create!(
   team_two_kills: 37,
   duration: 2064,
   winner: "team_two",
-  team_one_champions: "Renekton Ekko Ahri Jhin Notilus",
-  team_two_champions: "Ryze Kayn Kassadin MissFortune FiddleStick",
+  team_one_champions: "Renekton Ekko Ahri Jhin Nautilus",
+  team_two_champions: "Ryze Kayn Kassadin MissFortune Fiddlesticks",
   team_one_players: "SPY Vizicsacsi, Totally BoB, give me mid ok, Squirt gun, OwnerOfR",
   team_two_players: "try h4rder, L1 2 10, Xenagoras, Lapin du Néant, Nelun",
   player_team: 'team_one'
   )
 
+playerHistory6 = UserHistory.create!(
+  user: xerxe,
+  team_one_kills: 36,
+  team_two_kills: 47,
+  duration: 2072,
+  winner: "team_two",
+  team_one_champions: "Mordekaiser Shyvana Qiyana Lucian Leona",
+  team_two_champions: "Cassiopeia LeeSin Pyke Yasuo Gragas",
+  team_one_players: "Friendly Pitbull, Holy Rabies, Chíbs, Barcodee, Swaglord H1IVA",
+  team_two_players: "RGE Finnαir, RGE Lαrssen, VIT Jiizuké, Unicornrider1, Snusmumriken 4",
+  player_team: 'team_one'
+  )
+
+playerHistory7 = UserHistory.create!(
+  user: xerxe,
+  team_one_kills: 20,
+  team_two_kills: 39,
+  duration: 1500,
+  winner: "team_two",
+  team_one_champions: "Aatrox RekSai Ryze Pyke Yuumi",
+  team_two_champions: "Darius LeeSin Qiyana MissFortune Zyra",
+  team_one_players: "Delitto, Holy Rabies, Jag vill vinna, VIT Jiizuké, OG Destlny",
+  team_two_players: "JEWZAURUS REX, Elmargucci, Dark Decay, FNC xMatty, Targamas",
+  player_team: 'team_one'
+  )
+
+playerHistory8 = UserHistory.create!(
+  user: xerxe,
+  team_one_kills: 14,
+  team_two_kills: 28,
+  duration: 1681,
+  winner: "team_two",
+  team_one_champions: "Vladimir Vi Sylas Tristana Thresh",
+  team_two_champions: "Aatrox LeeSin Akali MissFortune Nautilus",
+  team_one_players: "Orkun Civanoglu, Holy Rabies, Ectomorphic, ΞSΥΝDRΑξζ, Voorzaken",
+  team_two_players: "Agresivooo, Gilly Willikers, Αdept, Vayne MF M, xErdote",
+  player_team: 'team_one'
+  )
+
+playerHistory9 = UserHistory.create!(
+  user: xerxe,
+  team_one_kills: 33,
+  team_two_kills: 20,
+  duration: 1743,
+  winner: "team_one",
+  team_one_champions: "Ryze Khazix Syndra MissFortune Blitzcrank",
+  team_two_champions: "Qiyana Elise Cassiopeia Draven Morgana",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory10 = UserHistory.create!(
+  user: xerxe,
+  team_one_kills: 16,
+  team_two_kills: 6,
+  duration: 1009,
+  winner: "team_one",
+  team_one_champions: "Riven Shyvana Qiyana Lucian Senna",
+  team_two_champions: "Fiora Ekko Ryze Morgana Fiddlesticks",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory11 = UserHistory.create!(
+  user: humanoid,
+  team_one_kills: 46,
+  team_two_kills: 33,
+  duration: 1842,
+  winner: "team_one",
+  team_one_champions: "Ryze LeeSin Tristana Syndra Rakan",
+  team_two_champions: "Heimerdinger Ekko Irelia MissFortune Pyke",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory12 = UserHistory.create!(
+  user: humanoid,
+  team_one_kills: 25,
+  team_two_kills: 14,
+  duration: 1232,
+  winner: "team_one",
+  team_one_champions: "Kled Nidalee Irelia Twitch Morgana",
+  team_two_champions: "Rengar Elise Syndra Kaisa Thresh",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory13 = UserHistory.create!(
+  user: humanoid,
+  team_one_kills: 23,
+  team_two_kills: 32,
+  duration: 1355,
+  winner: "team_two",
+  team_one_champions: "Rengar RekSai Akali Vayne Braum",
+  team_two_champions: "Ornn JarvanIV Katarina Kaisa Leona",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory14 = UserHistory.create!(
+  user: humanoid,
+  team_one_kills: 10,
+  team_two_kills: 27,
+  duration: 1455,
+  winner: "team_two",
+  team_one_champions: "Darius Graves Cassiopeia Jinx Thresh",
+  team_two_champions: "Garen Khazix Kassadin Kaisa Nautilus",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory15 = UserHistory.create!(
+  user: humanoid,
+  team_one_kills: 25,
+  team_two_kills: 46,
+  duration: 1734,
+  winner: "team_two",
+  team_one_champions: "Ornn Khazix Cassiopeia Tristana Pyke",
+  team_two_champions: "Sion Rengar Velkoz Kaisa Thresh",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory16 = UserHistory.create!(
+  user: kobbe,
+  team_one_kills: 38,
+  team_two_kills: 38,
+  duration: 1983,
+  winner: "team_two",
+  team_one_champions: "Akali Khazix Syndra Draven Blitzcrank",
+  team_two_champions: "Ekko JarvanIV Azir MissFortune Thresh",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory17 = UserHistory.create!(
+  user: kobbe,
+  team_one_kills: 16,
+  team_two_kills: 28,
+  duration: 1333,
+  winner: "team_two",
+  team_one_champions: "Garen Graves Tristana Heimerdinger Janna",
+  team_two_champions: "Camille Khazix Syndra MissFortune Thresh",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory18 = UserHistory.create!(
+  user: kobbe,
+  team_one_kills: 48,
+  team_two_kills: 32,
+  duration: 2522,
+  winner: "team_one",
+  team_one_champions: "Sion LeeSin Anivia Garen Yuumi",
+  team_two_champions: "Tryndamere Amumu Qiyana Jhin Senna",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory19 = UserHistory.create!(
+  user: kobbe,
+  team_one_kills: 29,
+  team_two_kills: 14,
+  duration: 1349,
+  winner: "team_one",
+  team_one_champions: "Darius Khazix Heimerdinger Jhin Blitzcrank",
+  team_two_champions: "Shen RekSai Brand Twitch Nami",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory20 = UserHistory.create!(
+  user: kobbe,
+  team_one_kills: 47,
+  team_two_kills: 29,
+  duration: 1798,
+  winner: "team_one",
+  team_one_champions: "Kled Olaf Cassiopeia Draven Thresh",
+  team_two_champions: "Fiora Ekko Ryze Jhin TahmKench",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory21 = UserHistory.create!(
+  user: tore,
+  team_one_kills: 42,
+  team_two_kills: 15,
+  duration: 1492,
+  winner: "team_one",
+  team_one_champions: "Vladimir Olaf Zed Kaisa Nautilus",
+  team_two_champions: "Renekton Ivern Yasuo MissFortune LeeSin",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory22 = UserHistory.create!(
+  user: tore,
+  team_one_kills: 50,
+  team_two_kills: 50,
+  duration: 2264,
+  winner: "team_two",
+  team_one_champions: "Shen RekSai TwistedFate Kaisa Swain",
+  team_two_champions: "Kayle LeeSin Talon Vayne Fiddlesticks",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory23 = UserHistory.create!(
+  user: tore,
+  team_one_kills: 17,
+  team_two_kills: 33,
+  duration: 1402,
+  winner: "team_two",
+  team_one_champions: "MonkeyKing LeeSin Akali Caitlyn Morgana",
+  team_two_champions: "Quinn Nunu Veigar MissFortune Nautilus",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory24 = UserHistory.create!(
+  user: tore,
+  team_one_kills: 35,
+  team_two_kills: 15,
+  duration: 1545,
+  winner: "team_one",
+  team_one_champions: "Akali Ivern Veigar Kaisa Karma",
+  team_two_champions: "Jayce Kindred Cassiopeia Fizz Thresh",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
+playerHistory25 = UserHistory.create!(
+  user: tore,
+  team_one_kills: 27,
+  team_two_kills: 16,
+  duration: 1283,
+  winner: "team_one",
+  team_one_champions: "Vladimir Elise Tristana Kaisa Leona",
+  team_two_champions: "Garen Graves Fizz Lucian Nautilus",
+  team_one_players: "Nik Tendo, Holy Rabies, JOHΝ, suomenajokoira, Jhinners",
+  team_two_players: "jg diff victim, sof, Chemera, RGE Hαns sαmα, SteeelbacK",
+  player_team: 'team_one'
+  )
+
 puts "Finished!"
-
-
-# vizicsacsi
-# xerxe
-# humanoid
-# kobbe
-# tore
