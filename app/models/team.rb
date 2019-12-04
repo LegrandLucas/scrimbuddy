@@ -26,9 +26,17 @@ class Team < ApplicationRecord
   end
 
   def next_scrims_confirmed
-    host_scrims = Scrim.where("team_host_id = ? AND confirmation = ? AND start_game <= ? AND start_game > ?", self, true, Date.today + 7, Date.today)
-    visitor_scrims = Scrim.where("team_visitor_id = ? AND confirmation = ? AND start_game <= ? AND start_game > ?", self, true, Date.today + 7, Date.today)
+    host_scrims    = Scrim.where("team_host_id = ? AND confirmation = ? AND start_game > ?", self, true, Date.today)
+    visitor_scrims = Scrim.where("team_visitor_id = ? AND confirmation = ? AND start_game > ?", self, true, Date.today)
     host_scrims + visitor_scrims
+  end
+
+  def invitations_received
+    Scrim.where("team_visitor_id = ? AND confirmation = ? AND start_game <= ? AND start_game > ?", self, false, Date.today + 7, Date.today)
+  end
+
+  def invitations_sent
+    Scrim.where("team_host_id = ? AND confirmation = ? AND start_game <= ? AND start_game > ?", self, false, Date.today + 7, Date.today)
   end
 
   def display_add_review_btn(user)
