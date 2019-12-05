@@ -46,7 +46,9 @@
       <div class="col-4">
         <div class="stat-infos">
           <div class="diagram">
-            <p><%= @win_rate %>%</p>
+            <span id="wins" class="display_none"><%= @user[:season_wins] %></span>
+            <span id="losses" class="display_none"><%= @user[:season_losses] %></span>
+            <canvas id="myChart" width="400" height="400"></canvas>
           </div>
           <div class="games">
             <p><%= @total_match %> games played:</p>

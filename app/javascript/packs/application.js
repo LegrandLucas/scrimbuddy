@@ -1,5 +1,6 @@
 import "bootstrap";
 import "../plugins/flatpickr";
+import "../plugins/doughnut";
 
 import { updateEndGame } from "../plugins/update_end_game"
 updateEndGame();
