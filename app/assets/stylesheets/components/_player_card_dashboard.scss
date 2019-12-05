@@ -2,6 +2,9 @@
 .dashboard-player-info {
     padding: 5px;
     margin-left: 40px;
+    overflow: scroll;
+    height: calc(100vh - 30vh);
+
  .player-card {
    background: #427a8859;
    border-radius: 5px;
@@ -32,11 +35,14 @@
    .player-card-content {
       display: flex;
       align-items: center;
-      // height: 50px;
     }
   }
 
  .flex-item {
    flex-direction: column;
+  }
+
+  a {
+    color: black;
   }
 }

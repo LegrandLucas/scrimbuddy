@@ -1,7 +1,7 @@
 .card-image-avatar{
-  height: 120px;
+  height: 150px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-bottom: solid 1px lightgray;
 }
 
@@ -9,15 +9,17 @@
   border: 1px solid lightgray;
   border-radius: 4px;
   font-weight: bold;
+  font-size: 20px;
   width: 140%;
-  height: 180px;
+  height: 210px;
   background-color: white;
 }
 
 .player-card-team  p{
   text-align: center;
   vertical-align: center;
-  color: $sb-orange;
+  color: black;
+  margin: 0;
 }
 
 .fixed-bottom {

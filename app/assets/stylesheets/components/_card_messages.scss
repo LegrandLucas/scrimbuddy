@@ -44,5 +44,13 @@
 }
 
 .messages-link .active {
-  background-color: $sb-blue;
+  background-color: $sb-light-blue;
+  color: white;
+}
+
+
+.messages-link :hover {
+  background-color: $sb-light-blue;
+  color: white;
+  transition: 0.4s;
 }

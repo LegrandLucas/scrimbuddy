@@ -14,7 +14,7 @@
 .sidebar {
   background-image: asset-url("games.png");
   background-size:  cover;
-  height:           calc(100vh - 95px);
+  height:           calc(100vh - 0vh);
   width:            100%;
   background-position: 0 0;
  }
@@ -28,13 +28,11 @@
 
 .sidebar-right {
   background-color: #acbcbf73;
-  margin-top: 99px;
-  // height: 100%;
+  margin-top: 12.5%;
   border-radius: 5px;
   width: 60%;
-  margin-left: 9%;
 
-  h3{
+  h3 {
     text-align: center;
     text-shadow: 1px 1px #929281;
     padding: 10px;
@@ -45,11 +43,15 @@
   height: 100px;
 }
 
-
-.team-box {
-  padding: 5px;
-  a:hover{
-  color: #f1f1f1;
-  }
+.program-team-box {
+  overflow: scroll;
+  height: calc(100vh - 21vh);
 }
 
+.team-box {
+
+
+  a:hover {
+    color: #f1f1f1;
+  }
+}

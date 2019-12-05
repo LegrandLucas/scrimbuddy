@@ -153,11 +153,11 @@
 
 .player-statistics {
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .player-statistics p {
   text-shadow: none;
-  font-size: 20px;
   margin: 0;
 }
 
@@ -181,7 +181,6 @@
   font-size: 24px;
   background-color: $sb-orange;
   color: white;
-  margin-top: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
 }
