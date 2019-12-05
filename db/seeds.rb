@@ -849,18 +849,18 @@ fncMatch1 = Scrim.create!(
   start_game: DateTime.new(2019,12,5,17,30,00),
   end_game: DateTime.new(2019,12,5,18,30,00),
   confirmation: true,
-  team_host: vitality,
-  team_visitor: fnatic,
+  team_visitor: vitality,
+  team_host: fnatic,
   winner_team: "fnatic",
-  team_host_kills: 8,
-  team_visitor_kills: 19,
-  team_host_champions: "Lucian JarvanIV Taliyah Ezreal Braum",
-  team_visitor_champions: "Gangplank Karthus Lissandra Vayne Alistar"
+  team_visitor_kills: 8,
+  team_host_kills: 19,
+  team_visitor_champions: "Lucian JarvanIV Taliyah Ezreal Braum",
+  team_host_champions: "Gangplank Karthus Lissandra Vayne Alistar"
   )
 
 fncMatch2 = Scrim.create!(
-  start_game: DateTime.new(2019,12,6,17,30,00),
-  end_game: DateTime.new(2019,12,6,18,30,00),
+  start_game: DateTime.new(2019,11,7,14,30,00),
+  end_game: DateTime.new(2019,11,7,15,30,00),
   confirmation: true,
   team_host: fnatic,
   team_visitor: vitality,
@@ -875,18 +875,18 @@ fncMatch3 = Scrim.create!(
   start_game: DateTime.new(2019,11,7,17,30,00),
   end_game: DateTime.new(2019,11,7,18,30,00),
   confirmation: true,
-  team_host: vitality,
-  team_visitor: fnatic,
+  team_visitor: vitality,
+  team_host: fnatic,
   winner_team: "fnatic",
-  team_host_kills: 7,
-  team_visitor_kills: 27,
-  team_host_champions: "Jayce Gragas Yasuo Jinx Thresh",
-  team_visitor_champions: "Sion RekSai Kayle Sivir Braum"
+  team_visitor_kills: 7,
+  team_host_kills: 27,
+  team_visitor_champions: "Jayce Gragas Yasuo Jinx Thresh",
+  team_host_champions: "Sion RekSai Kayle Sivir Braum"
   )
 
 fncMatch4 = Scrim.create!(
-  start_game: DateTime.new(2019,12,7,17,30,00),
-  end_game: DateTime.new(2019,12,7,18,30,00),
+  start_game: DateTime.new(2019,11,7,16,00,00),
+  end_game: DateTime.new(2019,11,7,17,00,00),
   confirmation: true,
   team_host: fnatic,
   team_visitor: splyce,
@@ -898,21 +898,21 @@ fncMatch4 = Scrim.create!(
   )
 
 fncMatch5 = Scrim.create!(
-  start_game: DateTime.new(2019,11,9,17,30,00),
-  end_game: DateTime.new(2019,11,9,18,30,00),
+  start_game: DateTime.new(2019,11,9,14,00,00),
+  end_game: DateTime.new(2019,11,9,15,00,00),
   confirmation: true,
-  team_host: splyce,
-  team_visitor: fnatic,
+  team_visitor: splyce,
+  team_host: fnatic,
   winner_team: "splyce",
-  team_host_kills: 19,
-  team_visitor_kills: 10,
-  team_host_champions: "Sion Skarner Ryze Tristana Braum",
-  team_visitor_champions: "Chogath RekSai Kayle Sivir Thresh"
+  team_visitor_kills: 19,
+  team_host_kills: 10,
+  team_visitor_champions: "Sion Skarner Ryze Tristana Braum",
+  team_host_champions: "Chogath RekSai Kayle Sivir Thresh"
   )
 
 fncMatch6 = Scrim.create!(
-  start_game: DateTime.new(2019,11,10,17,30,00),
-  end_game: DateTime.new(2019,11,10,18,30,00),
+  start_game: DateTime.new(2019,11,9,16,00,00),
+  end_game: DateTime.new(2019,11,9,17,00,00),
   confirmation: true,
   team_host: fnatic,
   team_visitor: splyce,
@@ -924,16 +924,16 @@ fncMatch6 = Scrim.create!(
   )
 
 fncMatch7 = Scrim.create!(
-  start_game: DateTime.new(2019,11,11,17,30,00),
-  end_game: DateTime.new(2019,11,11,18,30,00),
+  start_game: DateTime.new(2019,11,9,17,00,00),
+  end_game: DateTime.new(2019,11,9,18,00,00),
   confirmation: true,
-  team_host: splyce,
-  team_visitor: fnatic,
+  team_visitor: splyce,
+  team_host: fnatic,
   winner_team: "fnatic",
-  team_host_kills: 8,
-  team_visitor_kills: 21,
-  team_host_champions: "Shen Hecarim Sylas Veigar TahmKench",
-  team_visitor_champions: "Lissandra JarvanIV Vayne Sivir Alistar"
+  team_visitor_kills: 8,
+  team_host_kills: 21,
+  team_visitor_champions: "Shen Hecarim Sylas Veigar TahmKench",
+  team_host_champions: "Lissandra JarvanIV Vayne Sivir Alistar"
   )
 
 message1 = Message.create!(

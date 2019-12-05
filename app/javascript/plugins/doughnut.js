@@ -13,8 +13,8 @@ const myChart = new Chart(ctx, {
             label: '# of games',
             data: [Number.parseInt(wins.innerText, 10), Number.parseInt(losses.innerText, 10)],
             backgroundColor: [
-                'rgba(163, 207, 236, 1)',
-                'rgba(226, 182, 179, 1)'
+                'rgba(103, 194, 254, 1)',
+                'rgba(231, 137, 131, 1)'
             ],
             borderColor: [
                 'rgba(244, 244, 244, 1)',
@@ -30,6 +30,9 @@ const myChart = new Chart(ctx, {
                 fontColor: 'rgb(0, 0, 0)',
                 fontSize: 20,
             },
+        },
+        animation: {
+          duration: 2000
         },
     }
 });
