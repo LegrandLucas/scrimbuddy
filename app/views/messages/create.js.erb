@@ -11,7 +11,7 @@ function addMessage(messageHTML) {
 <% if @message.errors.any? %>
   refreshForm('<%= j render "messages/form", friend: @friend, message: @message %>');
 <% else %>
-  addMessage('<%= j render "messages/show", message: @message, reverse: true, sender: true %>')
+  addMessage('<%= j render "messages/message_sent", message: @message, current_user_id: current_user.id %>')
   refreshForm('<%= j render "messages/form", friend: @friend, message: Message.new %>');
 <% end %>
 

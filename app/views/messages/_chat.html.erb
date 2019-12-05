@@ -1,9 +1,9 @@
 <div id="messages" class="chat-box mb-2">
   <% messages.each do |message| %>
     <% if message.sender == current_user %>
-      <%= render "messages/show", message: message, reverse: true, sender: true %>
+      <%= render "messages/message_sent", message: message, current_user_id: current_user.id %>
     <% else %>
-      <%= render "messages/show", message: message, reverse: false, sender: false %>
+      <%= render "messages/message_received", message: message %>
       <%#= image_tag message.sender.avatar, class: "avatar-large mb-2" %>
 <!--       <div class="card-chat">
          <p><%= message.content %></p>

@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-start">
+  <div class="message-image">
+
+    <img src="<%= url_for(message.sender.avatar) %> " alt="" class="avatar-large mb-2">
+  </div>
+  <div class="card-chat">
+    <p><%= message.content %></p>
+  </div>
+</div>
