@@ -29,8 +29,10 @@
                 <div class="invitation-type">
                   <h2>Invitations sent</h2>
                 </div>
-                <div class="all-initations">
-                  <%= render 'shared/invitation_card_sent', user: @user, invitations_sent: @invitations_sent %>
+                <div id="all-initations">
+                  <div class="toto">
+                    <%= render 'shared/invitation_card_sent', user: @user, invitations_sent: @invitations_sent %>
+                  </div>
                 </div>
               </div>
             </div>
