@@ -12,10 +12,12 @@
                 <div class="invitation-type">
                   <h2>Invitations received</h2>
                 </div>
-                <div class="all-initations">
+                <div id="all-initations">
+                  <div class="all-init">
                   <% @invitations_received.each do |scrim| %>
                     <%= render 'shared/invitation_card', user: @user, scrim: scrim %>
                   <% end %>
+                  </div>
                 </div>
               </div>
             </div>
@@ -30,7 +32,7 @@
                   <h2>Invitations sent</h2>
                 </div>
                 <div id="all-initations">
-                  <div class="toto">
+                  <div class="all-init">
                     <%= render 'shared/invitation_card_sent', user: @user, invitations_sent: @invitations_sent %>
                   </div>
                 </div>
