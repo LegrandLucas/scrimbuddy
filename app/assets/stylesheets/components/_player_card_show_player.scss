@@ -164,8 +164,6 @@
 .diagram {
   height: 250px;
   width: 250px;
-  border: 2px solid black;
-  border-radius: 50%;
 }
 
 .stat-infos {
@@ -202,4 +200,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.display_none {
+  display: none;
 }
