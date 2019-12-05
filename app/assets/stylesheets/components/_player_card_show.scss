@@ -1,22 +1,23 @@
 .card-image-avatar{
-  height:120px;
+  height: 120px;
   width: 100%;
   object-fit: cover;
+  border-bottom: solid 1px lightgray;
 }
 
 .player-card-team{
-  border: 2px solid $sb-blue;
-  border-radius: 5px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
   font-weight: bold;
-  width: 100%;
+  width: 140%;
   height: 180px;
+  background-color: white;
 }
 
 .player-card-team  p{
   text-align: center;
   vertical-align: center;
-  color: $sb-dark-blue;
-  text-shadow: -1px -1px #BABDB6FF;
+  color: $sb-orange;
 }
 
 .fixed-bottom {

@@ -15,8 +15,8 @@
       <div id="bottom-infos">
         <h2><i class="far fa-file-alt"></i> Description: </h2><p><%= @team.description %></p>
       </div>
-      <div class="team-players-bloc">
         <h2 class="stat-category">Team players</h2>
+      <div class="team-players-bloc">
         <%= render 'shared/player-card-show', team: @team %>
       </div>
       <div class="match-history-bloc">
