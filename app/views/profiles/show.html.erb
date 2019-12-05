@@ -36,7 +36,7 @@
 </div>
 
 <div class="sb-container">
-  <div class="stat-category">
+  <div class="stat-category mt-3">
     Personnal statistics
   </div>
 
@@ -51,8 +51,26 @@
             <canvas id="myChart" width="400" height="400"></canvas>
           </div>
           <div class="games">
-            <p><%= @total_match %> games played:</p>
-            <p><%= @user[:season_wins] %>W / <%= @user[:season_losses] %>L</p>
+            <div class="row">
+              <div class="col-4">
+                <div class="stat">
+                  <p class="stat-number"><%= @total_match %></p>
+                  <p class="stat-label">GAMES</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat">
+                  <p class="stat-number"><%= @user[:season_wins] %></p>
+                  <p class="stat-label">WINS</p>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="stat">
+                  <p class="stat-number"><%= @user[:season_losses] %></p>
+                  <p class="stat-label">LOSSES</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -79,9 +97,15 @@
             <% end %>
           </div>
 
-          <div class="stats">
-            <p><strong>Rank:</strong> <%= @user[:rank] %></p>
-            <p><strong>League Points:</strong> <%= @user[:league_points] %></p>
+          <div class="stats-ranking">
+            <div>
+              <p class="stat-number"><%= @user[:rank] %></p>
+              <p class="stat-label">RANK</p>
+            </div>
+            <div>
+              <p class="stat-number"><%= @user[:league_points] %></p>
+              <p class="stat-label">LEAGUE POINTS</p>
+            </div>
           </div>
         </div>
       </div>
@@ -101,7 +125,7 @@
             </div>
           </div>
 
-          <p><strong>Most used champions</strong></p>
+          <p class="stat-label">Most used champions</p>
         </div>
       </div>
 
@@ -109,7 +133,7 @@
   </div>
 
   <div class="stat-category">
-    SoloQ history
+    Match history
   </div>
 
   <div class="history-cards">

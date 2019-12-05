@@ -32,5 +32,16 @@
 }
 
 .score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
+
+  p {
+  font-size: 28px;
+  }
+}
+
+.grayscale {
+  filter: grayscale(100%);
 }
