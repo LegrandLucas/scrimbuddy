@@ -43,10 +43,13 @@
   height: 100px;
 }
 
-
-.team-box {
+.program-team-box {
   overflow: scroll;
   height: calc(100vh - 21vh);
+}
+
+.team-box {
+
 
   a:hover {
     color: #f1f1f1;
