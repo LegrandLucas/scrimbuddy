@@ -9,5 +9,6 @@ class ConversationsController < ApplicationController
     @users_with_conversation = current_user.friends
     @friend                  = User.find(params[:id])
     @messages                = current_user.conversation_with(@friend.id)
+    @channel                 = current_user.id * @friend.id
   end
 end

@@ -31,3 +31,20 @@
     </div>
   </div>
 </div>
+
+<% content_for :after_js do %>
+  <script>
+    App['chat_room_<%= @channel %>'] = App.cable.subscriptions.create(
+      { channel: 'ChatRoomsChannel', chat_room_id: <%= @channel %> },
+      { received: (data) => {
+
+          const sender_id = data.current_user_id
+          if (sender_id != <%= current_user.id %>) {
+            const messagesContainer = document.getElementById('messages');
+            messagesContainer.insertAdjacentHTML('beforeend', data.message_partial);
+          }
+        }
+      }
+    )
+  </script>
+<% end %>
