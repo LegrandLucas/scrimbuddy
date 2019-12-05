@@ -41,7 +41,10 @@ class ScrimsController < ApplicationController
 
   def destroy
     @scrim.destroy
-    redirect_to invitations_dashboard_path
+    respond_to do |format|
+      format.html { redirect_to invitations_dashboard_path }
+      format.js
+    end
   end
 
   private
