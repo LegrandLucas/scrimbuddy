@@ -82,6 +82,67 @@ splyce_logo_path = Rails.root.join('app', 'assets', 'images', 'splycelogo.png')
 splyce.images.attach(io: File.open(splyce_logo_path), filename: 'splycelogo.png', content_type: 'image/png')
 
 
+origen = Team.create!(
+  name: "ORIGEN",
+  league: "LEC",
+  country: "Spain",
+  description: "Origen is a European team that was founded by xPeke to compete in the EU LCS (now LEC). The organization was acquired by RFRSH Entertainment in late 2018."
+)
+origen_logo_path = Rails.root.join('app', 'assets', 'images', 'origenlogo.png')
+
+origen.images.attach(io: File.open(origen_logo_path), filename: 'origenlogo.png', content_type: 'image/png')
+
+sk = Team.create!(
+  name: "SK GAMING",
+  league: "LEC",
+  country: "Germany",
+  description: "SK Gaming is a German team, which has been part of the esports community since 1997. The organization entered the League of Legends scene in September 2010."
+)
+sk_logo_path = Rails.root.join('app', 'assets', 'images', 'sklogo.png')
+
+sk.images.attach(io: File.open(sk_logo_path), filename: 'sklogo.png', content_type: 'image/png')
+
+rogue = Team.create!(
+  name: "ROGUE",
+  league: "LEC",
+  country: "USA",
+  description: "Rogue is a European League of Legends esports team. They play in the LEC. There is a disambiguation page associated with the name Rogue. Three players and one other team share this name."
+)
+rogue_logo_path = Rails.root.join('app', 'assets', 'images', 'roguelogo.png')
+
+rogue.images.attach(io: File.open(rogue_logo_path), filename: 'roguelogo.png', content_type: 'image/png')
+
+excel = Team.create!(
+  name: "EXCEL ESPORTS",
+  league: "LEC",
+  country: "Canada",
+  description: "Excel Esports is a British team. Their name was previously stylized exceL eSports and later exceL Esports."
+)
+excel_logo_path = Rails.root.join('app', 'assets', 'images', 'excellogo.png')
+
+excel.images.attach(io: File.open(excel_logo_path), filename: 'excellogo.png', content_type: 'image/png')
+
+ldlc = Team.create!(
+  name: "LDLC",
+  league: "LFL",
+  country: "France",
+  description: "Team-LDLC is a professional esports organization based in France."
+)
+ldlc_logo_path = Rails.root.join('app', 'assets', 'images', 'ldlclogo.png')
+
+ldlc.images.attach(io: File.open(ldlc_logo_path), filename: 'ldlclogo.png', content_type: 'image/png')
+
+gamersorigin = Team.create!(
+  name: "GAMERSORIGIN",
+  league: "LFL",
+  country: "France",
+  description: "none"
+)
+gamersorigin_logo_path = Rails.root.join('app', 'assets', 'images', 'gamersoriginlogo.png')
+
+gamersorigin.images.attach(io: File.open(gamersorigin_logo_path), filename: 'gamersoriginlogo.png', content_type: 'image/png')
+
+
 bwipo = User.create!(
   first_name: "Gabriel",
   last_name: "Rau",
