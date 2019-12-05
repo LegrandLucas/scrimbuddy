@@ -2,7 +2,7 @@
 .gif-container {
   position: relative;
   background-image: asset-url("gamer_800x600.gif");
-  height: calc(100vh - 70px);
+  height: calc(100vh - 60px);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,7 +19,6 @@
   position: absolute;
   top: -40vw;
   left: -40vw;
-  z-index: 2;
 }
 
 .sb-container {
