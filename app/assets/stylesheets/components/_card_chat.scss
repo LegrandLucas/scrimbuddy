@@ -1,13 +1,17 @@
 .card-chat {
   background-color: rgba(255, 80, 47, 0.5);
-  width: 150px;
+  width: 50%;
   text-align: left;
   border-radius: 5px;
   margin-left: 10px;
   margin-bottom: 10px;
   background-opacity: 0.5;
   padding: 5px;
+}
 
+.card-chat p {
+  font-size: 28px;
+  color: white;
 }
 
 .chat-box {
@@ -20,6 +24,7 @@
 .sender {
   align-self: flex-end;
   background-color: $sb-light-blue;
+  text-align: right;
 }
 
 .message-image {
@@ -29,6 +34,8 @@
 .dashboard-conversation{
   width: 100%;
 }
+
+
 
 // .input-message .form-control{
 //   width: 500px

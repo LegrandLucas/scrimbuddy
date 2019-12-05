@@ -13,6 +13,7 @@ function addMessage(messageHTML) {
 <% else %>
   addMessage('<%= j render "messages/message_sent", message: @message, current_user_id: current_user.id %>')
   refreshForm('<%= j render "messages/form", friend: @friend, message: Message.new %>');
+  scrollLastMessageIntoView()
 <% end %>
 
 
