@@ -33,15 +33,43 @@
       align-items: center;
     }
 
-    .sb-link {
-      margin-left: 20px;
-
-        &:hover {
-          opacity: 0.5;
-          border-bottom: solid 2px;
-      }
-    }
 }
+
+.animoSlideUp {
+   padding: 0px 10px;
+   border-radius: 4px;
+   text-align: center;
+   line-height: 40px;
+   cursor: pointer;
+   position: relative;
+   -webkit-transition: .5s ease-out;
+   transition: .5s ease-out;
+   overflow: hidden;
+  }
+
+  .animoSlideUp::after {
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform:translateY(100%);
+    background-color: #e374ba;
+    transition:transform .2s ease-out;
+    z-index:-1
+    }
+
+    .animoSlideUp:hover {
+      color:#fff
+    }
+
+    .animoSlideUp:hover::after {
+      transform:translateY(0);
+      transition:transform .2s ease-in
+    }
+
+
 
 /*
 .nav-container {
