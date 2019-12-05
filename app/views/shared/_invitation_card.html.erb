@@ -16,11 +16,15 @@
 
     <div class="col-5">
       <div class="answer">
-        <%= link_to scrim_path(scrim), method: :patch, class: "accept" do %>
+
+        <%= link_to scrim_path(scrim), method: :patch, class: "accept", remote: true do %>
           <p><i class="fas fa-check-circle"></i> - ACCEPT</p>
+
         <% end %>
+
         <%= link_to scrim_path(scrim), class: "decline", method: :delete, remote: true do %>
-          <p><i class="fas fa-times-circle"></i> - DECLINE</p>
+          <p><i class="fas fa-times-circle"></i> DECLINE</p>
+
         <% end %>
       </div>
     </div>

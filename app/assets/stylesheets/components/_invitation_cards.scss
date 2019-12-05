@@ -7,7 +7,7 @@
   align-items: center;
   padding: 20px;
   margin-bottom: 10px;
-
+  height: 150px;
   p {
     opacity: .9;
   }
@@ -98,8 +98,13 @@
   border-bottom: 1px solid black;
 }
 
+#all-initations {
+  overflow: hidden;
+  height: 100%;
+}
 
-.all-initations {
-  overflow: scroll;
-  height: calc(100vh - 370px);
+.all-init {
+  height: 99%;
+  overflow: auto;
+  padding-right: 15px;
 }

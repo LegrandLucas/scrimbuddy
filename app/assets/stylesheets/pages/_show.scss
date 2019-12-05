@@ -10,6 +10,7 @@
 }
 
 .column-dashboard-left {
+
 /* here we put the styling for the image that will be added on this div*/
 .sidebar {
   background-image: asset-url("games.png");
@@ -20,6 +21,7 @@
  }
 }
 
+
 .column-dashboard {
   flex-direction: column;
   flex-basis: 100%;
@@ -27,15 +29,16 @@
 }
 
 .sidebar-right {
-  background-color: #acbcbf73;
+  background-color: #99C1CB;
   margin-top: 12.5%;
   border-radius: 5px;
   width: 60%;
+  text-align: -webkit-center;
 
   h3 {
     text-align: center;
-    text-shadow: 1px 1px #929281;
     padding: 10px;
+    color: white;
   }
 }
 
@@ -44,8 +47,17 @@
 }
 
 
+
 .team-box {
   // height: calc(100vh - 21vh);
+
+.program-team-box {
+  overflow: scroll;
+  height: calc(100vh - 21vh);
+}
+
+.team-box {
+
 
   a:hover {
     color: #f1f1f1;
