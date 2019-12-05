@@ -14,7 +14,7 @@
 .sidebar {
   background-image: asset-url("games.png");
   background-size:  cover;
-  height:           calc(100vh - 0vh);
+  height:           calc(100vh - 60px);
   width:            100%;
   background-position: 0 0;
  }
@@ -45,8 +45,7 @@
 
 
 .team-box {
-  overflow: scroll;
-  height: calc(100vh - 21vh);
+  // height: calc(100vh - 21vh);
 
   a:hover {
     color: #f1f1f1;

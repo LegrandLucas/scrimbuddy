@@ -1,9 +1,6 @@
 <div class="d-flex justify-content-start m-4">
-  <div class="message-image">
-
+  <div class="d-flex align-items-center pl-3 w-100 receiver">
     <img src="<%= url_for(message.sender.avatar) %> " alt="" class="avatar-large mb-2">
-  </div>
-  <div class="card-chat">
-    <p><%= message.content %></p>
+    <p class="card-chat pl-3"><%= message.content %></p>
   </div>
 </div>
