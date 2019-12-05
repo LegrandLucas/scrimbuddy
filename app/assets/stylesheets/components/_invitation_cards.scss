@@ -46,6 +46,7 @@
   justify-content: space-around;
 
   .accept {
+    color: #058B05FF;
     border-radius: 4px;
     background-color: rgb(163, 207, 236);
     width: 100%;
@@ -57,6 +58,7 @@
     font-size: 20px;
   }
   .decline {
+    color: #A40000FF;
     border-radius: 4px;
     background-color: rgb(226, 182, 179);
     width: 100%;
@@ -65,6 +67,11 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
+  }
+
+  &:hover{
+    cursor:pointer;
+    color: #4f99ff;
   }
 }
 
