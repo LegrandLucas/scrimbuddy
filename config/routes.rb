@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :teams do
     resources :scrims, only: %i[new create]
   end
-  resources :scrims, only: %i[udpate destroy] do
+  resources :scrims, only: %i[update destroy] do
     resources :reviews, only: %i[new create]
   end
   resources :profiles, only: [:show]

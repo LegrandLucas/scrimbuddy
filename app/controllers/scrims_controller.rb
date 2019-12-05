@@ -34,16 +34,14 @@ class ScrimsController < ApplicationController
   end
 
   def update
-    if @scrim.update(scrim_params)
-      redirect_to team_path(@team_host)
-    else
-      render :edit
-    end
+    @scrim.confirmation = true
+    @scrim.save
+    redirect_to invitations_dashboard_path
   end
 
   def destroy
     @scrim.destroy
-    redirect_to team_path(@team_host)
+    redirect_to invitations_dashboard_path
   end
 
   private

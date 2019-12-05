@@ -12,7 +12,11 @@
                 <div class="invitation-type">
                   <h2>Invitations received</h2>
                 </div>
-                <%= render 'shared/invitation_card', user: @user, invitations_received: @invitations_received %>
+                <div class="all-initations">
+                  <% @invitations_received.each do |scrim| %>
+                    <%= render 'shared/invitation_card', user: @user, scrim: scrim %>
+                  <% end %>
+                </div>
               </div>
             </div>
           </div>
@@ -25,7 +29,9 @@
                 <div class="invitation-type">
                   <h2>Invitations sent</h2>
                 </div>
-                <%= render 'shared/invitation_card_sent', user: @user, invitations_sent: @invitations_sent %>
+                <div class="all-initations">
+                  <%= render 'shared/invitation_card_sent', user: @user, invitations_sent: @invitations_sent %>
+                </div>
               </div>
             </div>
           </div>
