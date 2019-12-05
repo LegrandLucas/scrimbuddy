@@ -13,17 +13,20 @@
    margin: 10px 20px 10px 20px;
 
    .avatar {
+     background-color: white;
+     object-fit: cover;
      height: 80px;
-     width: 100px;
+     width: 80px;
      border-radius: 50%;
      margin: 5px;
      filter: drop-shadow(3px 2px 2px #3E3B3B6E);
+
     }
 
    .text-block {
      margin-left: 10px;
      text-shadow: 1px 1px #929281;
-     overflow: overlay;
+     overflow: hidden;
     }
 
    .player-card-content {
