@@ -36,7 +36,10 @@ class ScrimsController < ApplicationController
   def update
     @scrim.confirmation = true
     @scrim.save
-    redirect_to invitations_dashboard_path
+    respond_to do |format|
+      format.html { redirect_to invitations_dashboard_path }
+      format.js
+    end
   end
 
   def destroy
