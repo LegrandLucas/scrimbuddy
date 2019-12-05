@@ -10,6 +10,11 @@
   -webkit-box-align: center;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 3%;
+
+  &.active-scrim {
+  background-color: #99C1CB;
+ }
 }
 
 .card-scrims img {
