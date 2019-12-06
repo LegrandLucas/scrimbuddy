@@ -1023,12 +1023,6 @@ message4 = Message.create!(
   receiver: duke,
   )
 
-message5 = Message.create!(
-  content: "I asked the guys, no problem, see you tomorrow",
-  sender: mephisto,
-  receiver: duke,
-  )
-
 message6 = Message.create!(
   content: "Hello",
   sender: falco,
