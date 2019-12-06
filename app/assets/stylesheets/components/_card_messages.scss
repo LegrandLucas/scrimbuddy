@@ -1,6 +1,6 @@
 .message-card {
   background-color: lightgrey;
-  border-radius:    10px;
+  border-radius:    4px;
   display:          flex;
   align-items:      center;
   width: 250px;
@@ -28,7 +28,6 @@
 .message-card h3{
   text-align: left;
   font-size: 18px;
-  text-shadow: 1px 1px #DDC;
   font-weight: bold;
   margin: 0px;
 }

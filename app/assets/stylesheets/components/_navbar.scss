@@ -35,128 +35,28 @@
 
 }
 
-.animoSlideUp {
-   padding: 0px 10px;
-   border-radius: 4px;
-   text-align: center;
-   line-height: 40px;
-   cursor: pointer;
-   position: relative;
-   -webkit-transition: .5s ease-out;
-   transition: .5s ease-out;
-   overflow: hidden;
+.animoBorderCenter {
+  display:inline-block;
+  position:relative;
+  cursor:pointer;
+  margin: 10px;
   }
 
-  .animoSlideUp::after {
-    content:'';
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:100%;
-    transform:translateY(100%);
-    background-color: #e374ba;
-    transition:transform .2s ease-out;
-    z-index:-1
-    }
-
-    .animoSlideUp:hover {
-      color:#fff
-    }
-
-    .animoSlideUp:hover::after {
-      transform:translateY(0);
-      transition:transform .2s ease-in
-    }
-
-
-
-/*
-.nav-container {
-  position: relative;
-  background-color: $sb-light-blue;
-  display: contents;
-  color: white;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  z-index: 3;
-
-  img {
-      width: 40px;
-      height: 40px;
-      align-self: center;
-      filter: drop-shadow(2px 2px 2px #313030);
-    }
-
-    a {
-      display: flex;
-      text-decoration: none;
-      color: white;
-      filter: drop-shadow(2px 2px 2px #313030);
-    }
-}
-*/
-/*
-.sb-navbar {
-  display: flex;
-  color: white;
-  align-items: center;
-  list-style-type: none;
-  height: 10vh;
-
-
-  li {
-    padding: 5px;
-    color: black;
+.animoBorderCenter::after {
+  content:'';
+  position:absolute;
+  left:50%;bottom:-3px;
+  width:60%;height:3px;
+  opacity:0;background-color:white;
+  transform:translate(-50%,0);
+  transition:all .3s ease-in-out
   }
 
-  a.link {
-    color: black;
-    text-decoration: none;
-
-  }
-
-  a:hover {
-    opacity: 0.5;
-    border-bottom: solid 2px;
-  }
-
-  ul {
-    list-style-type: none;
-    text-decoration: none;
-  }
+.animoBorderCenter:hover::after {
+  width:100%;
+  opacity:1
 }
 
-.sb-avatar {
-  width: 50px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  color: black;
-  min-width: 160px;
-  border: solid 0.5px #f9f9f9;
-  padding: 5px 0px;
-  z-index: 1;
-}
-
-.dropdown-content .link:hover {
-  color: white;
-  background-color: $sb-light-blue;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-*/
 .nav-avatar {
   height: 60px;
   border-radius: 50%;
