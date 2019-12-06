@@ -860,6 +860,14 @@ scrim8 = Scrim.create!(
   confirmation: false
   )
 
+scrim8 = Scrim.create!(
+  start_game: DateTime.new(2019,12,13,10,30,00),
+  end_game: DateTime.new(2019,12,13,12,30,00),
+  team_host: misfits,
+  team_visitor: fnatic,
+  confirmation: false
+  )
+
 scrim9 = Scrim.create!(
   start_game: DateTime.new(2019,12,12,10,30,00),
   end_game: DateTime.new(2019,12,12,12,30,00),
@@ -869,8 +877,8 @@ scrim9 = Scrim.create!(
   )
 
 scrim10 = Scrim.create!(
-  start_game: DateTime.new(2019,12,13,10,30,00),
-  end_game: DateTime.new(2019,12,13,12,30,00),
+  start_game: DateTime.new(2019,12,9,10,30,00),
+  end_game: DateTime.new(2019,12,9,12,30,00),
   team_host: fnatic,
   team_visitor: vitality,
   confirmation: true
