@@ -11,14 +11,14 @@
 
 .column-dashboard-left {
 
-/* here we put the styling for the image that will be added on this div*/
-.sidebar {
-  background-image: asset-url("games.png");
-  background-size:  cover;
-  height:           calc(100vh - 60px);
-  width:            100%;
-  background-position: 0 0;
- }
+  /* here we put the styling for the image that will be added on this div*/
+  .sidebar {
+    background-image: asset-url("games.png");
+    background-size:  cover;
+    height:           calc(100vh - 60px);
+    width:            100%;
+    background-position: 0 0;
+  }
 }
 
 
