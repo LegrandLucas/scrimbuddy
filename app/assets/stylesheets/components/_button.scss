@@ -1,20 +1,20 @@
 .btn-ca {
-  background: linear-gradient(#FF502F,#DD3718FF);
+  background:    linear-gradient(#FF502F,#DD3718FF);
   border-radius: 5px;
-  border: 1px solid #DD3718FF;
-  box-shadow: -1px 2px #00000075;
-  color: #F8F0F0FF;
-  display: inline-block;
-  font-weight: bold;
-  font-family: 'Raleway', sans-serif;
-  font-size: 18px;
-  padding: 8px 24px;
-  transition: background 0.2s ease;
-  text-shadow: -1px -1px #BABDB6FF;
+  border:        1px solid #DD3718FF;
+  box-shadow:    -1px 2px #00000075;
+  color:         #F8F0F0FF;
+  display:       inline-block;
+  font-weight:   bold;
+  font-family:   'Raleway', sans-serif;
+  font-size:     30px;
+  padding:       8px 24px;
+  transition:    background 0.2s ease;
+  text-shadow:   -1px -1px #BABDB6FF;
 }
 
 .btn-ca:hover {
-  background: linear-gradient(#DD3718FF,#FF502FB4 );
-  color: #F8F0F0FF;
+  background:      linear-gradient(#DD3718FF,#FF502FB4 );
+  color:           #F8F0F0FF;
   text-decoration: none;
 }
