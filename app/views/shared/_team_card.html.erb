@@ -1,15 +1,31 @@
-<% next_scrims.each do |scrim| %>
-  <%= link_to dashboard_path(team: scrim.team_host.id) do %>
-    <div class="card-scrims <%= 'active-scrim' if current_page?(dashboard_path(team: scrim.team_host_id)) %>">
-    <%# link_to 'Program', dashboard_path, class: "card-dashboard-selected #{'active' if current_page?(dashboard_path)}" %>
-      <% scrim.team_host.images.each do |image|%>
-        <%= image_tag image %>
-        <div class="card-scrims-infos">
-          <h2><%= scrim.team_host.name %></h2>
-          <p><strong>Date: </strong><%= scrim.start_game.strftime('%a, %d %b %Y') %></p>
-          <p><strong>Time: </strong><%= scrim.start_game.strftime('%H:%M') %> - <%= scrim.end_game.strftime('%H:%m') %></p>
-        </div>
-      <% end %>
-    </div>
+<% next_scrims.sort_by { |scrim| scrim.start_game }.each do |scrim| %>
+  <%  if scrim.team_visitor == current_user.team %>
+    <%= link_to dashboard_path(team: scrim.team_host.id) do %>
+      <div class="card-scrims <%= 'active-scrim' if current_page?(dashboard_path(team: scrim.team_host_id)) %>">
+      <%# link_to 'Program', dashboard_path, class: "card-dashboard-selected #{'active' if current_page?(dashboard_path)}" %>
+        <% scrim.team_host.images.each do |image|%>
+          <%= image_tag image %>
+          <div class="card-scrims-infos">
+            <h2><%= scrim.team_host.name %></h2>
+            <p><strong>Date: </strong><%= scrim.start_game.strftime('%a, %d %b %Y') %></p>
+            <p><strong>Time: </strong><%= scrim.start_game.strftime('%H:%M') %> - <%= scrim.end_game.strftime('%H:%m') %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to dashboard_path(team: scrim.team_visitor.id) do %>
+      <div class="card-scrims <%= 'active-scrim' if current_page?(dashboard_path(team: scrim.team_visitor_id)) %>">
+      <%# link_to 'Program', dashboard_path, class: "card-dashboard-selected #{'active' if current_page?(dashboard_path)}" %>
+        <% scrim.team_visitor.images.each do |image|%>
+          <%= image_tag image %>
+          <div class="card-scrims-infos">
+            <h2><%= scrim.team_visitor.name %></h2>
+            <p><strong>Date: </strong><%= scrim.start_game.strftime('%a, %d %b %Y') %></p>
+            <p><strong>Time: </strong><%= scrim.start_game.strftime('%H:%M') %> - <%= scrim.end_game.strftime('%H:%m') %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
 <% end %>

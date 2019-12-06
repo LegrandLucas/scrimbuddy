@@ -1,4 +1,4 @@
-<% invitations_sent.each do |invitation| %>
+<% invitations_sent.sort_by { |scrim| scrim.start_game }.each do |invitation| %>
   <div class="invitation-card-scrims">
     <div class="row">
       <div class="col-2">

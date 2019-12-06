@@ -797,53 +797,108 @@ duke.avatar.attach(io: File.open(avatar_duke_path), filename: 'duke.png', conten
 
 
 scrim1 = Scrim.create!(
-  start_game: DateTime.new(2019,12,12,15,30,00),
-  end_game: DateTime.new(2019,12,12,18,30,00),
+  start_game: DateTime.new(2019,12,9,15,30,00),
+  end_game: DateTime.new(2019,12,9,18,30,00),
   team_host: vitality,
-  team_visitor: fnatic,
-  confirmation: false,
+  team_visitor: gtwo,
+  confirmation: true,
   )
 
 scrim2 = Scrim.create!(
-  start_game: DateTime.new(2019,12,14,10,30,00),
-  end_game: DateTime.new(2019,12,14,12,30,00),
-  team_host: fnatic,
+  start_game: DateTime.new(2019,12,10,10,30,00),
+  end_game: DateTime.new(2019,12,10,12,30,00),
+  team_host: vitality,
   team_visitor: gtwo,
-  confirmation: false
+  confirmation: true
   )
 
 scrim3 = Scrim.create!(
-  start_game: DateTime.new(2019,12,20,10,30,00),
-  end_game: DateTime.new(2019,12,20,12,20,00),
-  team_host: fnatic,
-  team_visitor: splyce,
-  confirmation: false
+  start_game: DateTime.new(2019,12,11,10,30,00),
+  end_game: DateTime.new(2019,12,11,12,30,00),
+  team_host: vitality,
+  team_visitor: gtwo,
+  confirmation: true
   )
 
 scrim4 = Scrim.create!(
-  start_game: DateTime.new(2019,12,8,10,30,00),
-  end_game: DateTime.new(2019,12,8,12,20,00),
-  team_host: fnatic,
-  team_visitor: splyce,
-  confirmation: false
+  start_game: DateTime.new(2019,12,12,10,30,00),
+  end_game: DateTime.new(2019,12,12,12,30,00),
+  team_host: vitality,
+  team_visitor: gtwo,
+  confirmation: true
   )
 
 scrim5 = Scrim.create!(
-  start_game: DateTime.new(2019,12,10,17,30,00),
-  end_game: DateTime.new(2019,12,10,19,30,00),
-  team_host: splyce,
-  team_visitor: fnatic,
-  confirmation: false
+  start_game: DateTime.new(2019,12,13,10,30,00),
+  end_game: DateTime.new(2019,12,13,12,30,00),
+  team_host: vitality,
+  team_visitor: gtwo,
+  confirmation: true
   )
 
 scrim6 = Scrim.create!(
-  start_game: DateTime.new(2019,12,13,17,30,00),
-  end_game: DateTime.new(2019,12,13,19,30,00),
-  team_host: fcschalke,
+  start_game: DateTime.new(2019,12,14,10,30,00),
+  end_game: DateTime.new(2019,12,14,12,30,00),
+  team_host: vitality,
+  team_visitor: gtwo,
+  confirmation: true
+  )
+
+scrim7 = Scrim.create!(
+  start_game: DateTime.new(2019,12,15,10,30,00),
+  end_game: DateTime.new(2019,12,15,12,30,00),
+  team_host: vitality,
+  team_visitor: gtwo,
+  confirmation: true
+  )
+
+scrim8 = Scrim.create!(
+  start_game: DateTime.new(2019,12,12,10,30,00),
+  end_game: DateTime.new(2019,12,12,12,30,00),
+  team_host: gamersorigin,
   team_visitor: fnatic,
   confirmation: false
   )
 
+scrim9 = Scrim.create!(
+  start_game: DateTime.new(2019,12,12,10,30,00),
+  end_game: DateTime.new(2019,12,12,12,30,00),
+  team_host: fnatic,
+  team_visitor: ldlc,
+  confirmation: false
+  )
+
+scrim10 = Scrim.create!(
+  start_game: DateTime.new(2019,12,13,10,30,00),
+  end_game: DateTime.new(2019,12,13,12,30,00),
+  team_host: fnatic,
+  team_visitor: vitality,
+  confirmation: true
+  )
+
+scrim11 = Scrim.create!(
+  start_game: DateTime.new(2019,12,14,10,30,00),
+  end_game: DateTime.new(2019,12,14,12,30,00),
+  team_host: fnatic,
+  team_visitor: origen,
+  confirmation: true
+  )
+
+scrim12 = Scrim.create!(
+  start_game: DateTime.new(2019,12,16,10,30,00),
+  end_game: DateTime.new(2019,12,16,12,30,00),
+  team_host: fnatic,
+  team_visitor: ldlc,
+  confirmation: true
+  )
+
+scrim13 = Scrim.create!(
+  start_game: DateTime.new(2019,12,18,10,30,00),
+  end_game: DateTime.new(2019,12,18,12,30,00),
+  team_host: fnatic,
+  team_visitor: rogue,
+  confirmation: true
+  )
 
 fncMatch1 = Scrim.create!(
   start_game: DateTime.new(2019,12,5,17,30,00),
@@ -1051,12 +1106,12 @@ playerHistory3 = UserHistory.create!(
 
 playerHistory4 = UserHistory.create!(
   user: vizicsacsi,
-  team_one_kills: 37,
-  team_two_kills: 37,
-  duration: 1666,
+  team_one_kills: 26,
+  team_two_kills: 17,
+  duration: 1416,
   winner: "team_one",
-  team_one_champions: "Neeko Kayn Ryze Ashe Thresh",
-  team_two_champions: "Gangplank Karthus Yasuo Kaisa Pyke",
+  team_one_champions: "Darius Nasus Fizz Senna Blitzcrank",
+  team_two_champions: "Akali LeeSin Orianna Ashe Nidalee",
   team_one_players: "SPY Vizicsacsi, AUDI RS 7 1000HP, Grrumpyx, REC Woolite, ttommy shelby",
   team_two_players: "NilleNalley, Triestìno, kingofwarrior66, destroy you, Dadju abuser",
   player_team: 'team_one'

@@ -1,6 +1,6 @@
 <h1 class="mt-4 title-size title-hilighted">All teams</h1>
 <div class="row d-flex ">
-  <% @teams.each do |team| %>
+  <% @teams.sort_by { |scrim| scrim.name }.each do |team| %>
   <div class="col-4 index-team-card">
     <%= link_to team_path(team) do  %>
     <div class="team-card m-2">

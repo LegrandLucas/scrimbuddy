@@ -14,7 +14,7 @@
                 </div>
                 <div id="all-initations">
                   <div class="all-init">
-                  <% @invitations_received.each do |scrim| %>
+                  <% @invitations_received.sort_by { |scrim| scrim.start_game }.each do |scrim| %>
                     <%= render 'shared/invitation_card', user: @user, scrim: scrim %>
                   <% end %>
                   </div>
